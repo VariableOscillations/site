@@ -4,3 +4,13 @@ body {
   color: #dedcd9; 
   margin: 50px;
 }
+
+a {
+  color: #dedcd9;
+  text-decoration: none;
+  font-size: 30;
+}
+
+a:hover {
+  color: #6f6e6c;
+}
