@@ -8,9 +8,8 @@ a {
   color: #ffffff;
   text-decoration: none;
   font-size: 40;
-  font-weight: lighter;
 }
 
 a:hover {
-  color: #000000;
+  color: #ffffff;
 }
