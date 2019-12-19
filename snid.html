@@ -16,7 +16,17 @@
         <main>
             <article>   
                 <p><center>Sinusoidal Numeric Incremental Device</center></p>
-                <p> SNID is an experimental patchable drone synth with three main components, a clock divider, sine wave oscillator, and experimental wave multiplier oscillator. The multiplier oscillator is based on phase distortion synthesis and generates slopes which read through a sine wavetable. The slopes are more complicated than standard phase distortion methods and result in unpredictable and chaotic waveforms. More information can be found <a href = "https://github.com/VariableOscillations/SNID" target= "_blank">here</a>.</p>
+                <p> SNID is an experimental patchable drone synth with three main components, a clock divider, sine wave oscillator, 
+                    and experimental wave multiplier oscillator.</p>
+                <p> The clock divider can be triggered by the sine wave or wave multiplier oscillators or an external voltage source 
+                    between 0 and 5 volts. The first two divisions are used to create a square sub oscillator while the slower divisions 
+                    from /8 to /4096 are accessible in the patching section as modulation sources.</p>   
+                <p>The multiplier oscillator is based on phase distortion synthesis and generates slopes which read through a sine 
+                    wavetable. The comparator knob moves between negative and postive values with 0 in the center position. When at 
+                    0 the slope is a saw wave which reads through the wavetable linearly outputting a sine wave. At any other comparator 
+                    value when the slope is less than that value it will be multiplied by itself resulting in more harmonically complex 
+                    and unpredictable waveforms. More information can be 
+                    found <a href = "https://github.com/VariableOscillations/SNID" target= "_blank">here</a>.</p>
             </article>
         </main>
         <footer>
