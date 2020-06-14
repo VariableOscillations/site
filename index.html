@@ -3,26 +3,83 @@
     <head>
         <meta charset="utf-8">
         <meta name="keywords" content="variable, oscillations, synthesizer">
-        <title>VO</title>
+        <title>VØ</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    
     <body>
-        <header>
-            <h1><a href = "index.html"> <img src="VO.PNG" alt = "Variable Oscillations" height = "70"> </a></h1>
-            <br/>
-            <a href = "snid.html"> SNID </a>
-        </header>
-        <main>
-
-        </main>
-        <footer>
-            <a href = "https://www.instagram.com/variable_oscillations/" target= "_blank"> INSTAGRAM &nbsp;</a>
-            <a href = "https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target= "_blank"> &nbsp; YOUTUBE &nbsp;</a> 
-            <a href = "https://www.etsy.com/ca/shop/VariableOscillations" target= "_blank"> &nbsp; ETSY &nbsp; </a> 
-            <a href = "about.html"> &nbsp; ABOUT </a>
-            <br/><br/>
-            <p><b>Variable Oscillations</b></p>
-        </footer>  
+        <node class="left">
+            <node class="gate">
+                <img src="node_images/on/vo_on.gif" alt="vo">
+                <a href="vo.html">
+                    <img src="node_images/hover/vo_hover.gif" class="img-top" alt="vo">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/snid_off.gif" alt="snid">
+                <a href="snid.html">
+                    <img src="node_images/hover/snid_hover.gif" class="img-top" alt="vina">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_static.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/gast_off.gif" alt="gast">
+                <a href="gast.html">
+                    <img src="node_images/hover/gast_hover.gif" class="img-top" alt="gast">
+                </a>
+            </node>
+        </node>
+        
+        <node class="right">
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/vina_off.gif" alt="vina">
+                <a href="vina.html">
+                    <img src="node_images/hover/vina_hover.gif" class="img-top" alt="vina">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/deny_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/deny_hover.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+        </node>
+        
+        
+        
+        <node class="selected">
+            <img class="head" src="node_images/test/vo_diagonal_610x200.png" alt="variable oscillations">
+            <section class="blocks">
+                <block class="line"> 
+                    .<br>
+                    .<br>
+                    .<br>
+                    .
+                </block>
+                <block class="line"> 
+                    .<br>
+                    .<br>
+                    .<br>
+                    .
+                </block>
+            </section> 
+        </node>
+        
     </body>
 </html>
