@@ -3,41 +3,125 @@
     <head>
         <meta charset="utf-8">
         <meta name="keywords" content="variable, oscillations, synthesizer">
-        <title>VO</title>
+        <title>SNID</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    
     <body>
-        <header>
-            <h1><a href = "index.html"> <img src="VO.PNG" alt = "Variable Oscillations" height = "70"> </a></h1>
-            <br/>
-            <a href = "snid.html"> <u>SNID</u> </a>
-        </header>
-        <main>
-            <article>   
-                <p><center>Sinusoidal Numeric Incremental Device</center></p>
-                <p> SNID is an experimental patchable drone synth with three main components, a clock divider, sine wave oscillator, 
-                    and experimental wave multiplier oscillator.</p>
-                <br/>
-                <img src="SNID_layout.PNG" alt = "SNID synth">
-                <p> The clock divider can be triggered by the sine wave or wave multiplier oscillators or an external voltage source 
-                    between 0 and 5 volts. The first two divisions are used to create a square sub oscillator while the slower divisions 
-                    from /8 to /4096 are accessible in the patching section as modulation sources.</p>   
-                <p>The multiplier oscillator is based on phase distortion synthesis and generates slopes which read through a sine 
-                    wavetable. The comparator knob moves between negative and postive values with 0 in the center position. When at 
-                    0 the slope is a saw wave which reads through the wavetable linearly outputting a sine wave. At any other comparator 
-                    value when the slope is less than that value it will be multiplied by itself resulting in more harmonically complex 
-                    and unpredictable waveforms. More information can be 
-                    found <a href = "https://github.com/VariableOscillations/SNID" target= "_blank">here</a>.</p>
-            </article>
-        </main>
-        <footer>
-            <a href = "https://www.instagram.com/variable_oscillations/" target= "_blank"> INSTAGRAM &nbsp;</a>
-            <a href = "https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target= "_blank"> &nbsp; YOUTUBE &nbsp;</a> 
-            <a href = "https://www.etsy.com/ca/shop/VariableOscillations" target= "_blank"> &nbsp; ETSY &nbsp; </a> 
-            <a href = "about.html"> &nbsp; ABOUT </a>
-            <br/><br/>
-            <p><b>Variable Oscillations</b></p>
-        </footer>  
+        <node class="left">
+            <node class="gate">
+                <img src="node_images/off/vo_off.gif" alt="vo">
+                <a href="vo.html">
+                    <img src="node_images/hover/vo_hover.gif" class="img-top" alt="vo">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/on/snid_on.gif" alt="snid">
+                <a href="snid.html">
+                    <img src="node_images/hover/snid_hover.gif" class="img-top" alt="vina">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_static.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/gast_off.gif" alt="gast">
+                <a href="gast.html">
+                    <img src="node_images/hover/gast_hover.gif" class="img-top" alt="gast">
+                </a>
+            </node>
+        </node>
+        
+        <node class="right">
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/vina_off.gif" alt="vina">
+                <a href="vina.html">
+                    <img src="node_images/hover/vina_hover.gif" class="img-top" alt="vina">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/deny_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/deny_hover.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+        </node>
+        
+        
+        <node class="selected">
+            <section class="blocks">
+                <block class="title">
+                    <img src="node_images/test/snid_title_test.png" alt="snid">
+                </block>
+                <block class="line">
+                    .<br>
+                    .<br>
+                    .<br>
+                    .
+                </block>
+                <block class="line">  
+                    .<br>
+                    .<br>
+                    .<br>
+                    .
+                </block>
+                <block class="noline">
+                    <block class="right"><img src="snid/snid_waveform.gif"></block>
+                    .<br>
+                    <a id="btn_1" class="btn">[ stored data ]</a>
+                    <br>.<br>.<br>
+                    <a id="btn_2" class="btn">[ architecture ]</a>
+                    <br>.
+                </block>
+            </section> 
+            <br><br><br>
+            
+            <img class="layout" src="snid/snid_layout.png">
+            
+            <div id="dataStream" class="data">
+                <div class="data-storage">
+                    <img src="snid/snid_2_data_w500px.png" alt="data">
+                    <a href="https://github.com/VariableOscillations/SNID/blob/master/sine_punk_oscillator.ino"
+                    target="_blank">[ previously transcribed data file - version 0.1 ]</a>
+                </div>
+            </div>
+            <div id="schematic" class="data">
+                <div class="data-storage">
+                    <img src="snid/snid_schematic.png" alt="data">
+                </div>
+            </div>
+        </node>
+        
+        <script>
+            var modal_1 = document.getElementById("dataStream");
+            var btn_1 = document.getElementById("btn_1"); 
+            var modal_2 = document.getElementById("schematic");
+            var btn_2 = document.getElementById("btn_2");
+            btn_1.onclick = function() {modal_1.style.display = "block";}
+            btn_2.onclick = function() {modal_2.style.display = "block";}
+            window.onclick = function(event) {
+              if (event.target == modal_1 || event.target == modal_2) {
+                modal_1.style.display = "none";
+                modal_2.style.display = "none";
+              }
+            }
+            
+        </script>
+        
+
     </body>
 </html>
