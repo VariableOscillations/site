@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="variable, oscillations, synthesizer">
+        <title>Glitch A Sketch</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <node class="left">
+            <node class="gate">
+                <img src="node_images/off/vo_off.gif" alt="vo">
+                <a href="vo.html">
+                    <img src="node_images/hover/vo_hover.gif" class="img-top" alt="vo">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/snid_off.gif" alt="snid">
+                <a href="snid.html">
+                    <img src="node_images/hover/snid_hover.gif" class="img-top" alt="vina">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_static.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/on/gast_on.gif" alt="gast">
+                <a href="gast.html">
+                    <img src="node_images/hover/gast_hover.gif" class="img-top" alt="gast">
+                </a>
+            </node>
+        </node>
+        
+        <node class="right">
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/vina_off.gif" alt="vina">
+                <a href="vina.html">
+                    <img src="node_images/hover/vina_hover.gif" class="img-top" alt="vina">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+            <node class="gate">
+                <img src="node_images/off/deny_off.gif" alt="corrupt data detected">
+                <a href="denied.html">
+                    <img src="node_images/hover/deny_hover.gif" class="img-top" alt="corrupt data detected">
+                </a>
+            </node>
+        </node>
+        
+        
+        
+        <node class="selected">
+            <section class="blocks">
+                <block class="title">
+                    <img src="node_images/test/gast_white_border.png" alt="glitch a sketch">
+                </block>
+                <block class="line"> 
+                    .<br>
+                    .<br>
+                    .<br>
+                    .
+                </block>
+                <block class="line"> 
+                    .<br>
+                    .<br>
+                    .<br>
+                    .
+                </block>
+                <block class="noline">
+                    .<br>
+                    <a id="btn_1" class="btn"><u>stored data</u></a>
+                    <br>.<br>
+                    <a id="btn_2" class="btn"><u>architecture</u></a>
+                    <br>.
+                </block>
+            </section> 
+            
+            <div id="dataStream" class="data">
+                <div class="data-storage">stored data unavailable</div>
+            </div>
+            <div id="schematic" class="data">
+                <div class="data-storage">architecture diagram unavailable</div>
+            </div>
+        </node>
+        
+        <script>
+            var modal_1 = document.getElementById("dataStream");
+            var btn_1 = document.getElementById("btn_1"); 
+            var modal_2 = document.getElementById("schematic");
+            var btn_2 = document.getElementById("btn_2");
+            btn_1.onclick = function() {modal_1.style.display = "block";}
+            btn_2.onclick = function() {modal_2.style.display = "block";}
+            window.onclick = function(event) {
+              if (event.target == modal_1 || event.target == modal_2) {
+                modal_1.style.display = "none";
+                modal_2.style.display = "none";
+              }
+            }
+            
+        </script>
+        
+
+    </body>
+</html>
