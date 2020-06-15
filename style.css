@@ -80,6 +80,21 @@ node.gate:hover .img-top {
     cursor: cell;
 }
 
+@media (max-width: 768px) {
+    node.left {
+        display: none;
+    }
+    node.right {
+        display: none;
+    }
+    node.selected {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+
 .blocks{
     display: grid;
     grid-gap: 10px;
