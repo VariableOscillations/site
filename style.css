@@ -44,6 +44,10 @@ img.layout {
     max-height: 100%;
     border: 1px solid white;
 }
+img.dat {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 
 
@@ -79,11 +83,11 @@ node.selected {
 node.top {
     margin: auto;
     display: none;
-    border: 1px solid white;
+    margin-top: 40px;
+    text-align: center;
     color: white;
     max-width: 610px;
-    text-align: center;
-    
+    border: 1px solid black;
 }
 node.gate {
     width: 168px;
@@ -103,30 +107,6 @@ node.gate:hover .img-top {
     display: inline;
     cursor: cell;
 }
-
-@media (max-width: 970px) {
-    node.left {
-        display: none;
-    }
-    node.right {
-        display: none;
-    }
-    node.selected {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    node.top {
-        display: block;
-    }
-}
-@media (max-width: 634px) {
-    node.selected {
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 353px;
-    }
-}
-
 
 
 
@@ -162,9 +142,22 @@ block.left {
 
 
 
-.btn{cursor:cell;}
+.btn {
+    cursor:cell;
+}
 
-.data{
+.close {
+    color: white;
+    float: right;
+    font-size: 16px;
+}
+.close:hover {
+    cursor:cell;
+    color: black;
+    background-color: white;
+}
+
+.data {
     display: none;
     position: fixed;
     z-index: 1;
@@ -178,12 +171,43 @@ block.left {
     background-repeat: repeat;
 }
 
-.data-storage{
+.data-storage {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
     text-align: center;
     margin: auto;
     border: 1px solid white;
+    padding: 4px;
     padding-bottom: 24px;
     width: 500px;
+}
+
+
+
+
+@media (max-width: 970px) {
+    node.left {
+        display: none;
+    }
+    node.right {
+        display: none;
+    }
+    node.selected {
+        margin-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    node.top {
+        display: block;
+    }
+}
+@media (max-width: 634px) {
+    node.selected {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 353px;
+    }
+    .data-storage {
+        width: 353px;
+    }
 }
