@@ -8,10 +8,13 @@ body {
     background-attachment: scroll;
     background-position: center 61px;
     max-width: 1200px;
-    min-width: 660px;
+    min-width: 320px;
     border: 1px solid black;
     margin: auto;
 }
+
+
+
 
 a:link {
     text-decoration: none;
@@ -26,17 +29,29 @@ a:hover {
     color: black;
     background-color: white;
 }
+
+
+
+
 img.head {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    padding-bottom: 20px;
-    
+    padding-bottom: 20px; 
 }
+img.layout {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid white;
+}
+
+
+
+
 node.left {
     margin-top: 80px;
     margin-left: 0px;
-    width: 168px;
+    max-width: 168px;
     position: absolute;
     display: block;
     border: 1px solid black;
@@ -51,16 +66,25 @@ node.right {
 }
 node.selected {
     margin: auto;
+    display: block;
     margin-top: 80px;
     padding-left: 178px;
     padding-right: 178px;
-    height: 725px;
-    display: block;
+    min-height: 725px;
     color: white;
     min-width: 300px;
     max-width: 610px;
     border: 1px solid black;
 } 
+node.top {
+    margin: auto;
+    display: none;
+    border: 1px solid white;
+    color: white;
+    max-width: 610px;
+    text-align: center;
+    
+}
 node.gate {
     width: 168px;
     height: 91px;
@@ -80,7 +104,7 @@ node.gate:hover .img-top {
     cursor: cell;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 970px) {
     node.left {
         display: none;
     }
@@ -91,11 +115,24 @@ node.gate:hover .img-top {
         padding-left: 10px;
         padding-right: 10px;
     }
+    node.top {
+        display: block;
+    }
+}
+@media (max-width: 634px) {
+    node.selected {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 353px;
+    }
 }
 
 
 
-.blocks{
+
+
+
+.blocks {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -121,11 +158,7 @@ block.right {
 block.left {
     float: left;
 }
-img.layout {
-    max-width: 100%;
-    max-height: 100%;
-    border: 1px solid white;
-}
+
 
 
 
