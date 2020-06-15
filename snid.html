@@ -8,6 +8,12 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <node class="top">
+            <a href="index.html">VO</a> - - - 
+            <a href="snid.html">SNID</a> - - - 
+            <a href="gast.html">Glitch A Sketch</a> - - - 
+            <a href="vina.html">VINA</a>
+        </node>
         <node class="left">
             <node class="gate">
                 <img src="node_images/off/vo_off.gif" alt="vo">
@@ -63,6 +69,8 @@
         </node>
         
         
+        
+        
         <node class="selected">
             <section class="blocks">
                 <block class="title">
@@ -91,18 +99,25 @@
             </section> 
             <br><br><br>
             
-            <img class="layout" src="snid/snid_layout.png">
+            
+            
+            <picture>
+                <source srcset="snid/snid_layout.png" media="(min-width: 634px)">
+                <img class="layout" src="snid/snid_layout_r.png">
+            </picture>
             
             <div id="dataStream" class="data">
                 <div class="data-storage">
-                    <img src="snid/snid_2_data_w500px.png" alt="data">
+                    <span id="x_1" class="close"> [x] </span>
+                    <img class="dat" src="snid/snid_2_data_w500px.png" alt="data">
                     <a href="https://github.com/VariableOscillations/SNID/blob/master/sine_punk_oscillator.ino"
-                    target="_blank">[ previously transcribed data file - version 0.1 ]</a>
+                    target="_blank">[previously transcribed data file - v0.1]</a>
                 </div>
             </div>
             <div id="schematic" class="data">
                 <div class="data-storage">
-                    <img src="snid/snid_schematic.png" alt="data">
+                    <span id="x_2" class="close"> [x] </span>
+                    <img class="dat" src="snid/snid_schematic.png" alt="data">
                 </div>
             </div>
         </node>
@@ -110,10 +125,14 @@
         <script>
             var modal_1 = document.getElementById("dataStream");
             var btn_1 = document.getElementById("btn_1"); 
+            var x_1 = document.getElementById("x_1");
             var modal_2 = document.getElementById("schematic");
             var btn_2 = document.getElementById("btn_2");
+            var x_2 = document.getElementById("x_2");
             btn_1.onclick = function() {modal_1.style.display = "block";}
             btn_2.onclick = function() {modal_2.style.display = "block";}
+            x_1.onclick = function() {modal_1.style.display = "none";}
+            x_2.onclick = function() {modal_2.style.display = "none";}
             window.onclick = function(event) {
               if (event.target == modal_1 || event.target == modal_2) {
                 modal_1.style.display = "none";
