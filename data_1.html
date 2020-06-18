@@ -3,10 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="keywords" content="variable, oscillations, synthesizer">
-        <title>-̵̪̔-̴̻͗f̸̨͝f̵̝̚l̶̫͌.̶̖̅.̷̘͆.̶̱͗.̶̘͝.̶̻̏</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>-̶͍́-̸̪̕-̶̧̒-̴̢̓.̸͕͋-̸͉̀-̸͍̓-̵̠̉</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+    <body onload="warning()">
+        <node class="top">
+            <a href="index.html">VO</a>
+            <a href="snid.html">SNID</a>
+            <a href="gast.html">Glitch A Sketch</a>
+            <a href="vina.html">VINA</a>
+        </node>
         <node class="left">
             <node class="gate">
                 <img src="node_images/off/vo_off.gif" alt="vo">
@@ -22,7 +29,7 @@
             </node>
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_1.html">
                     <img src="node_images/hover/corrupt_hover_static.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -37,7 +44,7 @@
         <node class="right">
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_2.html">
                     <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -49,13 +56,13 @@
             </node>
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_3.html">
                     <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
             <node class="gate">
                 <img src="node_images/off/deny_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_1.html">
                     <img src="node_images/hover/deny_hover.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -64,13 +71,28 @@
         
         
         <node class="selected">
-            <img class="head" src="node_images/on/deny_on.gif" alt="variable oscillations">
             <section class="blocks">
                 <block class="line"> 
-                    c̶o̵r̴r̶u̴p̸t̶e̴d̵ ̸d̵a̷t̶a̴ ̵d̶e̶t̶e̶c̵t̶e̷d̸  <br><br>  ̷p̷r̵o̷c̷e̴e̸d̸ ̴w̶i̶t̸h̸ ̵c̷a̴u̶t̸i̷o̵n̶
+                    data 1
                 </block>
             </section> 
+            
+            <div id="dataStream" class="data">
+                <div class="data-storage">
+                    <br>DATA CONTAINER BREACH DETECTED
+                    <br><br>DATA FILES CORRUPTED: 12
+                    <br><br>
+                    <span id="x_1" class="proceed"> [ PROCEED WITH CAUTION ] </span>
+                </div>
+            </div>
         </node>
+        
+        <script>
+            function warning() {modal_1.style.display = "block";}
+            var modal_1 = document.getElementById("dataStream");
+            var x_1 = document.getElementById("x_1");
+            x_1.onclick = function() {modal_1.style.display = "none";}
+        </script>
         
     </body>
 </html>
