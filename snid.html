@@ -7,11 +7,21 @@
         <title>SNID</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+    <style>
+        body {
+            background-image: url('bg_images/bg_snid.png');
+        }
+        @media (max-width: 970px) {
+            body {
+                background-image: none;
+                }
+        }
+    </style>
     <body>
         <node class="top">
-            <a href="index.html">VO</a> - - - 
-            <a href="snid.html">SNID</a> - - - 
-            <a href="gast.html">Glitch A Sketch</a> - - - 
+            <a href="index.html">VO</a>
+            <a href="snid.html">SNID</a>
+            <a href="gast.html">Glitch A Sketch</a>
             <a href="vina.html">VINA</a>
         </node>
         <node class="left">
@@ -29,7 +39,7 @@
             </node>
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_1.html">
                     <img src="node_images/hover/corrupt_hover_static.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -44,7 +54,7 @@
         <node class="right">
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_2.html">
                     <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -56,13 +66,13 @@
             </node>
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_3.html">
                     <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
             <node class="gate">
                 <img src="node_images/off/deny_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_1.html">
                     <img src="node_images/hover/deny_hover.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -74,7 +84,7 @@
         <node class="selected">
             <section class="blocks">
                 <block class="title">
-                    <img src="snid/snid_title_image.png" alt="snid">
+                    <img src="snid/snid_title_image.png" alt="SINUSOIDAL NUMERIC INCREMENTAL DEVICE">
                 </block>
                 <block class="line">
                     SNID<br> <br>
@@ -85,8 +95,7 @@
                     rhythmic tones. 
                 </block>
                 <block class="line">  
-                    The wave multiplier oscillator uses a method similar to phase distortion s
-                    ynthesis. However, further testing has shown it to be highly unstable.
+                    The wave multiplier oscillator uses a method similar to phase distortion synthesis. However, further testing has shown it to be highly unstable.
                 </block>
                 <block class="noline">
                     <block class="right"><img src="snid/snid_waveform.gif"></block>
@@ -97,9 +106,8 @@
                     <br>.
                 </block>
             </section> 
+            
             <br><br><br>
-            
-            
             
             <picture>
                 <source srcset="snid/snid_layout.png" media="(min-width: 634px)">
