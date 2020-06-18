@@ -48,6 +48,9 @@ img.dat {
     max-width: 100%;
     max-height: 100%;
 }
+img.fxd {
+    max-width: 300px;
+}
 
 
 
