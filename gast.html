@@ -19,7 +19,7 @@
     </style>
     <body>
         <node class="top">
-            <a href="index.html">VO</a> - - - 
+            <a href="index.html">VØ</a> - - - 
             <a href="snid.html">SNID</a> - - - 
             <a href="gast.html">Glitch A Sketch</a> - - - 
             <a href="vina.html">VINA</a>
@@ -40,7 +40,7 @@
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
                 <a href="data_1.html">
-                    <img src="node_images/hover/corrupt_hover_static.gif" class="img-top" alt="corrupt data detected">
+                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
             <node class="gate">
@@ -83,14 +83,11 @@
         <node class="selected">
             <section class="blocks">
                 <block class="title">
-                    <img src="gast/gast_title_image.png" alt="glitch a sketch">
+                    <img class="fxd" src="gast/gast_title_image.svg" alt="glitch a sketch">
                 </block>
                 <block class="line"> 
                     Glitch-A-Sketch <br> <br>
-                    A portable audio visual plotting machine. It appears to harness the biological creative 
-                    energy of the user, converting it into playful sounds and images. The device often
-                    attempts to utilize data that exceeds its physical boundaries. This results in displayed 
-                    images and sounds of an unknown origin.
+                    A portable audio visual plotting machine. It appears to harness the biological creative energy of the user, converting it into playful sounds and images. The device often attempts to utilize data that exceeds its physical boundaries. This results in displayed images and sounds of an unknown origin.
                 </block>
                 <block class="line"> 
                     .<br>
@@ -116,20 +113,30 @@
             </picture>
             
             <div id="dataStream" class="data">
-                <div class="data-storage">stored data unavailable</div>
+                <div class="data-storage">
+                    <span id="x_1" class="close"> [x] </span>
+                    stored data unavailable
+                </div>
             </div>
             <div id="schematic" class="data">
-                <div class="data-storage">architecture diagram unavailable</div>
+                <div class="data-storage">
+                    <span id="x_2" class="close"> [x] </span>
+                    architecture diagram unavailable
+                </div>
             </div>
         </node>
         
         <script>
             var modal_1 = document.getElementById("dataStream");
             var btn_1 = document.getElementById("btn_1"); 
+            var x_1 = document.getElementById("x_1");
             var modal_2 = document.getElementById("schematic");
             var btn_2 = document.getElementById("btn_2");
+            var x_2 = document.getElementById("x_2");
             btn_1.onclick = function() {modal_1.style.display = "block";}
             btn_2.onclick = function() {modal_2.style.display = "block";}
+            x_1.onclick = function() {modal_1.style.display = "none";}
+            x_2.onclick = function() {modal_2.style.display = "none";}
             window.onclick = function(event) {
               if (event.target == modal_1 || event.target == modal_2) {
                 modal_1.style.display = "none";
