@@ -7,11 +7,21 @@
         <title>Glitch A Sketch</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+    <style>
+        body {
+            background-image: url('bg_images/bg_gast.png');
+        }
+        @media (max-width: 970px) {
+            body {
+                background-image: none;
+                }
+        }
+    </style>
     <body>
         <node class="top">
-            <a href="index.html">VO</a> - - - 
-            <a href="snid.html">SNID</a> - - - 
-            <a href="gast.html">Glitch A Sketch</a> - - - 
+            <a href="index.html">VO</a>  
+            <a href="snid.html">SNID</a>
+            <a href="gast.html">Glitch A Sketch</a> 
             <a href="vina.html">VINA</a>
         </node>
         <node class="left">
@@ -29,7 +39,7 @@
             </node>
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_1.html">
                     <img src="node_images/hover/corrupt_hover_static.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -44,7 +54,7 @@
         <node class="right">
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_2.html">
                     <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -56,13 +66,13 @@
             </node>
             <node class="gate">
                 <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_3.html">
                     <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
             <node class="gate">
                 <img src="node_images/off/deny_off.gif" alt="corrupt data detected">
-                <a href="data.html">
+                <a href="data_1.html">
                     <img src="node_images/hover/deny_hover.gif" class="img-top" alt="corrupt data detected">
                 </a>
             </node>
@@ -73,13 +83,11 @@
         <node class="selected">
             <section class="blocks">
                 <block class="title">
-                    <img src="node_images/test/gast_white_border.png" alt="glitch a sketch">
+                    <img src="gast/gast_title_image.png" alt="glitch a sketch">
                 </block>
                 <block class="line"> 
-                    .<br>
-                    .<br>
-                    .<br>
-                    .
+                    Glitch-A-Sketch <br> <br>
+                    A portable audio visual plotting machine. It appears to harness the biological creative energy of the user, converting it into playful sounds and images. At times the device attempts to utilize data that exceeds its physical boundaries. This results in displayed images and sounds of an unknown origin.
                 </block>
                 <block class="line"> 
                     .<br>
@@ -88,6 +96,7 @@
                     .
                 </block>
                 <block class="noline">
+                    <block class="right"><img src="test/waveform_scope.gif"></block>
                     .<br>
                     <a id="btn_1" class="btn"><u>stored data</u></a>
                     <br>.<br>
@@ -95,6 +104,13 @@
                     <br>.
                 </block>
             </section> 
+            
+            <br><br><br>
+            
+            <picture>
+                <source srcset="test/gast_3d.png" media="(min-width: 634px)">
+                <img class="layout" src="snid/snid_layout_r.png" alt="glitch_a_sketch">
+            </picture>
             
             <div id="dataStream" class="data">
                 <div class="data-storage">stored data unavailable</div>
