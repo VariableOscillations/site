@@ -7,6 +7,16 @@
         <title>-̶͍́-̸̪̕-̶̧̒-̴̢̓.̸͕͋-̸͉̀-̸͍̓-̵̠̉</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+    <style>
+        body {
+            background-image: url('bg_images/bg_3_data1.png');
+        }
+        @media (max-width: 970px) {
+            body {
+                background-image: none;
+                }
+        }
+    </style>
     <body onload="warning()">
         <node class="top">
             <a href="index.html">VØ</a> - - - 
@@ -28,7 +38,7 @@
                 </a>
             </node>
             <node class="gate">
-                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <img src="node_images/hover/corrupt_hover_fill.gif" alt="corrupt data detected">
                 <a href="data_1.html">
                     <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
                 </a>
@@ -72,19 +82,31 @@
         
         <node class="selected">
             <section class="blocks">
-                <block class="line"> ! </block>
-                <block class="line"> ! </block>
-                <block class="noline"> ! </block>
-                <block class="noline"> ! </block>
-                <block class="line"> ! </block>
-                <block class="line"> ! </block>
-                <block class="noline"> ! </block>
-                <block class="noline"> ! </block>
-                <block class="line"> ! </block>
-                <block class="line"> ! </block>
-                <block class="line"> ! </block>
-                <block class="line"> ! </block>
+                <block class="title">
+                    <img class="fxd" src="test/data_corruption_1_test.gif" alt="---">
+                </block>
+                <block class="title">
+                    <img class="fxd" src="test/data_1_text_1.gif" alt="---">
+                </block>
+                <block class="title">
+                    <img class="fxd" src="test/data_1_text_2.gif" alt="---">
+                </block>
+                <block class="noline">
+                    <block class="right"><img src="test/corrupt_scope.gif"></block>
+                    .<br>
+                    [ -̸̪̕-̶̧̒-̴̢̓.̸͕͋-̸͉̀-̸͍̓-̵̠̉ ]
+                    <br>.<br>.<br>
+                    [ -̶͍́-̸̪̕-̴̢̓.̸͕͋-̸͍̓-̵̠̉ ]
+                    <br>.
+                </block>
             </section> 
+            
+            <br><br><br>
+            
+            <picture>
+                <source srcset="corrupt/data_intercept_2.gif" media="(min-width: 634px)">
+                <img class="layout" src="corrupt/data_intercept_2_r.gif" alt="---------">
+            </picture>
             
             <div id="dataStream" class="data">
                 <div class="data-storage">
