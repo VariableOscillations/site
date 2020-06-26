@@ -122,17 +122,25 @@ node.gate:hover .img-top {
 block.title {
     display: relative;
     text-align:center;
-    background-image: url(bg_images/dot_screen_2.png);    
+    border-bottom: 1px solid white;
+    background-image: url(00_bg_images/dot_screen_2.png);    
 }
 block.line {
     position: relative;
-    padding: 10px;
+    padding: 8px;
+    padding-top: 6px;
     border: 1px solid white;
-    background-image: url(bg_images/dot_screen_2.png);
+    background-image: url(00_bg_images/dot_screen_2.png);
+    font-size: 14px;
 }
 block.noline {
     position: relative;
     text-align: center;
+}
+block.nolinebg {
+    position: relative;
+    text-align: center;
+    background-image: url(00_bg_images/dot_screen_2.png); 
 }
 block.right {
     float: right;
@@ -178,7 +186,7 @@ block.left {
     width: 100%;
     height: calc(100% - 120px);
     overflow: auto;
-    background-image: url(bg_images/dot_screen_2.png);
+    background-image: url(00_bg_images/dot_screen_2.png);
     background-repeat: repeat;
 }
 
@@ -225,6 +233,7 @@ block.left {
         width: 353px;
     }
     block.title {
+        border-bottom: none;
         border-left: 1px solid white;
         border-right: 1px solid white;
     }

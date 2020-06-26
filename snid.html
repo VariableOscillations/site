@@ -9,7 +9,7 @@
     </head>
     <style>
         body {
-            background-image: url('bg_images/bg_2_snid.png');
+            background-image: url('00_bg_images/bg_2_snid.png');
         }
         @media (max-width: 970px) {
             body {
@@ -26,54 +26,54 @@
         </node>
         <node class="left">
             <node class="gate">
-                <img src="node_images/off/vo_off.gif" alt="vo">
+                <img src="01_node_images/off/vo_off.gif" alt="vo">
                 <a href="index.html">
-                    <img src="node_images/hover/vo_hover.gif" class="img-top" alt="vo">
+                    <img src="01_node_images/hover/vo_hover.gif" class="img-top" alt="vo">
                 </a>
             </node>
             <node class="gate">
-                <img src="node_images/on/snid_on.gif" alt="snid">
+                <img src="01_node_images/on/snid_on.gif" alt="snid">
                 <a href="snid.html">
-                    <img src="node_images/hover/snid_hover.gif" class="img-top" alt="vina">
+                    <img src="01_node_images/hover/snid_hover.gif" class="img-top" alt="vina">
                 </a>
             </node>
             <node class="gate">
-                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <img src="01_node_images/off/corrupt_1_off.gif" alt="---">
                 <a href="data_1.html">
-                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                    <img src="01_node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="---">
                 </a>
             </node>
             <node class="gate">
-                <img src="node_images/off/gast_off.gif" alt="gast">
+                <img src="01_node_images/off/gast_off.gif" alt="gast">
                 <a href="gast.html">
-                    <img src="node_images/hover/gast_hover.gif" class="img-top" alt="gast">
+                    <img src="01_node_images/hover/gast_hover.gif" class="img-top" alt="gast">
                 </a>
             </node>
         </node>
         
         <node class="right">
             <node class="gate">
-                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <img src="01_node_images/off/corrupt_1_off.gif" alt="---">
                 <a href="data_2.html">
-                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                    <img src="01_node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="---">
                 </a>
             </node>
             <node class="gate">
-                <img src="node_images/off/vina_off.gif" alt="vina">
+                <img src="01_node_images/off/vina_off.gif" alt="vina">
                 <a href="vina.html">
-                    <img src="node_images/hover/vina_hover.gif" class="img-top" alt="vina">
+                    <img src="01_node_images/hover/vina_hover.gif" class="img-top" alt="vina">
                 </a>
             </node>
             <node class="gate">
-                <img src="node_images/off/corrupt_1_off.gif" alt="corrupt data detected">
+                <img src="01_node_images/off/corrupt_1_off.gif" alt="---">
                 <a href="data_3.html">
-                    <img src="node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="corrupt data detected">
+                    <img src="01_node_images/hover/corrupt_hover_fill.gif" class="img-top" alt="c---">
                 </a>
             </node>
             <node class="gate">
-                <img src="node_images/off/deny_off.gif" alt="corrupt data detected">
+                <img src="01_node_images/off/deny_off.gif" alt="---">
                 <a href="data_1.html">
-                    <img src="node_images/hover/deny_hover.gif" class="img-top" alt="corrupt data detected">
+                    <img src="01_node_images/hover/deny_hover.gif" class="img-top" alt="---">
                 </a>
             </node>
         </node>
@@ -84,50 +84,45 @@
         <node class="selected">
             <section class="blocks">
                 <block class="title">
-                    <img class="fxd" src="snid/snid_title_image.svg" alt="SINUSOIDAL NUMERIC INCREMENTAL DEVICE">
+                    <img class="fxd" src="02_title_images/snid_title_image.svg" alt="SINUSOIDAL NUMERIC INCREMENTAL DEVICE">
                 </block>
                 <block class="line">
-                    SNID<br> <br>
                     An experimental patchable drone synthesizer with 
                     three main components, a clock divider, sine wave oscillator, 
                     and wave multiplier oscillator. While at times the device emits sounds 
                     that could be perceived as pleasant, it predominantly emits harsh 
-                    rhythmic tones. 
+                    rhythmic tones. The rate of which are based on divisions of the oscillator frequecies.
                 </block>
                 <block class="line">  
-                    The wave multiplier oscillator uses a method similar to phase distortion synthesis. However, further testing has shown it to be highly unstable.
+                    The wave multiplier oscillator seems similar to phase distortion synthesis. However, further testing has shown it to be highly unstable.
                 </block>
                 <block class="noline">
-                    <block class="right"><img src="snid/snid_waveform.gif"></block>
+                    <block class="right"><img src="03_sel_images/snid/snid_scope.gif"></block>
                     .<br>
                     <a id="btn_1" class="btn">[ stored data ]</a>
                     <br>.<br>.<br>
                     <a id="btn_2" class="btn">[ architecture ]</a>
                     <br>.
-                    
-                    
-
-
                 </block>
             </section> 
             
             <br><br><br>
             
             <picture>
-                <source srcset="snid/snid_layout.svg" media="(min-width: 634px)">
-                <img class="layout" src="snid/snid_layout_r.svg" alt="SNID">
+                <source srcset="03_sel_images/snid/snid_layout.svg" media="(min-width: 634px)">
+                <img class="layout" src="03_sel_images/snid/snid_layout_r.svg" alt="SNID">
             </picture>
             
             <div id="dataStream" class="data">
                 <div class="data-storage">
                     <span id="x_1" class="close"> [x] </span>
-                    <img class="dat" src="snid/snid_2_data_w500px.svg" alt="data">
+                    <img class="dat" src="03_sel_images/snid/snid_2_data.svg" alt="data">
                     <a href="https://github.com/VariableOscillations/SNID/blob/master/sine_punk_oscillator.ino"
                     target="_blank">[ previously transcribed data file - v0.1 ]</a>
                     <br> <br>
-                    <audio id="player" src="snid/snid2demo01.mp3"></audio>
+                    <audio id="player" src="04_audio/snid_transmission.mp3"></audio>
                     <div> 
-                        archived energy transmission - 
+                        archived energy transmission <br>
                         <a class="btn" onclick="document.getElementById('player').play()">[ play ]</a> 
                         <a class="btn" onclick="document.getElementById('player').pause()">[ pause ]</a> 
                     </div>
@@ -136,7 +131,7 @@
             <div id="schematic" class="data">
                 <div class="data-storage">
                     <span id="x_2" class="close"> [x] </span>
-                    <img class="dat" src="snid/snid_schematic.svg" alt="data">
+                    <img class="dat" src="03_sel_images/snid/snid_schematic.svg" alt="data">
                 </div>
             </div>
         </node>
