@@ -98,11 +98,12 @@
                 </block>
                 <block class="noline">
                     <block class="right"><img src="03_sel_images/snid/snid_scope.gif"></block>
-                    .<br>
+                    <br>
                     <a id="btn_1" class="btn">[ stored data ]</a>
-                    <br>.<br>.<br>
+                    <br><br>
                     <a id="btn_2" class="btn">[ architecture ]</a>
-                    <br>.
+                    <br><br>
+                    <a id="btn_3" class="btn">[ transmissions ]</a>
                 </block>
             </section> 
             
@@ -120,18 +121,28 @@
                     <a href="https://github.com/VariableOscillations/SNID/blob/master/sine_punk_oscillator.ino"
                     target="_blank">[ previously transcribed data file - v0.1 ]</a>
                     <br> <br>
-                    <audio id="player" src="04_audio/snid_transmission.mp3"></audio>
-                    <div> 
-                        archived energy transmission <br>
-                        <a class="btn" onclick="document.getElementById('player').play()">[ play ]</a> 
-                        <a class="btn" onclick="document.getElementById('player').pause()">[ pause ]</a> 
-                    </div>
+                    
                 </div>
             </div>
             <div id="schematic" class="data">
                 <div class="data-storage">
                     <span id="x_2" class="close"> [x] </span>
                     <img class="dat" src="03_sel_images/snid/snid_schematic.svg" alt="data">
+                </div>
+            </div>
+            <div id="transmissions" class="data">
+                <div class="data-storage">
+                    <span id="x_3" class="close"> [x] </span>
+                    <audio id="player" src="04_audio/snid_transmission.mp3"></audio>
+                    <div> 
+                        <br>--------------------
+                        <br><br><br><br><br><br><br><br>
+                        archived energy transmission 1 
+                        <a class="btn" onclick="document.getElementById('player').play()">[ play ]</a> 
+                        <a class="btn" onclick="document.getElementById('player').pause()">[ pause ]</a> 
+                        <br><br><br><br><br><br><br><br>
+                        --------------------
+                    </div>
                 </div>
             </div>
         </node>
@@ -143,14 +154,20 @@
             var modal_2 = document.getElementById("schematic");
             var btn_2 = document.getElementById("btn_2");
             var x_2 = document.getElementById("x_2");
+            var modal_3 = document.getElementById("transmissions");
+            var btn_3 = document.getElementById("btn_3"); 
+            var x_3 = document.getElementById("x_3");
             btn_1.onclick = function() {modal_1.style.display = "block";}
             btn_2.onclick = function() {modal_2.style.display = "block";}
+            btn_3.onclick = function() {modal_3.style.display = "block";}
             x_1.onclick = function() {modal_1.style.display = "none";}
             x_2.onclick = function() {modal_2.style.display = "none";}
+            x_3.onclick = function() {modal_3.style.display = "none";}
             window.onclick = function(event) {
               if (event.target == modal_1 || event.target == modal_2) {
                 modal_1.style.display = "none";
                 modal_2.style.display = "none";
+                modal_3.style.display = "none";
               }
             }
         </script>
