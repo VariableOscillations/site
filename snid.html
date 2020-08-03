@@ -137,9 +137,11 @@
                     <div> 
                         <br>--------------------
                         <br><br><br><br><br><br><br><br>
-                        archived energy transmission 1 
-                        <a class="btn" onclick="document.getElementById('player').play()">[ play ]</a> 
-                        <a class="btn" onclick="document.getElementById('player').pause()">[ pause ]</a> 
+                        Archived Energy Transmissions
+                        <br>
+                        <br><br> 1 --- 
+                        <a class="btn" onclick="document.getElementById('player').play()">[ ▶ ]</a> 
+                        <a class="btn" onclick="document.getElementById('player').pause()">[ ❚❚ ]</a> 
                         <br><br><br><br><br><br><br><br>
                         --------------------
                     </div>
@@ -164,7 +166,7 @@
             x_2.onclick = function() {modal_2.style.display = "none";}
             x_3.onclick = function() {modal_3.style.display = "none";}
             window.onclick = function(event) {
-              if (event.target == modal_1 || event.target == modal_2) {
+              if (event.target == modal_1 || event.target == modal_2 || event.target == modal_3) {
                 modal_1.style.display = "none";
                 modal_2.style.display = "none";
                 modal_3.style.display = "none";

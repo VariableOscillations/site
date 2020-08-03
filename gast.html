@@ -93,11 +93,12 @@
                 </block>
                 <block class="noline">
                     <block class="right"><img src="03_sel_images/sine_scope.gif"></block>
-                    .<br>
+                    <br>
                     <a id="btn_1" class="btn">[ stored data ]</a>
-                    <br>.<br>.<br>
+                    <br><br>
                     <a id="btn_2" class="btn">[ architecture ]</a>
-                    <br>.
+                    <br><br>
+                    <a id="btn_3" class="btn">[ transmissions ]</a>
                 </block>
             </section> 
             
@@ -124,6 +125,35 @@
                     <img class="dat" src="03_sel_images/gast/gast_schematic.svg" alt="data">
                 </div>
             </div>
+        <div id="transmissions" class="data">
+                <div class="data-storage">
+                    <span id="x_3" class="close"> [x] </span>
+                    <audio id="note_range" src="04_audio/gast/01_note_range.mp3"></audio>
+                    <audio id="index_error" src="04_audio/gast/02_index_error.mp3"></audio>
+                    <audio id="arp" src="04_audio/gast/03_arpeggiator.mp3"></audio>
+                    <audio id="sinepunk" src="04_audio/gast/04_sinepunk.mp3"></audio>
+                    <div> 
+                        <br>--------------------
+                        <br><br><br><br><br><br><br><br>
+                        Archived Energy Transmissions 
+                        <br>
+                        <br><br> note_freq_range.aet -
+                        <a class="btn" onclick="document.getElementById('note_range').play()">[ ▶ ]</a> 
+                        <a class="btn" onclick="document.getElementById('note_range').pause()">[ ❚❚ ]</a> 
+                        <br><br> index_error.aet -----
+                        <a class="btn" onclick="document.getElementById('index_error').play()">[ ▶ ]</a> 
+                        <a class="btn" onclick="document.getElementById('index_error').pause()">[ ❚❚ ]</a> 
+                        <br><br> arpeggiator.aet -----
+                        <a class="btn" onclick="document.getElementById('arp').play()">[ ▶ ]</a> 
+                        <a class="btn" onclick="document.getElementById('arp').pause()">[ ❚❚ ]</a> 
+                        <br><br> boundary_limit.aet --
+                        <a class="btn" onclick="document.getElementById('sinepunk').play()">[ ▶ ]</a> 
+                        <a class="btn" onclick="document.getElementById('sinepunk').pause()">[ ❚❚ ]</a> 
+                        <br><br><br><br><br><br><br><br>
+                        --------------------
+                    </div>
+                </div>
+            </div>
         </node>
         
         <script>
@@ -133,17 +163,22 @@
             var modal_2 = document.getElementById("schematic");
             var btn_2 = document.getElementById("btn_2");
             var x_2 = document.getElementById("x_2");
+            var modal_3 = document.getElementById("transmissions");
+            var btn_3 = document.getElementById("btn_3"); 
+            var x_3 = document.getElementById("x_3");
             btn_1.onclick = function() {modal_1.style.display = "block";}
             btn_2.onclick = function() {modal_2.style.display = "block";}
+            btn_3.onclick = function() {modal_3.style.display = "block";}
             x_1.onclick = function() {modal_1.style.display = "none";}
             x_2.onclick = function() {modal_2.style.display = "none";}
+            x_3.onclick = function() {modal_3.style.display = "none";}
             window.onclick = function(event) {
-              if (event.target == modal_1 || event.target == modal_2) {
+              if (event.target == modal_1 || event.target == modal_2 || event.target == modal_3) {
                 modal_1.style.display = "none";
                 modal_2.style.display = "none";
+                modal_3.style.display = "none";
               }
             }
-            
         </script>
         
 
