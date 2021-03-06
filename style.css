@@ -895,8 +895,22 @@ block.noline {
     block.fixed {
         font-size: 14px;
     }
+    .modal {
+        padding-top: 40px;
+    }
     iframe.doc {
         height: 270px;
+    }
+}
+
+@media (max-height: 900px) {
+    .modal {
+        padding-top: 50px;
+    }
+}
+@media (max-height: 800px) {
+    .modal {
+        padding-top: 20px;
     }
 }
 
