@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VO</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="variable, oscillations, synthesizer, about">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Content-Language" content="english">
+        <meta name="description" content="Variable Oscillations Auxiliary Research Station">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            modal {
+                padding-top: 0px;
+                background-image: none;
+                position: relative;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+        
+        <node class="gate">
+            <a href="about.html">
+                <img class="logo" src="00_bg_images/vo_64x32_dot.svg">
+            </a>
+            
+            <a href="about.html">
+                <img class="img-top" src="00_bg_images/vo_64x32_hover.gif">
+            </a>
+        </node>
+        
+        <node class="gate">
+            <a class="btn_theme">&#9728;</a>
+        </node>
+        
+        <a class="text" href="index.html">
+            Variable Oscillations <br> 
+            <a class="scale" href="index.html">Auxiliary Research Station</a>
+        </a> 
+        <br><br><br><br>
+        
+        <!-- - - - - - - - - - - - - main - - - - - - - - - - - - -->
+        
+        <div>
+            <p style="text-align: left">
+                <br>
+                The primary function of the research station is the exploration of auditory energy fields, to gain an understanding of their terrain and the innate knowledge they possess. Such intangible spaces are accessed through the uncovering of esoteric synthesizer technologies and the development of small scale electromechanical structures. The use of these technologies allows for the researchers of the facility to scan through the various composite waves of the surrounding space time, searching for those resonant frequencies that are bound to the energy fields.
+                <br><br>
+            </p>
+            <br>
+            <p style="border: none">
+                Synthesizer manifestation site location: 51.0758°N, 114.0850°W
+                <br><br><br>
+                Founded by researchers <a class="btn">[ 3112122113 ]</a> and <a class="btn">[ 11253 ]</a>
+            </p>
+        </div>
+        
+        <!-- - - - - - - - - - 3112122113 - - - - - - - - - -->
+        
+        <div class="modal-about" style="position:relative">
+            <p style="border: none">
+                Other works by researcher 3112122113:
+                <br><br><br><br>
+                <a class="text" href="https://shower.bandcamp.com/releases" target="_blank">
+                    [ Shower ]
+                </a>
+                <br><br>
+                <a class="text" href="https://lessthen3.bandcamp.com/album/thermodynamics" target="_blank">
+                    [ Thermodynamics ]
+                </a>
+            </p>
+        </div>
+        
+        <!-- - - - - - - - - - 11253 - - - - - - - - - -->
+        
+        <div class="modal-about" style="position:relative">
+            <p style="border: none">
+                Other works by researcher 11253:
+                <br><br><br><br>
+                <a class="text" href="https://www.youtube.com/channel/UCNoNxV4ERrVTS3rXLEaBguA" target="_blank">
+                    [ Audio Visual Compositions ]
+                </a>
+                <br><br>
+                <a class="text" href="https://11253.bandcamp.com/" target="_blank">
+                    [ Sound Experiments ]
+                </a>
+                <br><br>
+                <a class="text" href="https://lsehumanmemory.bandcamp.com/" target="_blank">
+                    [ Life System Emulator ]
+                </a>
+                <br><br>
+                <a class="text" href="https://youtu.be/0OAz9qltzpk" target="_blank">
+                    [ Goodnight No. 1 ]
+                </a>
+                <br><br>
+                <a class="text" href="index0.html">
+                    [ Auxiliary Research Station ]
+                </a> 
+                <br><br>
+            </p>
+        </div>
+            
+        <!-- - - - - - - - - - - - - script - - - - - - - - - - - - -->
+        
+        <script>
+            // - - - - - - - - - - - - theme - - - - - - - - - - - -
+            
+            const togl = document.querySelector(".btn_theme");
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme == "dark") {
+                document.body.classList.toggle("dark-theme");
+            } else if (currentTheme == "light") {
+                document.body.classList.toggle("light-theme");
+            }
+
+            togl.addEventListener("click", function () {
+                if (prefersDarkScheme.matches) {
+                    document.body.classList.toggle("light-theme");
+                    var theme = document.body.classList.contains("light-theme")
+                    ? "light"
+                    : "dark";
+                } else {
+                    document.body.classList.toggle("dark-theme");
+                    var theme = document.body.classList.contains("dark-theme")
+                    ? "dark"
+                    : "light";
+                }
+                localStorage.setItem("theme", theme);
+            });
+            
+            // - - - - - - - - - - - - drop downs - - - - - - - - - - - -
+            
+            var btn = document.getElementsByClassName("btn");
+            var mdl = document.getElementsByClassName("modal-about");
+            
+            btn[0].onclick = function() { 
+                mdl[0].style.display = "block"; 
+                mdl[1].style.display = "none";
+            }
+            
+            btn[1].onclick = function() { 
+                mdl[1].style.display = "block"; 
+                mdl[0].style.display = "none";
+            }
+        </script>
+        
+    </body>
+</html>

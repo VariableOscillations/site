@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VOID</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="variable, oscillations, synthesizer, snid">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Content-Language" content="english">
+        <meta name="description" content="Variable Oscillations Auxiliary Research Station">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <h3><a class="void" href="index.html">hello there</a></h3>
+        
+        <script>
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme == "dark") {
+                document.body.classList.toggle("dark-theme");
+            } else if (currentTheme == "light") {
+                document.body.classList.toggle("light-theme");
+            }
+        </script>
+    </body>
+</html>

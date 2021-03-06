@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visual</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="variable, oscillations, synthesizer, glitch a sketch">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Content-Language" content="english">
+        <meta name="description" content="Glitch A Sketch">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        
+        <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+        
+        <node class="gate">
+            <a href="about.html">
+                <img class="logo" src="00_bg_images/vo_64x32_dot.svg">
+            </a>
+            
+            <a href="about.html">
+                <img class="img-top" src="00_bg_images/vo_64x32_hover.gif">
+            </a>
+        </node>
+        
+        <node class="gate">
+            <a class="btn_theme">&#9728;</a>
+        </node>
+        
+        <a class="text" href="index.html">
+            Variable Oscillations <br> 
+            <a class="scale" href="index.html">Auxiliary Research Station</a>
+        </a> 
+        <br><br><br><br>
+        
+        <!-- - - - - - - - - - - - - main - - - - - - - - - - - - -->
+        
+        <div class="select">
+            <div class="visual">
+                <section class="blocks">
+                    <block class="noline">
+                        <a class="text" href="snid.html">SNID</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="text" href="varirack.html">VariRack</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="text" href="eve.html">EVE</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="current" href="visual.html">Visual</a>
+                    </block>
+                </section>
+
+                <br><br><br>
+
+                <section class="bigblocks">
+                    <block class="image">
+                        <img class="lim" src="03_documents/glitch/glitchasketch_image.svg">
+                    </block>
+                    <block class="fixed">
+                        Glitch-A-Sketch
+                        <br><br>
+                        A portable audiovisual plotting machine. It appears to harness the biological creative energy of the user, converting it into sounds and images.
+                        <br><br>
+                        The device often attempts to exceed its physical bounds, resulting in displayed data of unknown origins. 
+                    </block>
+                    <block class="fixed">
+                        <br><br><br>
+                        IO: 3.5mm headphone output, coin cell battery powered
+                        <br><br><br>
+                        Dimensions: 86 x 40 x 26 mm
+                    </block>
+                    <block class="fixed" style="text-align: center;">
+                        <br><br>
+                        <img class="right" src="03_documents/scope_gifs/xy_140_3.gif">
+                        <br>
+                        <a class="btn">[ Stored Data ]</a>
+                        <br><br>
+                        <a class="btn">[ Architecture ]</a>
+                        <br><br>
+                        <a class="btn">[ Documentation ]</a>
+                        <br><br>
+                    </block>
+
+                </section>
+            </div>
+            
+            <br><br><br><br><br>
+            
+            <!-- - - - - - - - - - - - - glitch a sketch - - - - - - - - - - - - -->
+            <!--
+            <h2 class="anim">_Glitch-A-Sketch</h2>
+            <section class="bigblocks">
+                <block class="noline">
+                    <img class="adjust" src="03_documents/glitch/glitchasketch_image.png">
+                </block>
+                <block class="line">
+                    A portable audio visual plotting machine. It appears to harness the biological creative energy of the user, converting it into playful sounds and images.
+                    <br><br>
+                    The device often attempts to utilize data that exceeds its physical boundaries. This results in displayed energy of unknown origins. 
+                    
+                </block>
+                <block class="line">
+                    IO: 3.5mm headphone output, coin cell battery powered
+                    <br><br>
+                    Dimensions: 86 x 40 x 26 mm
+                </block>
+                <block class="noline">
+                    <img class="right" src="03_documents/scope_gifs/xy_140_3.gif">
+                    <br>
+                    <a class="btn">[ Stored Data ]</a>
+                    <br><br>
+                    <a class="btn">[ Architecture ]</a>
+                    <br><br>
+                    <a class="btn">[ Documentation ]</a>
+                    <br><br>
+                </block>
+            </section>
+            <h2 class="line">_</h2>
+        </div>
+        
+        <br><br><br>
+        
+        <!-- - - - - - - - - glitch a sketch data - - - - - - - - -->
+        
+        <div class="modal">
+            <div class="modal-content">
+                <a class="close">[ x ]</a>
+                <br><br>
+                <img class="data" id="varimg" style="max-width: 520px;" src="03_documents/glitch/glitch_a_sketch_data_1.svg">
+                <br><br>
+                <button id="minus" onclick="decrement()">&#60;</button>
+                stored data  
+                <label id="display"></label> / 4
+                <button id="plus" onclick="increment()">&#62;</button>
+                
+                <!-- - - - - - - - - multi image- - - - - - - - -->
+                
+                <script type="text/javascript">
+                    var i = 1;
+                    var img = document.getElementById('varimg');
+                    function increment() { 
+                        if (i < 4) {
+                            i++;
+                        } else {
+                            i = 1;
+                        }
+                        document.getElementById("display").innerHTML = i;
+                        if (i == 1) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_1.svg";
+                        }
+                        else if (i == 2) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_2.svg";
+                        }
+                        else if (i == 3) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_3.svg";
+                        }
+                        else if (i == 4) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_4.svg";
+                        }
+                    }
+                    function decrement() { 
+                        if (i > 1) {
+                            i--;
+                        } else {
+                            i = 4;
+                        }
+                        document.getElementById("display").innerHTML = i;
+                        if (i == 1) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_1.svg";
+                        }
+                        else if (i == 2) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_2.svg";
+                        }
+                        else if (i == 3) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_3.svg";
+                        }
+                        else if (i == 4) {
+                            img.src="03_documents/glitch/glitch_a_sketch_data_4.svg";
+                        }
+                    }
+                    document.getElementById("display").innerHTML = i;
+                </script> 
+            </div>
+        </div>
+        
+        <!-- - - - - - - - - glitch a sketch architecture - - - - - - - - -->
+        
+        <div class="modal">
+            <div class="modal-content">
+                <a class="close">[ x ]</a>
+                <br><br><br><br>
+                <img class="data" style="max-width: 470px;" src="03_documents/glitch/glitchasketch_schematic.png">
+            </div>
+        </div>
+        
+        <!-- - - - - - - - - glitch a sketch documentation - - - - - - - - -->
+        
+        <div class="modal">
+            <div class="modal-content">
+                <a class="close">[ x ]</a>
+                <br><br>
+                <img class="pic" id="varimg_2" src="03_documents/glitch/glitch_01.jpg">
+                <br><br>
+                <button id="minus_2" onclick="decrement_2()">&#60;</button>
+                document 
+                <label id="display_2"></label> / 3
+                <button id="plus_2" onclick="increment_2()">&#62;</button>
+                
+                <!-- - - - - - - - - multi image- - - - - - - - -->
+                
+                <script type="text/javascript">
+                    var j = 1;
+                    var img_2 = document.getElementById('varimg_2');
+                    function increment_2() { 
+                        if (j < 3) {
+                            j++;
+                        } else {
+                            j = 1;
+                        }
+                        document.getElementById("display_2").innerHTML = j;
+                        if (j == 1) {
+                            img_2.src="03_documents/glitch/glitch_01.jpg";
+                        }
+                        else if (j == 2) {
+                            img_2.src="03_documents/glitch/glitch_02.jpg";
+                        }
+                        else if (j == 3) {
+                            img_2.src="03_documents/glitch/glitch_03.jpg";
+                        }
+                    }
+                    function decrement_2() { 
+                        if (j > 1) {
+                            j--;
+                        } else {
+                            j = 3;
+                        }
+                        document.getElementById("display_2").innerHTML = j;
+                        if (j == 1) {
+                            img_2.src="03_documents/glitch/glitch_01.jpg";
+                        }
+                        else if (j == 2) {
+                            img_2.src="03_documents/glitch/glitch_02.jpg";
+                        }
+                        else if (j == 3) {
+                            img_2.src="03_documents/glitch/glitch_03.jpg";
+                        }
+                    }
+                    document.getElementById("display_2").innerHTML = j;
+                </script> 
+            </div>
+        </div>
+        
+        <!-- - - - - - - - - - - - - script - - - - - - - - - - - - -->
+        
+        <script>
+            // - - - - - - - - - - - - theme - - - - - - - - - - - -
+            
+            const togl = document.querySelector(".btn_theme");
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme == "dark") {
+                document.body.classList.toggle("dark-theme");
+            } else if (currentTheme == "light") {
+                document.body.classList.toggle("light-theme");
+            }
+
+            togl.addEventListener("click", function () {
+                if (prefersDarkScheme.matches) {
+                    document.body.classList.toggle("light-theme");
+                    var theme = document.body.classList.contains("light-theme")
+                    ? "light"
+                    : "dark";
+                } else {
+                    document.body.classList.toggle("dark-theme");
+                    var theme = document.body.classList.contains("dark-theme")
+                    ? "dark"
+                    : "light";
+                }
+                localStorage.setItem("theme", theme);
+            });
+            
+            // - - - - - - - - - - - - modals - - - - - - - - - - - -
+            
+            var btn = document.getElementsByClassName("btn");
+            var mdl = document.getElementsByClassName("modal");
+            var close = document.getElementsByClassName("close");
+            
+            btn[0].onclick = function() { mdl[0].style.display = "block"; }
+            close[0].onclick = function() { mdl[0].style.display = "none"; }
+            
+            btn[1].onclick = function() { mdl[1].style.display = "block"; }
+            close[1].onclick = function() { mdl[1].style.display = "none"; }
+            
+            btn[2].onclick = function() { mdl[2].style.display = "block"; }
+            close[2].onclick = function() { mdl[2].style.display = "none"; }
+            
+            window.onclick = function(event) {
+                if (event.target == mdl[0] || event.target == mdl[1] || 
+                    event.target == mdl[2]) {
+                        mdl[0].style.display = "none";
+                        mdl[1].style.display = "none";
+                        mdl[2].style.display = "none";
+                }
+            }
+        </script>
+        
+        <!-- - - - - - - - - - - - - bottom nav - - - - - - - - - - - - -->
+        
+        <div class="btmenu">
+            <section class="botblocks">
+                <block class="noline">
+                    <a class="text" href="https://github.com/VariableOscillations" target="_blank">Github</a>
+                </block>
+                
+                <block class="noline">
+                    <a class="text" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">Youtube</a>
+                </block>
+
+                <block class="noline">
+                <a class="text" href="https://www.instagram.com/var.osc/" target="_blank">Instagram</a>
+                </block>
+
+                <block class="noline">
+                <a class="text" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">Etsy</a>
+                </block>
+            </section>
+        </div>
+        <br><br>
+        
+    </body>
+</html>

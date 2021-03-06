@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EVE</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="variable, oscillations, synthesizer, eve">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Content-Language" content="english">
+        <meta name="description" content="Evolving Vector Environment">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        
+        <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+        
+        <node class="gate">
+            <a href="about.html">
+                <img class="logo" src="00_bg_images/vo_64x32_dot.svg">
+            </a>
+            
+            <a href="about.html">
+                <img class="img-top" src="00_bg_images/vo_64x32_hover.gif">
+            </a>
+        </node>
+        
+        <node class="gate">
+            <a class="btn_theme">&#9728;</a>
+        </node>
+        
+        <a class="text" href="index.html">
+            Variable Oscillations <br> 
+            <a class="scale" href="index.html">Auxiliary Research Station</a>
+        </a> 
+        <br><br><br><br>
+        
+        <!-- - - - - - - - - - - - - main - - - - - - - - - - - - -->
+        
+        <div class="select">
+            <div class="eve">
+                <section class="blocks">
+                    <block class="noline">
+                        <a class="text" href="snid.html">SNID</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="text" href="varirack.html">VariRack</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="current" href="eve.html">EVE</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="text" href="visual.html">Visual</a>
+                    </block>
+                </section>
+
+                <br><br><br>
+
+                <section class="bigblocks">
+                    <block class="image">
+                        <img class="lim" src="02_title_images/eve_title.svg">
+                    </block>
+                    <block class="fixed">
+                        The Evolving Vector Environment is a series of polyphonic digital synthesizers that utilize Vector Phase Shaping [VPS] Synthesis in various forms.
+                        <br><br>
+                        The synthesizers' modules are connected in matrices of attenuators, allowing for flexible audio signal and modulation routing.
+                    </block>
+                    <block class="image">
+                        <br><br><br><br><br>
+                        <a class="text" href="https://www.native-instruments.com/en/reaktor-community/reaktor-user-library/entry/show/12379/" target="_blank">
+                            [ EVE-01 Reaktor Instrument ]
+                        </a>
+                        <br><br>
+                        <a class="text" href="http://eprints.maynoothuniversity.ie/4096/1/vps_dafx11.pdf" target="_blank">
+                            [ Vector Phase Shaping Synthesis ]
+                        </a>
+                    </block>
+                    <block class="image">
+                        <br>
+                        <img src="03_documents/scope_gifs/xy_280.gif">
+                    </block>
+
+                </section>
+            </div>
+        </div>
+        
+        <br><br><br>
+        
+        <!-- - - - - - - - - - - - - script - - - - - - - - - - - - -->
+        
+        <script>
+            // - - - - - - - - - - - - theme - - - - - - - - - - - -
+            
+            const togl = document.querySelector(".btn_theme");
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme == "dark") {
+                document.body.classList.toggle("dark-theme");
+            } else if (currentTheme == "light") {
+                document.body.classList.toggle("light-theme");
+            }
+
+            togl.addEventListener("click", function () {
+                if (prefersDarkScheme.matches) {
+                    document.body.classList.toggle("light-theme");
+                    var theme = document.body.classList.contains("light-theme")
+                    ? "light"
+                    : "dark";
+                } else {
+                    document.body.classList.toggle("dark-theme");
+                    var theme = document.body.classList.contains("dark-theme")
+                    ? "dark"
+                    : "light";
+                }
+                localStorage.setItem("theme", theme);
+            });
+        </script>
+        
+        <!-- - - - - - - - - - - - - bottom nav - - - - - - - - - - - - -->
+        
+        <div class="btmenu">
+            <section class="botblocks">
+                <block class="noline">
+                    <a class="text" href="https://github.com/VariableOscillations" target="_blank">Github</a>
+                </block>
+                
+                <block class="noline">
+                    <a class="text" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">Youtube</a>
+                </block>
+
+                <block class="noline">
+                <a class="text" href="https://www.instagram.com/var.osc/" target="_blank">Instagram</a>
+                </block>
+
+                <block class="noline">
+                <a class="text" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">Etsy</a>
+                </block>
+            </section>
+        </div>
+        <br><br>
+        
+    </body>
+</html>
