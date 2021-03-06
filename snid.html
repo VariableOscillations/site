@@ -310,7 +310,7 @@
                 <br><br>
                 <button id="minus_2" onclick="decrement_2()">&#60;</button>
                 document 
-                <label id="display_2"></label> / 5
+                <label id="display_2"></label> / 8
                 <button id="plus_2" onclick="increment_2()">&#62;</button>
                 
                 <!-- - - - - - - - - multi image- - - - - - - - -->
@@ -320,7 +320,7 @@
                     var img_2 = document.getElementById('varimg_2');
                     var frm_2 = document.getElementById('varfrm_2');
                     function increment_2() { 
-                        if (j < 5) {
+                        if (j < 8) {
                             j++;
                         } else {
                             j = 1;
@@ -336,15 +336,24 @@
                             frm_2.style.display = "none";
                             
                             img_2.style.display = "initial";
-                            img_2.src="03_documents/snid/snidxs_01.jpg";
+                            img_2.src="03_documents/snid/snidxs_tree_01.jpg";
                         }
                         else if (j == 3) {
-                            img_2.src="03_documents/snid/snidxs_02.jpg";
+                            img_2.src="03_documents/snid/snidxs_tree_02.jpg";
                         }
                         else if (j == 4) {
-                            img_2.src="03_documents/snid/snidxs_03.jpg";
+                            img_2.src="03_documents/snid/snidxs_tree_03.jpg";
                         }
                         else if (j == 5) {
+                            img_2.src="03_documents/snid/snidxs_01.jpg";
+                        }
+                        else if (j == 6) {
+                            img_2.src="03_documents/snid/snidxs_02.jpg";
+                        }
+                        else if (j == 7) {
+                            img_2.src="03_documents/snid/snidxs_03.jpg";
+                        }
+                        else if (j == 8) {
                             frm_2.style.display = "none";
                             
                             img_2.style.display = "initial";
@@ -355,7 +364,7 @@
                         if (j > 1) {
                             j--;
                         } else {
-                            j = 5;
+                            j = 8;
                         }
                         document.getElementById("display_2").innerHTML = j;
                         if (j == 1) {
@@ -368,15 +377,24 @@
                             frm_2.style.display = "none";
                             
                             img_2.style.display = "initial";
-                            img_2.src="03_documents/snid/snidxs_01.jpg";
+                            img_2.src="03_documents/snid/snidxs_tree_01.jpg";
                         }
                         else if (j == 3) {
-                            img_2.src="03_documents/snid/snidxs_02.jpg";
+                            img_2.src="03_documents/snid/snidxs_tree_02.jpg";
                         }
                         else if (j == 4) {
-                            img_2.src="03_documents/snid/snidxs_03.jpg";
+                            img_2.src="03_documents/snid/snidxs_tree_03.jpg";
                         }
                         else if (j == 5) {
+                            img_2.src="03_documents/snid/snidxs_01.jpg";
+                        }
+                        else if (j == 6) {
+                            img_2.src="03_documents/snid/snidxs_02.jpg";
+                        }
+                        else if (j == 7) {
+                            img_2.src="03_documents/snid/snidxs_03.jpg";
+                        }
+                        else if (j == 8) {
                             frm_2.style.display = "none";
                             
                             img_2.style.display = "initial";
