@@ -967,6 +967,9 @@ block.noline {
     body img.pic{
         filter: invert(0);
     }
+    body iframe{
+        filter: invert(0);
+    }
 
     body.dark-theme {
         --txt: #e8e8e8;
@@ -979,9 +982,6 @@ block.noline {
     body.dark-theme img {
         filter: invert(0);
     }  
-    body.dark-theme iframe {
-    filter: invert(1);
-}
 }
 
 
