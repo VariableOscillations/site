@@ -907,10 +907,17 @@ block.noline {
     .modal {
         padding-top: 50px;
     }
+    img.data {
+        max-height: 600px;
+        width: auto;
+    }
 }
 @media (max-height: 800px) {
     .modal {
         padding-top: 20px;
+    }
+    img.data {
+        max-height: 500px;
     }
 }
 
@@ -927,7 +934,6 @@ block.noline {
     }
     img.data {
         height: 280px;
-        width: auto;
     }
     iframe.doc {
         height: 280px;
