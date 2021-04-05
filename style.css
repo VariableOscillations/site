@@ -887,10 +887,19 @@ block.noline {
     block.fixed {
         font-size: 14px;
     }
+    block.line {
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 430px) { /* sinlge column */
     a.scale {
+        font-size: 13px;
+    }
+    p {
         font-size: 13px;
     }
     block.fixed {
