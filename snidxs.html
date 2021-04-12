@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SNIDxs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="variable, oscillations, synthesizer, snid">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Content-Language" content="english">
+        <meta name="description" content="Variable Oscillations Auxiliary Research Station">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        
+        <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+        
+        <node class="gate">
+            <a href="about">
+                <img class="logo" src="00_bg_images/vo_64x32_dot.svg">
+            </a>
+            
+            <a href="about">
+                <img class="img-top" src="00_bg_images/vo_64x32_hover.gif">
+            </a>
+        </node>
+        
+        <node class="gate">
+            <a class="btn_theme">&#9728;</a>
+        </node>
+        
+        <a class="text" href="index">
+            Variable Oscillations <br> 
+            <a class="scale" href="index">Auxiliary Research Station</a>
+        </a> 
+        <br><br><br><br>
+        
+        <div>   
+             
+            <!-- - - - - - - - - - - - - SNIDxs - - - - - - - - - - - - -->
+            
+            <h2 class="anim">_ SNIDxs _</h2>
+            <section class="bigblocks">
+                <block class="noline">
+                    <a href="snidxs">
+                        <img class="adjust" src="03_documents/snid/snid_xs_image.png">
+                    </a>
+                </block>
+                <block class="line">
+                    The second discovered subspecies of SNID. Though fairly different in form than the first discovered subspecies it has very similar internal processes and behavioral patterns.
+                    <br><br>
+                    Submodules: WMS oscillator, sine wave / sync oscillator, clock divider, 2 x attenuators, 3 x voltage controlled attenuators
+                </block>
+                <block class="noline">
+                    <br>
+                    <a class="text" href="03_documents/snid/snidxs/SNIDxs_overview.pdf" target="_blank">[ Functional Overview ]</a>
+                    <br><br>
+                    <a class="text" href="03_documents/snid/snidxs/SNIDxs_example_patches.pdf" target="_blank">[ Example Patches ]</a>
+                    <br><br>
+                    <a class="text" href="03_documents/snid/snidxs/SNIDxs_patch_data_storage.pdf" target="_blank">[ External Patch Storage ]</a>
+                </block>
+                <block class="noline">
+                    <img class="right" src="03_documents/scope_gifs/xy_140_2.gif">
+                    <br>
+                    <a class="btn">[ Stored Data ]</a>
+                    <br><br>
+                    <a class="btn">[ Architecture ]</a>
+                    <br><br>
+                    <a class="btn">[ Documentation ]</a>
+                    <br><br>
+                </block>
+            </section>
+            <h2 class="line">_</h2>
+            
+            <br><br><br><br>
+            
+        </div>
+        
+        
+        <!-- - - - - - - - - - SNIDxs data - - - - - - - - - -->
+        
+        <div class="modal">
+            <div class="modal-content">
+                <a class="close">[ x ]</a>
+                <br><br>
+                <img class="data" style="max-width: 520px;" src="03_documents/snid/snid_xs_data.svg">
+                <br><br>
+                stored data transcription in progress
+            </div>
+        </div>
+        
+        <div class="modal">
+            <div class="modal-content">
+                <a class="close">[ x ]</a>
+                <br><br>
+                <img class="data" style="max-width: 470px;" src="03_documents/snid/snid_xs_schematic.svg">
+            </div>
+        </div>
+        
+        <div class="modal">
+            <div class="modal-content">
+                <a class="close">[ x ]</a>
+                <br><br>
+                
+                <img class="pic" id="varimg_2" style="display: none;" src="03_documents/snid/snidxs_01.jpg">
+                
+                <iframe class="doc" id="varfrm_2" frameborder="0" scrolling="no"  style="max-height: 390px;" src="https://www.youtube.com/embed/V-NpB3PR1kA"></iframe>
+                
+                <br><br>
+                <button id="minus_2" onclick="decrement_2()">&#60;</button>
+                document 
+                <label id="display_2"></label> / 8
+                <button id="plus_2" onclick="increment_2()">&#62;</button>
+                
+                <!-- - - - - - - - - multi image- - - - - - - - -->
+                
+                <script type="text/javascript">
+                    var j = 1;
+                    var img_2 = document.getElementById('varimg_2');
+                    var frm_2 = document.getElementById('varfrm_2');
+                    function increment_2() { 
+                        if (j < 8) {
+                            j++;
+                        } else {
+                            j = 1;
+                        }
+                        document.getElementById("display_2").innerHTML = j;
+                        if (j == 1) {
+                            frm_2.style.display = "initial";
+                            frm_2.src="https://www.youtube.com/embed/V-NpB3PR1kA";
+                            
+                            img_2.style.display = "none";
+                        }
+                        else if (j == 2) {
+                            frm_2.style.display = "none";
+                            
+                            img_2.style.display = "initial";
+                            img_2.src="03_documents/snid/snidxs_tree_01.jpg";
+                        }
+                        else if (j == 3) {
+                            img_2.src="03_documents/snid/snidxs_tree_02.jpg";
+                        }
+                        else if (j == 4) {
+                            img_2.src="03_documents/snid/snidxs_tree_03.jpg";
+                        }
+                        else if (j == 5) {
+                            img_2.src="03_documents/snid/snidxs_01.jpg";
+                        }
+                        else if (j == 6) {
+                            img_2.src="03_documents/snid/snidxs_02.jpg";
+                        }
+                        else if (j == 7) {
+                            img_2.src="03_documents/snid/snidxs_03.jpg";
+                        }
+                        else if (j == 8) {
+                            frm_2.style.display = "none";
+                            
+                            img_2.style.display = "initial";
+                            img_2.src="03_documents/snid/snidxs_04.jpg";
+                        }
+                    }
+                    function decrement_2() { 
+                        if (j > 1) {
+                            j--;
+                        } else {
+                            j = 8;
+                        }
+                        document.getElementById("display_2").innerHTML = j;
+                        if (j == 1) {
+                            frm_2.style.display = "initial";
+                            frm_2.src="https://www.youtube.com/embed/V-NpB3PR1kA";
+                            
+                            img_2.style.display = "none";
+                        }
+                        else if (j == 2) {
+                            frm_2.style.display = "none";
+                            
+                            img_2.style.display = "initial";
+                            img_2.src="03_documents/snid/snidxs_tree_01.jpg";
+                        }
+                        else if (j == 3) {
+                            img_2.src="03_documents/snid/snidxs_tree_02.jpg";
+                        }
+                        else if (j == 4) {
+                            img_2.src="03_documents/snid/snidxs_tree_03.jpg";
+                        }
+                        else if (j == 5) {
+                            img_2.src="03_documents/snid/snidxs_01.jpg";
+                        }
+                        else if (j == 6) {
+                            img_2.src="03_documents/snid/snidxs_02.jpg";
+                        }
+                        else if (j == 7) {
+                            img_2.src="03_documents/snid/snidxs_03.jpg";
+                        }
+                        else if (j == 8) {
+                            frm_2.style.display = "none";
+                            
+                            img_2.style.display = "initial";
+                            img_2.src="03_documents/snid/snidxs_04.jpg";
+                        }
+                    }
+                    document.getElementById("display_2").innerHTML = j;
+                </script> 
+            </div>
+        </div>
+        
+        <script>
+            // - - - - - - - - - - - - theme - - - - - - - - - - - -
+            
+            const togl = document.querySelector(".btn_theme");
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme == "dark") {
+                document.body.classList.toggle("dark-theme");
+            } else if (currentTheme == "light") {
+                document.body.classList.toggle("light-theme");
+            }
+
+            togl.addEventListener("click", function () {
+                if (prefersDarkScheme.matches) {
+                    document.body.classList.toggle("light-theme");
+                    var theme = document.body.classList.contains("light-theme")
+                    ? "light"
+                    : "dark";
+                } else {
+                    document.body.classList.toggle("dark-theme");
+                    var theme = document.body.classList.contains("dark-theme")
+                    ? "dark"
+                    : "light";
+                }
+                localStorage.setItem("theme", theme);
+            });
+            
+            
+            // - - - - - - - - - - - - modals - - - - - - - - - - - -
+            
+            var btn = document.getElementsByClassName("btn");
+            var mdl = document.getElementsByClassName("modal");
+            var close = document.getElementsByClassName("close");
+            
+            btn[0].onclick = function() { mdl[0].style.display = "block"; }
+            close[0].onclick = function() { mdl[0].style.display = "none"; }
+            
+            btn[1].onclick = function() { mdl[1].style.display = "block"; }
+            close[1].onclick = function() { mdl[1].style.display = "none"; }
+            
+            btn[2].onclick = function() { mdl[2].style.display = "block"; }
+            close[2].onclick = function() { mdl[2].style.display = "none"; }
+
+            window.onclick = function(event) {
+                if (event.target == mdl[0] || event.target == mdl[1] || 
+                    event.target == mdl[2]) {
+                        mdl[0].style.display = "none";
+                        mdl[1].style.display = "none";
+                        mdl[2].style.display = "none";
+
+                }
+            }
+        </script>
+        
+        <!-- - - - - - - - - - - - - bottom nav - - - - - - - - - - - - -->
+        
+        <br><br><br>
+        <div class="btmenu">
+            <section class="botblocks">
+                <block class="noline">
+                    <a class="scale" href="https://github.com/VariableOscillations" target="_blank">Github</a>
+                </block>
+                
+                <block class="noline">
+                    <a class="scale" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">Youtube</a>
+                </block>
+
+                <block class="noline">
+                <a class="scale" href="https://www.instagram.com/var.osc/" target="_blank">Instagram</a>
+                </block>
+
+                <block class="noline">
+                <a class="scale" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">Etsy</a>
+                </block>
+            </section>
+        </div>
+        <br><br>
+        
+    </body>
+</html>
