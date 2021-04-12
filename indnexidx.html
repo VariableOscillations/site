@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>██</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="variable, oscillations, synthesizer, snid">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Content-Language" content="english">
+        <meta name="description" content="Variable Oscillations Auxiliary Research Station">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        
+        <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+        
+        <node class="gate">
+            <a href="void">
+                <img class="logo" src="00_bg_images/vo_64x32_hover.gif">
+            </a>
+            
+            <a href="void">
+                <img class="img-top" src="00_bg_images/vo_64x32_hover.gif">
+            </a>
+        </node>
+        
+        <node class="gate">
+            <a class="btn_theme">&#9728;</a>
+        </node>
+        
+        <a class="text" href="index2">
+            █a▒█▓b̷͙͛██ ███i̸̻̿/ĺ̶̨a̵̰̓░░█ <br> 
+            <a class="scale" href="index2">███i̶̭͘█i̴̙͌a̴͓̔░▒/███ǎ̸̪██/█▒▒█▓o̴̯̐█</a>
+        </a> 
+        <br><br><br><br>
+        
+        <!-- - - - - - - - - - - - - main - - - - - - - - - - - - -->
+        
+        <div class="select">
+            <div class="main">
+                <section class="blocks">
+                    <block class="noline">
+                        <a class="text" href="void">█N̶̫͘▒█</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="text" href="void">██r̶̤̔i▓██k̶</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="text" href="void">███</a>
+                    </block>
+
+                    <block class="noline">
+                    <a class="text" href="void">V▓▓ṵ̶͘██</a>
+                    </block>
+                </section>
+
+                <br><br><br>
+
+                <section class="bigblocks">
+                    <block class="image">
+                        <a href="void">
+                            <img class="adjust" src="01_select_images/snid_brkn.gif">
+                        </a>
+                    </block>
+                    <block class="image">
+                        <a href="void">
+                            <img class="adjust" src="01_select_images/eve_brkn.gif">
+                        </a>
+                    </block>
+                    <block class="image">
+                        <a href="void">
+                            <img class="adjust" src="01_select_images/varirack_brkn.gif">
+                        </a>
+                    </block>
+                    <block class="image">
+                        <a href="void">
+                            <img class="adjust" src="01_select_images/glitch_brkn.gif">
+                        </a>
+                    </block>
+
+                </section>
+            </div>
+        </div>
+        
+        <!-- - - - - - - - - - - - - script - - - - - - - - - - - - -->
+        
+        <script>
+            // - - - - - - - - - - - - theme - - - - - - - - - - - -
+            
+            const togl = document.querySelector(".btn_theme");
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme == "dark") {
+                document.body.classList.toggle("dark-theme");
+            } else if (currentTheme == "light") {
+                document.body.classList.toggle("light-theme");
+            }
+
+            togl.addEventListener("click", function () {
+                if (prefersDarkScheme.matches) {
+                    document.body.classList.toggle("light-theme");
+                    var theme = document.body.classList.contains("light-theme")
+                    ? "light"
+                    : "dark";
+                } else {
+                    document.body.classList.toggle("dark-theme");
+                    var theme = document.body.classList.contains("dark-theme")
+                    ? "dark"
+                    : "light";
+                }
+                localStorage.setItem("theme", theme);
+            });
+        </script>
+        
+        <!-- - - - - - - - - - - - - bottom nav - - - - - - - - - - - - -->
+        
+        <br><br><br>
+        <div class="btmenu">
+            <section class="botblocks">
+                <block class="noline">
+                    <a class="scale" href="void">██████</a>
+                </block>
+                
+                <block class="noline">
+                    <a class="scale" href="void">█ḯ̴̷̵̶̸̤░u̸̷̷t̷̷̶███</a>
+                </block>
+
+                <block class="noline">
+                <a class="scale" href="void">█n̵s̶t̸▒▒███</a>
+                </block>
+
+                <block class="noline">
+                <a class="scale" href="void">████</a>
+                </block>
+            </section>
+        </div>
+        <br><br>
+        
+    </body>
+</html>
