@@ -1,504 +1,175 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SNID</title>      
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="keywords" content="variable, oscillations, synthesizer, snid">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Content-Language" content="english">
-        <meta name="description" content="Sinusoidal Numeric Incremental Device">
-        
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    
-    <body>
-        <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
-        
-        <node class="gate">
-            <a href="about">
-                <img class="logo" src="00_bg_images/vo_64x32_dot.svg">
-            </a>
-            
-            <a href="about">
-                <img class="img-top" src="00_bg_images/vo_64x32_hover.gif">
-            </a>
+  <head>
+    <title>snid</title>
+    <link rel="icon" type="image/x-icon" href="00_bg_images/vo.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="variable, oscillations, synthesizer, snid">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Content-Language" content="english">
+    <meta name="description" content="Sinusoidal Numeric Incremental Device">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+
+    <div class="top-pad">
+    </div>
+    <div class="top-nav">
+      <!-- - - - - - logo - - - - - -->
+      <node class="gate">
+        <a href="http://varosc.net">
+          <img class="logo" src="00_bg_images/vo_128x64.png">
+        </a>
+        <a href="http://varosc.net">
+          <img class="img-top" src="00_bg_images/vo_64x32_noise.gif">
+        </a>
+      </node>
+      <!-- - - - - - external links - - - - - -->
+      <div class="drop" style="float: right; right: 0;">
+        <node class="ext">
+            External<br>Resources
+            <div class="drop-spacer" style="padding-top: 6px">
+              <div class="drop-ext">
+                <br>
+                <a class="text-left" href="https://github.com/VariableOscillations" target="_blank">
+                  &nbsp;Code -------> GitHubGitHGt
+                </a><br>
+                <a class="text-left" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">
+                  &nbsp;Img / Vid --> YoutubeYotYt
+                </a><br>
+                <a class="text-left" href="https://www.instagram.com/var.osc/" target="_blank">
+                  &nbsp;Img / Vid --> InstagramInt
+                </a><br>
+                <a class="text-left" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">
+                  &nbsp;Purchase ---> EtsyEtEyEtst
+                </a><br><br>
+                <a class="text-left" style="text-align: center;" href="about">About</a>
+                <br>
+              </div>
+            </div>
         </node>
-        
-        <node class="gate">
-            <a class="btn_theme">&#9728;</a>
+        <!-- - - - - - mobile links - - - - - -->
+        <node class="ext-mob">
+          <input id="extrnl" type="checkbox" name="menu" />
+          <label class="lab-mob" for="extrnl">EXT<br>RNL</label>
+          <ul class="submenu">
+            <a style="padding: 8px; text-align:center; pointer-events: none; color: var(--bgnd); background: var(--txt)" href="">External Resources:</a>
+            <br>
+            <a class="text-left" href="https://github.com/VariableOscillations" target="_blank">
+              &nbsp;Code -------> GitHubGitHGt
+            </a><br>
+            <a class="text-left" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">
+              &nbsp;Img / Vid --> YoutubeYotYt
+            </a><br>
+            <a class="text-left" href="https://www.instagram.com/var.osc/" target="_blank">
+              &nbsp;Img / Vid --> InstagramInt
+            </a><br>
+            <a class="text-left" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">
+              &nbsp;Purchase ---> EtsyEtEyEtst
+            </a><br><br>
+            <a class="text-left" style="text-align: center;" href="about">About</a>
+            <br>
+          </ul>
         </node>
-        
-        <a class="text" href="index">
-            Variable Oscillations <br> 
-            <a class="scale" href="index">Auxiliary Research Station</a>
-        </a> 
+      </div>
+      <!-- - - - - - light / dark button - - - - - -->
+      <node class="gate">
+        <a class="btn-theme">&#9728;</a>
+      </node>
+      <!-- - - - - - name / main page link - - - - - -->
+      <div class="indexbox">
+        <a class="textnobg" href="http://varosc.net">Variable Oscillations</a>
+        <br>
+        <a class="scale" href="http://varosc.net">Auxiliary Research Station</a>
+      </div>
+      <div class="indexbox-mob">
+        <a class="textnobg" href="http://varosc.net">Variable</a>
+        <br>
+        <a class="textnobg" href="http://varosc.net">Oscillations</a>
+      </div>
+    </div>
+    <br><br><br>
+
+    <!-- - - - - - - - - - - - - page selection - - - - - - - - - - - - -->
+
+    <div class="selectdev" style="--lyr4: 1011px;">
+      <div class="snid">
+        <div class="dev-nav" id="devnav">
+          <section class="blocks">
+            <block class="noline">
+              <div class="drop">
+                <a class="current" href="snid">SNID</a>
+                <div class="drop-spacer">
+                  <div class="drop-content">
+                    <br>
+                    <a class="text-left" href="snidxs">&nbsp;SNIDxs</a>
+                    <br>
+                    <a class="text-left" href="snidv1">&nbsp;SNIDv1</a>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="bwop">BWOP</a>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="glitch">Glitch</a>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="eve">EVE</a>
+            </block>
+          </section>
+        </div>
         <br><br><br><br>
-        
-        <!-- - - - - - - - - - - - - main - - - - - - - - - - - - -->
-        
-        <div class="select">   
-            <div class="snid">
-                <section class="blocks">
-                    <block class="noline">
-                        <a class="current" href="snid">SNID</a>
-                    </block>
 
-                    <block class="noline">
-                    <a class="text" href="varirack">VariRack</a>
-                    </block>
+        <!-- - - - - - - - - - SNID info - - - - - - - - - -->
 
-                    <block class="noline">
-                    <a class="text" href="eve">EVE</a>
-                    </block>
+        <section class="bigblocks">
+          <block class="image">
+            <img class="lim" src="02_title_images/snid_title.svg">
+          </block>
 
-                    <block class="noline">
-                    <a class="text" href="visual">Visual</a>
-                    </block>
-                </section>
+          <block class="fixed">
+            The Sinusoidal Numeric Incremental Devices [SNID] are a class of stand-alone patchable drone synthesizers.
+            <br><br>
+            They can generally be identified by their unique wave multiplier voicing structure which is commonly accompanied by a sinusoid generator and frequency divider.
+          </block>
 
-                <br><br><br>
+          <block class="image" style="min-height: 280px;">
+            <a href="snidxs">
+              <br>
+              <div class="imageselect">
+                <img class="anim" style="max-width: 315px;" src="04_rotations/snid/snidxs_315x245.gif">
+                <div class="centertext">SNIDxs</div>
+              </div>
+            </a>
+          </block>
 
-                <section class="bigblocks">
-                    <block class="image">
-                        <img class="lim" src="02_title_images/snid_title.svg">
-                    </block>
-                    <block class="fixed">
-                        The Sinusoidal Numeric Incremental Devices [SNID] are a class of stand-alone patchable drone synthesizers. 
-                        <br><br>
-                        They can generally be identified by their unique wave multiplier voicing structure which is commonly accompanied by a sinusoid generator and frequency divider.
+          <block class="image" style="min-height: 280px;">
+            <a href="snidv1">
+              <br><br>
+              <div class="imageselect">
+                <img class="anim" style="max-width: 315px;" src="04_rotations/snid/snidv1_315x216.gif">
+                <div class="centertext">SNIDv1</div>
+              </div>
+            </a>
+          </block>
+        </section>
+      </div>
+    </div>
+    <br><br>
 
-                    </block>
-                    <block class="fixed">
-                        While at times the SNID may emit sounds 
-                        that can be perceived as pleasant, they predominantly generate harsh rhythmic tones on divisions of their voicing frequencies. 
-                        <br><br>
-                        Though similar to Phase Distortion [PD], testing has shown the Wave Multiplication Synthesis [WMS] to be highly unstable (Fig. 1).
-                    </block>
-                    <block class="image">
-                        <br>
-                        <img class="adjust" src="03_documents/snid/wavemult_visual.gif">  
-                        <br>
-                        <h1>
-                        Figure 1: WMS frequency sweep with comparator at 0%, 50%, and 100%.
-                        </h1>
+    <!-- - - - - - - - - - - - - theme script - - - - - - - - - - - - -->
 
+    <script type="text/javascript" src="script.js"></script>
 
-                    </block>
-                </section>
-            </div>
-
-            <br><br><br><br><br>
-            
-            <!-- - - - - - - - - - - - - SNID v1 - - - - - - - - - - - - -->
-            
-            <h2 class="anim">_<a class="lines"> SNIDv1 </a>_</h2>
-            <section class="bigblocks">
-                <block class="noline">
-                    <img class="adjust" src="03_documents/snid/snid_v1_image.png">
-                </block>
-                <block class="line">
-                    Population Size: 10 <br>
-                    Reproduction Cycle: Closed <br><br>
-                    
-                    Patching: 32 points - Mini jumper / THT components<br><br>
-                    Submodules: WMS oscillator, sine wave oscillator, clock divider, 3 x attenuators
-                </block>
-                <block class="line">
-                    IO: 3.5mm headphone output, 3.5mm stereo CV, microUSB power
-                    <br><br>
-                    Dimensions: 184 x 92 x 40 mm
-                </block>
-                <block class="noline">
-                    <img class="right" src="03_documents/scope_gifs/xy_140_1.gif">
-                    <br>
-                    <a class="btn">[ Stored Data ]</a>
-                    <br><br>
-                    <a class="btn">[ Architecture ]</a>
-                    <br><br>
-                    <a class="btn">[ Documentation ]</a>
-                    <br><br>
-                </block> 
-            </section>
-            <h2 class="line">_</h2>
-            
-            <br><br><br><br>
-            
-            <!-- - - - - - - - - - - - - SNIDxs - - - - - - - - - - - - -->
-            
-            <h2 class="anim">_<a class="lines" href="snidxs"> SNIDxs </a>_</h2>
-            <section class="bigblocks">
-                <block class="noline">
-                    <a href="snidxs">
-                        <img class="adjust" src="03_documents/snid/snid_xs_image.png">
-                    </a>
-                </block>
-                <block class="line">
-                    Population Size: 5<br>
-                    Reproduction Cycle: Open <br><br>
-                    Patching: 27 points, 2mm stackable banana cables<br><br>
-                    Submodules: WMS oscillator, sine wave / sync oscillator, clock divider, 2 x attenuators, 3 x voltage controlled attenuators
-                </block>
-                <block class="line">
-                    IO: 3.5mm headphone output, 3.5mm stereo CV, miniUSB or coin cell battery power
-                    <br><br>
-                    Dimensions: 140 x 95 x 15 mm
-                </block>
-                <block class="noline">
-                    <img class="right" src="03_documents/scope_gifs/xy_140_2.gif">
-                    <br>
-                    <a class="btn">[ Stored Data ]</a>
-                    <br><br>
-                    <a class="btn">[ Architecture ]</a>
-                    <br><br>
-                    <a class="btn">[ Documentation ]</a>
-                    <br><br>
-                </block>
-            </section>
-            <h2 class="line">_</h2>
-            
-            <br><br><br><br>
-            
-        </div>
-        
-        
-        <!-- - - - - - - - - SNID version 1 data - - - - - - - - -->
-        
-        <div class="modal">
-            <div class="modal-content">
-                <a class="close">[ x ]</a>
-                <br><br>
-                <img class="data" style="max-width: 520px;" src="03_documents/snid/snid_v1_data.svg">
-                <br><br>
-                <a href="https://github.com/VariableOscillations/SNID/blob/master/sine_punk_oscillator.ino" class="text" target="_blank">[ transcribed data file ]</a>
-                
-            </div>
-        </div>
-        
-        <div class="modal">
-            <div class="modal-content">
-                <a class="close">[ x ]</a>
-                <br><br>
-                <img class="data" style="max-width: 470px;" src="03_documents/snid/snid_v1_schematic.svg">
-            </div>
-        </div>
-        
-        <div class="modal">
-            <div class="modal-content">
-                <a class="close">[ x ]</a>
-                <br><br>
-                
-                <img class="pic" id ="varimg_1" style="display: none;" src="03_documents/snid/snidv1_01.jpg">
-                
-                <iframe class="doc" id="varfrm_1" frameborder="0" scrolling="no" src="https://www.youtube.com/embed/Z5A732szIVM"></iframe>
-                
-                <br><br>
-                <button id="minus_1" onclick="decrement_1()">&#60;</button>
-                document 
-                <label id="display_1"></label> / 5
-                <button id="plus_1" onclick="increment_1()">&#62;</button>
-                
-                <!-- - - - - - - - - multi image- - - - - - - - -->
-                
-                <script type="text/javascript">
-                    var i = 1;
-                    var img_1 = document.getElementById('varimg_1');
-                    var frm_1 = document.getElementById('varfrm_1');
-                    function increment_1() { 
-                        if (i < 5) {
-                            i++;
-                        } else {
-                            i = 1;
-                        }
-                        document.getElementById("display_1").innerHTML = i;
-                        if (i == 1) {
-                            frm_1.style.display = "initial";
-                            frm_1.src="https://www.youtube.com/embed/Z5A732szIVM";
-                            
-                            img_1.style.display = "none";
-                        }
-                        else if (i == 2) {
-                            frm_1.style.display = "initial";
-                            frm_1.src="https://www.youtube.com/embed/AWuAmzpaQ6U";
-                            
-                            img_1.style.display = "none";
-                        }
-                        else if (i == 3) {
-                            frm_1.style.display = "none";
-                            
-                            img_1.style.display = "initial";
-                            img_1.src="03_documents/snid/snidv1_01.jpg";
-                        }
-                        else if (i == 4) {
-                            img_1.src="03_documents/snid/snidv1_02.jpg";
-                        }
-                        else if (i == 5) {
-                            frm_1.style.display = "none";
-                            
-                            img_1.style.display = "initial";
-                            img_1.src="03_documents/snid/snidv1_03.jpg";
-                        }
-                    }
-                    function decrement_1() { 
-                        if (i > 1) {
-                            i--;
-                        } else {
-                            i = 5;
-                        }
-                        document.getElementById("display_1").innerHTML = i;
-                        if (i == 1) {
-                            frm_1.style.display = "initial";
-                            img_1.src="https://www.youtube.com/embed/Z5A732szIVM";
-                            
-                            img_1.style.display = "none";
-                        }
-                        else if (i == 2) {
-                            frm_1.style.display = "initial";
-                            img_1.src="https://www.youtube.com/embed/AWuAmzpaQ6U";
-                            
-                            img_1.style.display = "none";
-                        }
-                        else if (i == 3) {
-                            frm_1.style.display = "none";
-                            
-                            img_1.style.display = "initial";
-                            img_1.src="03_documents/snid/snidv1_01.jpg";
-                        }
-                        else if (i == 4) {
-                            img_1.src="03_documents/snid/snidv1_02.jpg";
-                        }
-                        else if (i == 5) {
-                            frm_1.style.display = "none";
-                            
-                            img_1.style.display = "initial";
-                            img_1.src="03_documents/snid/snidv1_03.jpg";
-                        }
-                    }
-                    document.getElementById("display_1").innerHTML = i;
-                </script> 
-            </div>
-        </div>
-        
-        
-        <!-- - - - - - - - - - SNIDxs data - - - - - - - - - -->
-        
-        <div class="modal">
-            <div class="modal-content">
-                <a class="close">[ x ]</a>
-                <br><br>
-                <img class="data" style="max-width: 520px;" src="03_documents/snid/snid_xs_data.svg">
-                <br><br>
-                stored data transcription in progress
-            </div>
-        </div>
-        
-        <div class="modal">
-            <div class="modal-content">
-                <a class="close">[ x ]</a>
-                <br><br>
-                <img class="data" style="max-width: 470px;" src="03_documents/snid/snid_xs_schematic.svg">
-            </div>
-        </div>
-        
-        <div class="modal">
-            <div class="modal-content">
-                <a class="close">[ x ]</a>
-                <br><br>
-                
-                <img class="pic" id="varimg_2" style="display: none;" src="03_documents/snid/snidxs_01.jpg">
-                
-                <iframe class="doc" id="varfrm_2" frameborder="0" scrolling="no"  style="max-height: 390px;" src="https://www.youtube.com/embed/V-NpB3PR1kA"></iframe>
-                
-                <br><br>
-                <button id="minus_2" onclick="decrement_2()">&#60;</button>
-                document 
-                <label id="display_2"></label> / 8
-                <button id="plus_2" onclick="increment_2()">&#62;</button>
-                
-                <!-- - - - - - - - - multi image- - - - - - - - -->
-                
-                <script type="text/javascript">
-                    var j = 1;
-                    var img_2 = document.getElementById('varimg_2');
-                    var frm_2 = document.getElementById('varfrm_2');
-                    function increment_2() { 
-                        if (j < 8) {
-                            j++;
-                        } else {
-                            j = 1;
-                        }
-                        document.getElementById("display_2").innerHTML = j;
-                        if (j == 1) {
-                            frm_2.style.display = "initial";
-                            frm_2.src="https://www.youtube.com/embed/V-NpB3PR1kA";
-                            
-                            img_2.style.display = "none";
-                        }
-                        else if (j == 2) {
-                            frm_2.style.display = "none";
-                            
-                            img_2.style.display = "initial";
-                            img_2.src="03_documents/snid/snidxs_tree_01.jpg";
-                        }
-                        else if (j == 3) {
-                            img_2.src="03_documents/snid/snidxs_tree_02.jpg";
-                        }
-                        else if (j == 4) {
-                            img_2.src="03_documents/snid/snidxs_tree_03.jpg";
-                        }
-                        else if (j == 5) {
-                            img_2.src="03_documents/snid/snidxs_01.jpg";
-                        }
-                        else if (j == 6) {
-                            img_2.src="03_documents/snid/snidxs_02.jpg";
-                        }
-                        else if (j == 7) {
-                            img_2.src="03_documents/snid/snidxs_03.jpg";
-                        }
-                        else if (j == 8) {
-                            frm_2.style.display = "none";
-                            
-                            img_2.style.display = "initial";
-                            img_2.src="03_documents/snid/snidxs_04.jpg";
-                        }
-                    }
-                    function decrement_2() { 
-                        if (j > 1) {
-                            j--;
-                        } else {
-                            j = 8;
-                        }
-                        document.getElementById("display_2").innerHTML = j;
-                        if (j == 1) {
-                            frm_2.style.display = "initial";
-                            frm_2.src="https://www.youtube.com/embed/V-NpB3PR1kA";
-                            
-                            img_2.style.display = "none";
-                        }
-                        else if (j == 2) {
-                            frm_2.style.display = "none";
-                            
-                            img_2.style.display = "initial";
-                            img_2.src="03_documents/snid/snidxs_tree_01.jpg";
-                        }
-                        else if (j == 3) {
-                            img_2.src="03_documents/snid/snidxs_tree_02.jpg";
-                        }
-                        else if (j == 4) {
-                            img_2.src="03_documents/snid/snidxs_tree_03.jpg";
-                        }
-                        else if (j == 5) {
-                            img_2.src="03_documents/snid/snidxs_01.jpg";
-                        }
-                        else if (j == 6) {
-                            img_2.src="03_documents/snid/snidxs_02.jpg";
-                        }
-                        else if (j == 7) {
-                            img_2.src="03_documents/snid/snidxs_03.jpg";
-                        }
-                        else if (j == 8) {
-                            frm_2.style.display = "none";
-                            
-                            img_2.style.display = "initial";
-                            img_2.src="03_documents/snid/snidxs_04.jpg";
-                        }
-                    }
-                    document.getElementById("display_2").innerHTML = j;
-                </script> 
-            </div>
-        </div>
-        
-        <!-- - - - - - - - - - - - - script - - - - - - - - - - - - -->
-        
-        <script>
-            // - - - - - - - - - - - - theme - - - - - - - - - - - -
-            
-            const togl = document.querySelector(".btn_theme");
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-            
-            const currentTheme = localStorage.getItem("theme");
-            if (currentTheme == "dark") {
-                document.body.classList.toggle("dark-theme");
-            } else if (currentTheme == "light") {
-                document.body.classList.toggle("light-theme");
-            }
-
-            togl.addEventListener("click", function () {
-                if (prefersDarkScheme.matches) {
-                    document.body.classList.toggle("light-theme");
-                    var theme = document.body.classList.contains("light-theme")
-                    ? "light"
-                    : "dark";
-                } else {
-                    document.body.classList.toggle("dark-theme");
-                    var theme = document.body.classList.contains("dark-theme")
-                    ? "dark"
-                    : "light";
-                }
-                localStorage.setItem("theme", theme);
-            });
-            
-            // - - - - - - - - - - - - modals - - - - - - - - - - - -
-            
-            var btn = document.getElementsByClassName("btn");
-            var mdl = document.getElementsByClassName("modal");
-            var close = document.getElementsByClassName("close");
-            
-            btn[0].onclick = function() { mdl[0].style.display = "block"; }
-            close[0].onclick = function() { mdl[0].style.display = "none"; }
-            
-            btn[1].onclick = function() { mdl[1].style.display = "block"; }
-            close[1].onclick = function() { mdl[1].style.display = "none"; }
-            
-            btn[2].onclick = function() { mdl[2].style.display = "block"; }
-            close[2].onclick = function() { mdl[2].style.display = "none"; }
-            
-            btn[3].onclick = function() { mdl[3].style.display = "block"; }
-            close[3].onclick = function() { mdl[3].style.display = "none"; }
-
-            
-            btn[4].onclick = function() { mdl[4].style.display = "block"; }
-            close[4].onclick = function() { mdl[4].style.display = "none"; }
-            
-            btn[5].onclick = function() { mdl[5].style.display = "block"; }
-            close[5].onclick = function() { mdl[5].style.display = "none"; }
-
-            window.onclick = function(event) {
-                if (event.target == mdl[0] || event.target == mdl[1] || 
-                    event.target == mdl[2] || event.target == mdl[3] || 
-                    event.target == mdl[4] || event.target == mdl[5]) {
-                        mdl[0].style.display = "none";
-                        mdl[1].style.display = "none";
-                        mdl[2].style.display = "none";
-                        mdl[3].style.display = "none";
-                        mdl[4].style.display = "none";
-                        mdl[5].style.display = "none";
-                }
-            }
-        </script>
-        
-        <!-- - - - - - - - - - - - - bottom nav - - - - - - - - - - - - -->
-        
-        <div class="btmenu">
-            <section class="botblocks">
-                <block class="noline">
-                    <a class="text" href="https://github.com/VariableOscillations" target="_blank">Github</a>
-                </block>
-                
-                <block class="noline">
-                    <a class="text" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">Youtube</a>
-                </block>
-
-                <block class="noline">
-                <a class="text" href="https://www.instagram.com/var.osc/" target="_blank">Instagram</a>
-                </block>
-
-                <block class="noline">
-                <a class="text" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">Etsy</a>
-                </block>
-            </section>
-        </div>
-        <br><br>
-        
-    </body>
+  </body>
 </html>

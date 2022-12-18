@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>snid version 1</title>
+    <link rel="icon" type="image/x-icon" href="00_bg_images/vo.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="variable, oscillations, synthesizer, snid">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Content-Language" content="english">
+    <meta name="description" content="Sinusoidal Numeric Incremental Device">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+
+    <div class="top-pad">
+    </div>
+    <div class="top-nav">
+      <!-- - - - - - logo - - - - - -->
+      <node class="gate">
+        <a href="http://varosc.net">
+          <img class="logo" src="00_bg_images/vo_128x64.png">
+        </a>
+        <a href="http://varosc.net">
+          <img class="img-top" src="00_bg_images/vo_64x32_noise.gif">
+        </a>
+      </node>
+      <!-- - - - - - external links - - - - - -->
+      <div class="drop" style="float: right; right: 0;">
+        <node class="ext">
+            External<br>Resources
+            <div class="drop-spacer" style="padding-top: 6px">
+              <div class="drop-ext">
+                <br>
+                <a class="text-left" href="https://github.com/VariableOscillations" target="_blank">
+                  &nbsp;Code -------> GitHubGitHGt
+                </a><br>
+                <a class="text-left" href="https://www.youtube.com/@VariableOscillations" target="_blank">
+                  &nbsp;Img / Vid --> YoutubeYotYt
+                </a><br>
+                <a class="text-left" href="https://www.instagram.com/var.osc/" target="_blank">
+                  &nbsp;Img / Vid --> InstagramInt
+                </a><br>
+                <a class="text-left" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">
+                  &nbsp;Purchase ---> EtsyEtEyEtst
+                </a><br><br>
+                <a class="text-left" style="text-align: center;" href="about">About</a>
+                <br>
+              </div>
+            </div>
+        </node>
+        <!-- - - - - - mobile links - - - - - -->
+        <node class="ext-mob">
+          <input id="extrnl" type="checkbox" name="menu" />
+          <label class="lab-mob" for="extrnl">EXT<br>RNL</label>
+          <ul class="submenu">
+            <a style="padding: 8px; text-align:center; pointer-events: none; color: var(--bgnd); background: var(--txt)" href="">External Resources:</a>
+            <br>
+            <a class="text-left" href="https://github.com/VariableOscillations" target="_blank">
+              &nbsp;Code -------> GitHubGitHGt
+            </a><br>
+            <a class="text-left" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">
+              &nbsp;Img / Vid --> YoutubeYotYt
+            </a><br>
+            <a class="text-left" href="https://www.instagram.com/var.osc/" target="_blank">
+              &nbsp;Img / Vid --> InstagramInt
+            </a><br>
+            <a class="text-left" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">
+              &nbsp;Purchase ---> EtsyEtEyEtst
+            </a><br><br>
+            <a class="text-left" style="text-align: center;" href="about">About</a>
+            <br>
+          </ul>
+        </node>
+      </div>
+      <!-- - - - - - light / dark button - - - - - -->
+      <node class="gate">
+        <a class="btn-theme">&#9728;</a>
+      </node>
+      <!-- - - - - - name / main page link - - - - - -->
+      <div class="indexbox">
+        <a class="textnobg" href="http://varosc.net">Variable Oscillations</a>
+        <br>
+        <a class="scale" href="http://varosc.net">Auxiliary Research Station</a>
+      </div>
+      <div class="indexbox-mob">
+        <a class="textnobg" href="http://varosc.net">Variable</a>
+        <br>
+        <a class="textnobg" href="http://varosc.net">Oscillations</a>
+      </div>
+    </div>
+    <br><br><br>
+
+    <!-- - - - - - - - - - - - - page selection - - - - - - - - - - - - -->
+
+    <div class="selectdev" style="--lyr2: 1285px; --lyr2b: 397px; --lyr3: 1840px; --lyr4: 2132px;">
+      <div class="snid">
+        <div class="dev-nav" id="devnav">
+          <section class="blocks">
+            <block class="noline">
+              <div class="drop">
+                <a class="current" href="snid">SNID</a>
+                <div class="drop-spacer">
+                  <div class="drop-content">
+                    <br>
+                    <a class="text-left" href="snidxs">&nbsp;SNIDxs</a>
+                    <br>
+                    <a class="text-left" href="snidv1">&nbsp;SNIDv1</a>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="bwop">BWOP</a>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="glitch">Glitch</a>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="eve">EVE</a>
+            </block>
+          </section>
+        </div>
+        <br><br><br><br>
+
+        <!-- - - - - - - - - - SNIDv1 top info - - - - - - - - - -->
+
+        <section class="bigblocks">
+          <block class="image">
+            <img class="lim" src="02_title_images/snid_title.svg">
+          </block>
+          <block class="fixed">
+            SNID Version 1 <div class="doubletxt">&nbsp</div>
+            The first discovered subspecies of the SNID family which lead to the instantiation of Variable Oscillations.<br><br>Research of SNIDv1 allowed for better understanding of Wave Multiplication Synthesis and resulted in the later discovery of SNIDxs.
+          </block>
+        </section>
+        <br><br>
+
+        <!-- - - - - - - - - - Rotation image - - - - - - - - - -->
+
+        <section class="titleblocks">
+          <block class="title">
+            <picture>
+              <source media="(min-width: 632px)" srcset="04_rotations/snidv1/snidv1_630x382.gif">
+              <img class="still" src="04_rotations/snidv1/snidv1_315x191.gif">
+            </picture>
+          </block>
+        </section>
+
+        <!-- - - - - - - - - - links and documents - - - - - - - - - -->
+
+        <section class="bigblocks">
+          <block class="fixed">
+            Wave Multiplication Synthesis [WMS] is calculated in a similar method to phase distortion synthesis though it becomes highly unstable as the comparator value increases [Fig. 1].
+            <br><br>
+            The chaotic nature of the WMS oscillator coupled with the frequency divider of the SNIDs allows for a vast array of rhythmic textures.
+          </block>
+          <block class="image">
+            <br>
+            <img class="adjust" src="03_documents/snidv1/wavemult_visual.gif">
+            <br>
+            <h1>
+              Figure 1: WMS frequency sweep with comparator at 0%, 50%, and 100%.
+            </h1>
+          </block>
+          <block class="nolinefixed">
+            <img class="right" style="float: none" src="03_documents/scope_gifs/xy_140_1.gif">
+          </block>
+
+          <block class="nolinefixed">
+            <br>
+            <a class="btn">Architecture</a>
+            <br><br>
+            <a class="btn">Documentation</a>
+
+          </block>
+
+          <block class="fixed">
+            The patching interface of the first SNIDs allowed for interconnecting with external passive electrical components. While this trait seems advantageous, the later generations were observed to allocate more space to patching in the form of 2mm banana cables. It is likely that the small interface of the first SNIDs lead to more errors in communication.
+
+          </block>
+
+          <block class="fixed">
+            Specifications <div class="doublegry">&nbsp</div>
+            2 x oscillators, 1 x clock divider, 3 x attenuators, 32 x patch points<br><br>
+            IO: 3.5mm headphone output, 3.5mm stereo CV, microUSB power <br><br>
+            Dimensions: 184 x 92 x 40 mm
+          </block>
+        </section>
+      </div>
+    </div>
+    <br><br>
+
+    <!-- - - - - - - - - SNID version 1 data - - - - - - - - -->
+
+    <div class="modal">
+      <div class="modal-content">
+        <a class="close">x</a>
+        <br><br>
+        <img class="data" style="max-width: 470px;" src="03_documents/snidv1/snid_v1_schematic.svg">
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-content">
+        <a class="close">x</a>
+        <br><br><br>
+
+        <img class="pic" id ="varimg_1" style="display: none;" src="03_documents/pics/snidv1/v1_01.jpg">
+
+        <iframe class="doc" id="varfrm_1" frameborder="0" scrolling="no" style="max-height: 390px;"src="https://www.youtube.com/embed/Z5A732szIVM"></iframe>
+
+        <br><br>
+        <button id="minus_1" onclick="decrement_1()">&#60&#60;</button>
+        document
+        <label id="display_1"></label> / 10
+        <button id="plus_1" onclick="increment_1()">&#62&#62;</button>
+
+        <!-- - - - - - - - - multi image- - - - - - - - -->
+
+        <script type="text/javascript">
+          var j = 1;
+          var img_1 = document.getElementById('varimg_1');
+          var frm_1 = document.getElementById('varfrm_1');
+          function increment_1() {
+            if (j < 10) {
+              j++;
+            } else {
+              j = 1;
+            }
+            if (j < 10) {
+              document.getElementById("display_1").innerHTML = "0" + j;
+            } else {
+              document.getElementById("display_1").innerHTML = j;
+            }
+            if (j == 1) {
+              frm_1.style.display = "initial";
+              frm_1.src="https://www.youtube.com/embed/Z5A732szIVM";
+
+              img_1.style.display = "none";
+            }
+            else if (j == 2) {
+              frm_1.style.display = "initial";
+              frm_1.src="https://www.youtube.com/embed/AWuAmzpaQ6U";
+
+              img_1.style.display = "none";
+            }
+            else if (j == 3) {
+              frm_1.style.display = "none";
+
+              img_1.style.display = "initial";
+              img_1.src="03_documents/pics/snidv1/v1_1.jpg";
+            }
+            else if (j == 4) {
+              img_1.src="03_documents/pics/snidv1/v1_2.jpg";
+            }
+            else if (j == 5) {
+              img_1.src="03_documents/pics/snidv1/v1_3.jpg";
+            }
+            else if (j == 6) {
+              img_1.src="03_documents/pics/snidv1/v1_4.jpg";
+            }
+            else if (j == 7) {
+              img_1.src="03_documents/pics/snidv1/v1_5.jpg";
+            }
+            else if (j == 8) {
+              img_1.src="03_documents/pics/snidv1/v1_6.jpg";
+            }
+            else if (j == 9) {
+              img_1.src="03_documents/pics/snidv1/v1_7.jpg";
+            }
+            else if (j == 10) {
+              frm_1.style.display = "none";
+
+              img_1.style.display = "initial";
+              img_1.src="03_documents/pics/snidv1/v1_8.jpg";
+            }
+          }
+          function decrement_1() {
+            if (j > 1) {
+              j--;
+            } else {
+              j = 10;
+            }
+            if (j < 10) {
+              document.getElementById("display_1").innerHTML = "0" + j;
+            } else {
+              document.getElementById("display_1").innerHTML = j;
+            }
+            if (j == 1) {
+              frm_1.style.display = "initial";
+              frm_1.src="https://www.youtube.com/embed/Z5A732szIVM";
+
+              img_1.style.display = "none";
+            }
+            else if (j == 2) {
+              frm_1.style.display = "initial";
+              frm_1.src="https://www.youtube.com/embed/AWuAmzpaQ6U";
+
+              img_1.style.display = "none";
+            }
+            else if (j == 3) {
+              frm_1.style.display = "none";
+
+              img_1.style.display = "initial";
+              img_1.src="03_documents/pics/snidv1/v1_1.jpg";
+            }
+            else if (j == 4) {
+              img_1.src="03_documents/pics/snidv1/v1_2.jpg";
+            }
+            else if (j == 5) {
+              img_1.src="03_documents/pics/snidv1/v1_3.jpg";
+            }
+            else if (j == 6) {
+              img_1.src="03_documents/pics/snidv1/v1_4.jpg";
+            }
+            else if (j == 7) {
+              img_1.src="03_documents/pics/snidv1/v1_5.jpg";
+            }
+            else if (j == 8) {
+              img_1.src="03_documents/pics/snidv1/v1_6.jpg";
+            }
+            else if (j == 9) {
+              img_1.src="03_documents/pics/snidv1/v1_7.jpg";
+            }
+            else if (j == 10) {
+              frm_1.style.display = "none";
+
+              img_1.style.display = "initial";
+              img_1.src="03_documents/pics/snidv1/v1_8.jpg";
+            }
+
+          }
+          if (j < 10) {
+            document.getElementById("display_1").innerHTML = "0" + j;
+          } else {
+            document.getElementById("display_1").innerHTML = j;
+          }
+        </script>
+      </div>
+    </div>
+
+    <!-- - - - - - - - - - - - - open + close modals - - - - - - - - - - - - -->
+
+    <script>
+      var btn = document.getElementsByClassName("btn");
+      var mdl = document.getElementsByClassName("modal");
+      var close = document.getElementsByClassName("close");
+
+      btn[0].onclick = function() { mdl[0].style.display = "block"; }
+      close[0].onclick = function() { mdl[0].style.display = "none"; }
+
+      btn[1].onclick = function() { mdl[1].style.display = "block"; }
+      close[1].onclick = function() { mdl[1].style.display = "none"; }
+
+      window.onclick = function(event) {
+        if (event.target == mdl[0] || event.target == mdl[1]) {
+          mdl[0].style.display = "none";
+          mdl[1].style.display = "none";
+        }
+      }
+    </script>
+
+    <!-- - - - - - - - - - - - - theme script - - - - - - - - - - - - -->
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </body>
+</html>

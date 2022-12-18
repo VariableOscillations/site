@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gifshop</title>
+    <link rel="icon" type="image/x-icon" href="00_bg_images/vo.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="variable, oscillations, synthesizer, snid">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Content-Language" content="english">
+    <meta name="description" content="Sinusoidal Numeric Incremental Device">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <!-- - - - - - - - - - - - - top nav - - - - - - - - - - - - -->
+
+    <div class="top-pad">
+    </div>
+    <div class="top-nav">
+      <!-- - - - - - logo - - - - - -->
+      <node class="gate">
+        <a href="http://varosc.net">
+          <img class="logo" src="00_bg_images/vo_128x64.png">
+        </a>
+        <a href="http://varosc.net">
+          <img class="img-top" src="00_bg_images/vo_64x32_noise.gif">
+        </a>
+      </node>
+      <!-- - - - - - external links - - - - - -->
+      <div class="drop" style="float: right; right: 0;">
+        <node class="ext">
+            External<br>Resources
+            <div class="drop-spacer" style="padding-top: 6px">
+              <div class="drop-ext">
+                <br>
+                <a class="text-left" href="https://github.com/VariableOscillations" target="_blank">
+                  &nbsp;Code -------> GitHubGitHGt
+                </a><br>
+                <a class="text-left" href="https://www.youtube.com/@VariableOscillations" target="_blank">
+                  &nbsp;Img / Vid --> YoutubeYotYt
+                </a><br>
+                <a class="text-left" href="https://www.instagram.com/var.osc/" target="_blank">
+                  &nbsp;Img / Vid --> InstagramInt
+                </a><br>
+                <a class="text-left" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">
+                  &nbsp;Purchase ---> EtsyEtEyEtst
+                </a><br><br>
+                <a class="text-left" style="text-align: center;" href="about">About</a>
+                <br>
+              </div>
+            </div>
+        </node>
+        <!-- - - - - - mobile links - - - - - -->
+        <node class="ext-mob">
+          <input id="extrnl" type="checkbox" name="menu" />
+          <label class="lab-mob" for="extrnl">EXT<br>RNL</label>
+          <ul class="submenu">
+            <a style="padding: 8px; text-align:center; pointer-events: none; color: var(--bgnd); background: var(--txt)" href="">External Resources:</a>
+            <br>
+            <a class="text-left" href="https://github.com/VariableOscillations" target="_blank">
+              &nbsp;Code -------> GitHubGitHGt
+            </a><br>
+            <a class="text-left" href="https://www.youtube.com/channel/UCaJubxz88nUiw0fNAK74BUA" target="_blank">
+              &nbsp;Img / Vid --> YoutubeYotYt
+            </a><br>
+            <a class="text-left" href="https://www.instagram.com/var.osc/" target="_blank">
+              &nbsp;Img / Vid --> InstagramInt
+            </a><br>
+            <a class="text-left" href="https://www.etsy.com/shop/VariableOscillations" target="_blank">
+              &nbsp;Purchase ---> EtsyEtEyEtst
+            </a><br><br>
+            <a class="text-left" style="text-align: center;" href="about">About</a>
+            <br>
+          </ul>
+        </node>
+      </div>
+      <!-- - - - - - light / dark button - - - - - -->
+      <node class="gate">
+        <a class="btn-theme">&#9728;</a>
+      </node>
+      <!-- - - - - - name / main page link - - - - - -->
+      <div class="indexbox">
+        <a class="textnobg" href="http://varosc.net">Variable Oscillations</a>
+        <br>
+        <a class="scale" href="http://varosc.net">Auxiliary Research Station</a>
+      </div>
+      <div class="indexbox-mob">
+        <a class="textnobg" href="http://varosc.net">Variable</a>
+        <br>
+        <a class="textnobg" href="http://varosc.net">Oscillations</a>
+      </div>
+    </div>
+    <br><br><br>
+
+    <!-- - - - - - - - - - - - - page selection - - - - - - - - - - - - -->
+
+    <div class="selectdev" style="--lyr2: 5463px; --lyr2b: 3510px; --lyr3: 5513px; --lyr4: 9407px;">
+      <div class="main">
+        <div class="dev-nav" id="devnav">
+          <section class="blocks">
+            <block class="noline">
+              <div class="drop">
+                <a class="textdrop" href="snid">SNID</a>
+                <div class="drop-spacer">
+                  <div class="drop-content">
+                    <br>
+                    <a class="text-left" href="snidxs">&nbsp;SNIDxs</a>
+                    <br>
+                    <a class="text-left" href="snidv1">&nbsp;SNIDv1</a>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="bwop">BWOP</a>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="glitch">Glitch</a>
+            </block>
+
+            <block class="noline">
+              <a class="text-under" href="eve">EVE</a>
+            </block>
+          </section>
+        </div>
+
+        <br><br><br><br>
+
+        <!-- - - - - - - - - - - - - gifs - - - - - - - - - - - - -->
+
+
+
+        <section class="bigblocks">
+          <block class="image">
+            <img class="adjust" src="01_select_images/snid_select.gif">
+          </block>
+
+          <block class="image">
+            <br><br>
+            <img class="adjust" src="03_documents/snidv1/wavemult_visual.gif">
+          </block>
+
+          <block class="image">
+            <br><br><br>
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <br><br>
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <br><br>
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_hover.gif">
+          </block>
+
+          <block class="noline">
+                <img class="anim" style="max-width: 315px; filter: invert(0);" src="04_rotations/snid/snidxs_315x245.gif">
+          </block>
+
+          <block class="noline">
+            <br><br><br>
+            <img class="lim" src="03_documents/scope_gifs/xy_140_2.gif">
+            <br><br><br>
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/old_images/snid.gif">
+          </block>
+        </section>
+
+        <br><br><br>
+
+        <section class="titleblocks">
+          <block class="title">
+            <picture>
+              <source media="(min-width: 632px)" srcset="04_rotations/snidxs/snidxs_630x418.gif">
+              <img class="still" src="04_rotations/snidxs/snidxs_315x209.gif">
+            </picture>
+          </block>
+        </section>
+
+        <br><br>
+
+        <section class="bigblocks">
+          <block class="image">
+            <img class="adjust" src="01_select_images/broken/snid_brkn.gif">
+          </block>
+
+          <block class="noline">
+            <br><br><br>
+            <img class="lim" src="03_documents/scope_gifs/xy_140_1.gif">
+            <br><br><br>
+          </block>
+
+          <block class="noline">
+            <br>
+            <img class="anim" style="max-width: 315px; filter: invert(0);" src="04_rotations/glitch/glitch_315x187.gif">
+          </block>
+
+          <block class="image">
+            <img class="lim" src="03_documents/scope_gifs/fast_scope.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/old_images/varirack.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/glitch_select.gif">
+          </block>
+        </section>
+
+        <br><br><br>
+
+        <section class="titleblocks">
+          <block class="title">
+            <picture>
+              <source media="(min-width: 632px)" srcset="04_rotations/glitch/glitch_630x373.gif">
+              <img class="still" src="04_rotations/glitch/glitch_315x187.gif">
+            </picture>
+          </block>
+        </section>
+
+        <br><br>
+
+        <section class="bigblocks">
+          <block class="image">
+            <img class="adjust" src="01_select_images/broken/glitch_brkn.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/broken/varirack_brkn.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/bwop_select.gif">
+          </block>
+
+          <block class="noline">
+            <br>
+            <img class="anim" style="max-width: 315px; filter: invert(0);" src="04_rotations/bwop/bwop_315x218.gif">
+          </block>
+
+          <block class="image" style="border:none; background:none; filter:invert(1);">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/bwop_select.gif">
+          </block>
+        </section>
+
+        <br><br><br>
+
+        <section class="titleblocks">
+          <block class="title">
+            <picture>
+              <source media="(min-width: 632px)" srcset="04_rotations/bwop/bwop_630x436.gif">
+              <img class="still" src="04_rotations/bwop/bwop_315x218.gif">
+            </picture>
+          </block>
+        </section>
+
+        <br><br>
+
+        <section class="bigblocks">
+          <block class="image">
+            <br>
+            <img class="lim" src="03_documents/scope_gifs/xy_280.gif">
+          </block>
+
+          <block class="noline">
+            <br><br><br>
+            <img class="lim" src="03_documents/scope_gifs/snid_scope.gif">
+            <br><br><br>
+          </block>
+
+          <block class="noline">
+                <img class="anim" style="max-width: 315px; filter: invert(0);" src="04_rotations/snid/snidv1_315x216.gif">
+          </block>
+
+          <block class="image">
+            <br><br>
+            <img class="lim" src="03_documents/snidv1/wavemult_visual.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/old_images/snid.gif">
+          </block>
+
+          <block class="image">
+            <br><br><br>
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <br><br>
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <br><br>
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+            <img class="lim" src="00_bg_images/vo_64x32_noise.gif">
+          </block>
+        </section>
+
+        <br><br><br>
+
+        <section class="titleblocks">
+          <block class="title">
+            <picture>
+              <source media="(min-width: 632px)" srcset="04_rotations/snidv1/snidv1_630x382.gif">
+              <img class="still" src="04_rotations/snidv1/snidv1_315x191.gif">
+            </picture>
+          </block>
+        </section>
+
+        <section class="bigblocks">
+          <block class="image">
+            <img class="adjust" src="01_select_images/eve_select.gif">
+          </block>
+
+          <block class="image">
+            <img class="lim" src="03_documents/scope_gifs/fast_scope.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/broken/eve_brkn.gif">
+          </block>
+
+          <block class="noline">
+            <br><br><br>
+            <img class="lim" src="03_documents/scope_gifs/xy_140_3.gif">
+            <br><br><br>
+          </block>
+
+          <block class="image" style="border:none; background:none; filter:invert(1);">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+            <br><br>
+            <img class="adjust" src="01_select_images/old_images/diagonal.gif">
+          </block>
+
+          <block class="image">
+            <img class="adjust" src="01_select_images/old_images/eve.gif">
+          </block>
+        </section>
+
+        <br><br><br>
+
+        <section class="titleblocks">
+          <block class="title">
+            <picture>
+              <source media="(min-width: 632px)" srcset="03_documents/sine_freqs/sinefreq_630x990.gif">
+              <img class="inv" src="03_documents/scope_gifs/xy_280.gif">
+            </picture>
+          </block>
+        </section>
+
+        <br><br><br>
+      </div>
+    </div>
+    <br><br>
+
+    <!-- - - - - - - - - - - - - theme script - - - - - - - - - - - - -->
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </body>
+</html>

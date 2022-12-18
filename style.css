@@ -1,1008 +1,1634 @@
+
 body {
-    --txt: #e8e8e8;
-    --gry: #333436;
-    --bgnd: #0b0c0e;
-    --bgnd_t: #0b0c0eee;  
-    --bg_img: url(00_bg_images/dot_0b0c0e.svg);
-    --hdr_img: url(00_bg_images/diagonal.gif);
-    
-    background-color: var(--bgnd);
-    font-family: Menlo, monospace;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 100;
-    font-size: 16px;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    max-width: 940px;
-    min-width: 320px;
-    min-height: 880px;
-    margin: auto;
-    
-    color: var(--txt);
-    padding-top: 40px;
-    padding-left: 2%;
-    padding-right: 2%;
+  --txt: #e8e8e8;
+  --gry: #333436;
+  --bgnd: #0b0d0e;
+  --bgnd_t: #0b0d0edd;
+  --switch: #0b0d0e;
+  --bg_img: url(00_bg_images/dot_0b0d0e.svg);
+  --lyr1: 105px;
+  --lyr2: 397px;
+  --lyr2b: 397px;
+  --lyr3: 689px;
+  --lyr4: 981px;
+
+  background-color: var(--bgnd);
+  font-family: Menlo, monospace;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 100;
+  font-size: 16px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  max-width: 940px;
+  min-width: 320px;
+  min-height: 880px;
+  margin: auto;
+
+  color: var(--txt);
+  padding-top: 0px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+@font-face {
+  font-family: varosc;
+  src: url(03_documents/fonts/varoscdin.ttf);
+}
+@font-face {
+  font-family: dinalt;
+  src: url(03_documents/fonts/dinalt.ttf);
+}
+@font-face {
+  font-family: segment;
+  src: url(03_documents/fonts/7segment.ttf);
 }
 body.light-theme {
-    --txt: #0b0c0e;
-    --gry: #c9c7c3;
-    --bgnd: #e8e8e8;
-    --bgnd_t: #e8e8e8dd;
-    --bg_img: url(00_bg_images/dot_e8e8e8.svg);
-    --hdr_img: url(00_bg_images/diagonal_l.gif);
+  --txt: #0b0d0e;
+  --gry: #c9c7c3;
+  --bgnd: #e8e8e8;
+  --bgnd_t: #e8e8e8dd;
+  --bg_img: url(00_bg_images/dot_e8e8e8.svg);
 }
 body.light-theme img{
-    filter: invert(1);
+  filter: invert(1);
 }
 body.light-theme img.pic{
-    filter: invert(0);
+  filter: invert(0);
 }
 body.light-theme iframe{
-    filter: invert(0);
+  filter: invert(0);
 }
-
+body.light-theme .stickyimg {
+  filter: invert(1);
+}
 
 p {
-    padding: 8%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    border: 1px solid var(--txt);
-    text-align: center;
+  padding: 8%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  border: 1px solid var(--txt);
+  text-align: center;
+
 }
 h1 {
-    padding: 8%;
-    padding-top: 5px;
-    font-weight: 100;
-    font-size: 14px;
-    text-align: left;
+  padding: 8%;
+  padding-top: 5px;
+  font-weight: 100;
+  font-size: 14px;
+  text-align: left;
 }
 h2 {
-    text-align: left;
-    color: var(--bgnd);
-    font-size: 36px;
-    position: relative;
-    width: 100%;
-    max-width: 940px;
-    min-width: 320px;
+  text-align: left;
+  color: var(--bgnd);
+  font-size: 36px;
+  position: relative;
+  width: 100%;
+  max-width: 940px;
+  min-width: 320px;
 }
 h2.line {
-    background:
-        /* lines */
-        linear-gradient(var(--txt), var(--txt)) 0px 8px / 100% 1px,
-        linear-gradient(var(--txt), var(--txt)) 0px 12px / 100% 1px,
-        linear-gradient(var(--txt), var(--txt)) 0px 16px / 100% 1px,
-        linear-gradient(var(--txt), var(--txt)) 0px 20px / 100% 1px,
-        linear-gradient(var(--txt), var(--txt)) 0px 24px / 100% 1px,
-        linear-gradient(var(--txt), var(--txt)) 0px 28px / 100% 1px,
-        linear-gradient(var(--txt), var(--txt)) 0px 32px / 100% 1px;
-    background-repeat: no-repeat;
-    border-bottom: 1px solid var(--gry);
+  background:
+    /* lines */
+    linear-gradient(var(--txt), var(--txt)) 0px 8px / 100% 1px,
+    linear-gradient(var(--txt), var(--txt)) 0px 12px / 100% 1px,
+    linear-gradient(var(--txt), var(--txt)) 0px 16px / 100% 1px,
+    linear-gradient(var(--txt), var(--txt)) 0px 20px / 100% 1px,
+    linear-gradient(var(--txt), var(--txt)) 0px 24px / 100% 1px,
+    linear-gradient(var(--txt), var(--txt)) 0px 28px / 100% 1px,
+    linear-gradient(var(--txt), var(--txt)) 0px 32px / 100% 1px;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid var(--gry);
 }
 h2.anim {
-    background-image: var(--hdr_img);
-    background-repeat: no-repeat;
-    border-top: 1px solid var(--gry);
+  font-family: dinalt;
+  background-image: var(--hdr_img);
+  background-repeat: no-repeat;
+  border-top: 2px solid var(--gry);
 }
 h3 {
-    padding-top: 200px;
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    color: var(--bgnd);
+  padding-top: 200px;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  color: var(--bgnd);
 }
 .btmenu {
-    overflow: hidden;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    align-content: center;
+  overflow: hidden;
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  bottom: 0;
+  width: 100%;
+  align-content: center;
 }
 button {
-    border: none;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: cell;
-    color: var(--txt);
-    background-color: var(--bgnd);
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: cell;
+  color: var(--txt);
+  background-color: var(--bgnd);
+  padding: 0px;
 }
+
+button.btext {
+  font-family: Menlo, monospace;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: cell;
+  color: var(--txt);
+  background-color: var(--bgnd);
+  padding: 4px;
+}
+
 scale {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 iframe {
-    filter: invert(1);
+  filter: invert(1);
+}
+area.info:hover {
+  cursor: cell;
+}
+area.voidd:hover {
+  cursor: default;
+}
+
+/* - - - - - - - - - - - - - - - - top padding - - - - - - - - - - - - - - - - */
+.top-pad {
+  overflow: hidden;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 8px;
+  background-repeat: no-repeat;
+  height: 40px; /* padding when scolled to top of page*/
+  width:100%;
+  position: sticky;
+  pointer-events: none;
+  top: 0;
+  z-index: 97;
+}
+
+/* - - - - - - - - - - - - - - - - top navigation - - - - - - - - - - - - - - - - */
+.top-nav {
+  overflow: visible;
+  background: var(--bgnd);
+  padding-bottom: 10px;
+  width:100%;
+  height: 46px;
+  position: sticky;
+  top: 2px;
+  z-index: 98;
+}
+
+/* - - - - - - - - - - - - - - - - varosc index.html link - - - - - - - - - - - - - - - - */
+
+.indexbox {
+  padding: 6px;
+  padding-top: 46px;
+  margin-top: -40px;
+  float: left;
+  margin-left: 8px;
+  transition: background 0.3s;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
+  background-repeat: no-repeat;
+  display: block;
+}
+.indexbox:hover {
+  color: var(--bgnd);
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
+  background-repeat: no-repeat;
+}
+.indexbox:hover a.textnobg {
+  color: var(--bgnd);
+}
+.indexbox:hover a.scale {
+  color: var(--bgnd);
+}
+
+.indexbox-mob {
+  padding: 6px;
+  float: left;
+  margin-left: 4px;
+  display: none;
+}
+
+/* - - - - - - - - - - - - - - - - vo logo - - - - - - - - - - - - - - - - */
+
+node.gate {
+  width: 64px;
+  height: 32px;
+}
+node.gate .logo {
+  padding-top: 8px;
+  margin-left: 6px;
+  float: left;
+  height: 32px;
+}
+node.gate:hover .logo {
+  display: none;
+}
+node.gate .img-top {
+  display: none;
+  float: left;
+  padding-top: 8px;
+  margin-left: 6px;
+  height: 32px;
+  z-index: 99;
+}
+node.gate:hover .img-top {
+  display: inline;
+}
+node.gate .btn-theme {
+  float: right;
+  font-size: 32px;
+  height: 34px;
+  margin-right: 4%;
+  margin-top: 4px;
+  padding: 8px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: var(--txt);
+}
+.stickyimg {
+  display: block;
+  padding-left: 6px;
+  overflow: visible;
+  position: sticky;
+  top: 30px;
+  height: 600px;
+  mix-blend-mode: difference;
+}
+
+
+/* - - - - - - - - - - - - - - - - external - - - - - - - - - - - - - - - - */
+
+node.ext {
+  top: 0;
+  float: right;
+  right: 0;
+  text-align: center;
+  padding: 12px;
+  padding-top: 46px;
+  width: 90px;
+  margin-top: -40px;
+  height: 32px;
+  transition: color 0.2s, background 0.3s;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
+  background-repeat: no-repeat;
+  border: 1px solid var(--txt);
+  border-bottom: none;
+  color: var(--bgnd);
+  z-index: 98;
+  display: block;
+}
+
+node.ext:hover {
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
+  background-repeat: no-repeat;
+  color: var(--txt);
+}
+
+
+node.ext-mob {
+  top: 0;
+  float: right;
+  right: 0;
+  text-align: center;
+  padding: 8px;
+  padding-top: 46px;
+  width: 28px;
+  margin-top: -40px;
+  height: 32px;
+  background: var(--txt);
+  border: 1px solid var(--txt);
+  border-top: none;
+  color: var(--bgnd);
+  z-index: 98;
+  display: none;
+}
+input {
+  display: none;
+}
+ul.submenu {
+  display: block;
+  position: absolute;
+  padding: 0px;
+  width: 282px;
+  margin-top: 3px;
+  right: 0px;
+  border: 1px solid var(--txt);
+  background: var(--bgnd);
+  text-align: left;
+  opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+ul.submenu a {
+  display: block;
+}
+label.lab-mob {
+  position: relative;
+  display: block;
+  cursor: cell;
+}
+input:checked~ul.submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+
+/* - - - - - - - - - - - - - - - - device navigation - - - - - - - - - - - - - - - - */
+.dev-nav {
+  overflow: visible;
+  background:
+    linear-gradient(var(--bgnd), var(--bgnd)) 0% 0% / 100% 30px,
+    linear-gradient(var(--switch), var(--switch)) 0% 30px / 100% 1px;
+  background-repeat: no-repeat;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  height: 18px;
+  width:100%;
+  position: sticky;
+  top: 57px;
+  z-index: 97;
+}
+
+
+/* - - - - - - - - - - - - - - - - drop down menu - - - - - - - - - - - - - - - - */
+
+.drop {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.drop-spacer {
+  display: block;
+  position: absolute;
+  padding-top: 5px;
+}
+.drop-content {
+  display: block;
+  position: absolute;
+  min-width:124px;
+  z-index: 1;
+  text-align: left;
+  border: 1px solid var(--txt);
+  background: var(--bgnd);
+  opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.drop-content a {
+  display: block;
+}
+.drop-content-a {
+  display: block;
+  position: absolute;
+  min-width:450px;
+  z-index: 1;
+  text-align: left;
+  border: 1px solid var(--txt);
+  background: var(--bgnd);
+  opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.drop-content-a a {
+  display: block;
+}
+.drop-ext {
+  display: block;
+  position: absolute;
+  min-width:282px;
+  right: -103px;
+  z-index: 1;
+  text-align: left;
+  border: 1px solid var(--txt);
+  border-top: none;
+  background:
+    linear-gradient(var(--txt), var(--txt)) 0% 0% / 168px 1px,
+    linear-gradient(var(--bgnd), var(--bgnd)) 0% 0% / 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.drop-ext a {
+  display: block;
+}
+.drop:hover .drop-content, .drop:hover .drop-ext {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.drop:hover a.textdrop {
+  color: var(--bgnd);
+  background: linear-gradient(var(--txt), var(--txt)) 0% 100% / 100% 100%;
+  background-repeat: no-repeat;
 }
 
 
 /* - - - - - - - - - - - - - - - - links - - - - - - - - - - - - - - - - */
 
 a:link {
-    text-decoration: none;
-    color: var(--txt);
-    transition: background 0.3s;
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
-    background-repeat: no-repeat;
+  text-decoration: none;
+  color: var(--txt);
+  transition: color 0.2s, background 0.3s;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
+  background-repeat: no-repeat;
+
 }
 a:visited {
-    text-decoration: none;
-    color: var(--txt);
+  text-decoration: none;
+  color: var(--txt);
 }
 a:hover {
-    cursor: cell;
+  cursor: cell;
 }
 a.text {
-    color: var(--txt);
-    transition: background 0.3s;
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
-    background-repeat: no-repeat;
+  color: var(--txt);
+  padding: 6px;
+  transition: color 0.2s, background 0.3s;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
+  background-repeat: no-repeat;
+}
+a.text-under {
+  color: var(--txt);
+  padding: 6px;
+  transition: color 0.2s, background 0.3s;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 100% / 100% 1px;
+  background-repeat: no-repeat;
+}
+a.text-left {
+  color: var(--txt);
+  padding: 6px;
+  transition: color 0.2s, background 0.3s;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 0% 100%;
+  background-repeat: no-repeat;
+}
+a.text-sides {
+  display: block;
+  color: var(--txt);
+  padding: 6px;
+  width: 210px;
+  margin: auto;
+  transition: color 0.2s, background 0.3s;
+  background:
+    linear-gradient(var(--txt), var(--txt)) 100% 0% / 2px 100%,
+    linear-gradient(var(--txt), var(--txt)) 0% 0% / 2px 100%;
+  background-repeat: no-repeat;
+}
+a.textdrop {
+  color: var(--txt);
+  padding: 6px;
+  transition: color 0.2s, background 0.3s;
+  background: linear-gradient(var(--txt), var(--txt)) 0% 100% / 100% 1px;
+  background-repeat: no-repeat;
+}
+a.textnobg {
+  padding: 6px;
+  color: var(--txt);
+  transition: color 0.2s;
 }
 a.lines {
-    color: var(--bgnd);
-    transition: background 0.3s;
-    background: linear-gradient(var(--bgnd), var(--bgnd)) 0% 0% / 100% 0%;
-    background-repeat: no-repeat;
+  color: var(--bgnd);
+  transition: color 0.2s, background 0.4s;
+  background: linear-gradient(var(--bgnd), var(--bgnd)) 0% 0% / 100% 0%;
+  background-repeat: no-repeat;
 }
 a.scale {
-    color: var(--txt);
-    font-size: 16px;
-    transition: background 0.3s;
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
-    background-repeat: no-repeat;
+  color: var(--txt);
+  font-size: 16px;
+  padding: 6px;
+  transition: color 0.2s;
 }
 a.text:hover {
-    color: var(--bgnd);
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
-    background-repeat: no-repeat;
+  color: var(--bgnd);
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
+  background-repeat: no-repeat;
 }
+a.text-under:hover {
+  color: var(--bgnd);
+  background: linear-gradient(var(--txt), var(--txt)) 0% 100% / 100% 100%;
+  background-repeat: no-repeat;
+}
+a.text-left:hover {
+  color: var(--bgnd);
+  background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
+  background-repeat: no-repeat;
+}
+a.text-sides:hover {
+  color: var(--bgnd);
+  background:
+    linear-gradient(var(--txt), var(--txt)) 100% 0% / 50% 100%,
+    linear-gradient(var(--txt), var(--txt)) 0% 0% / 50% 100%;
+  background-repeat: no-repeat;
+}
+
 a.lines:hover {
-    color: var(--txt);
-    background: linear-gradient(var(--bgnd), var(--bgnd)) 0% 0% / 100% 100%;
-    background-repeat: no-repeat;
+  color: var(--txt);
+  background: linear-gradient(var(--bgnd), var(--bgnd)) 0% 0% / 100% 100%;
+  background-repeat: no-repeat;
 }
-a.scale:hover {
-    color: var(--bgnd);
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
-    background-repeat: no-repeat;
-}
+
 a.current {
-    color: var(--bgnd);
-    background: var(--txt);
+  color: var(--bgnd);
+  background: var(--txt);
+  padding: 6px;
 }
 a.void {
-    font-size: 12px;
-    color: var(--bgnd);
+  font-size: 12px;
+  color: var(--bgnd);
 }
 a.void:hover {
-    cursor: default;
+  cursor: default;
 }
 
-
-/* - - - - - - - - - - - - - - - - vo - - - - - - - - - - - - - - - - */
-
-node.gate {
-    width: 64px;
-    height: 32px;
-}
-node.gate .logo {
-    float: right;
-    height: 32px;
-}
-node.gate:hover .logo {
-    display: none;
-}
-node.gate .img-top {
-    display: none;
-    float: right;
-    height: 32px;
-    z-index: 99;
-}
-node.gate:hover .img-top {
-    display: inline;
-}
-
-node.gate .btn_theme {
-    float: right;
-    font-size: 32px;
-    padding-right: 6%;
-    color: var(--gry);
-}
 
 
 /* - - - - - - - - - - - - - - - - images - - - - - - - - - - - - - - - - */
 
-
 img.lim {
-    max-height: 250px;
+  max-height: 250px;
 }
 img.right {
-    float: right;
+  float: right;
+  filter: brightness(86%);
 }
 img.meter {
-    float: right;
-    padding-top: 8px;
-    padding-right: 24px;
+  float: right;
+  padding-top: 8px;
+  padding-right: 24px;
 }
 img.adjust {
-    max-width: 360px;
-    width: 100%;
-    height: auto;
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+  filter: brightness(86%);
+  transition: opacity 0.3s;
 }
 img.pic {
-    max-width: 520px;
-    width: 100%;
-    height: auto;
-    filter: invert(0);
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  filter: invert(0);
 }
 img.data {
-    
+
+}
+img.infomap {
+  padding-top: 14px;
+  max-width: 298px;
+  min-width: 298px;
+  max-height: 216px;
+  min-height: 216px;
+}
+img.about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  filter: brightness(92%);
 }
 
 iframe.doc {
-    max-width: 520px;
-    width: 100%;
-    height: 410px;
-    filter: invert(0);
+  max-width: 520px;
+  width: 100%;
+  height: 410px;
+  filter: invert(0);
 }
 
+/* - - - - - - - - - - - - - - - - hover text image - - - - - - - - - - - - - - - - */
+
+.imageselect{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.centertext {
+  padding: 6px;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 39%;
+  text-align: center;
+  color: var(--bgnd);
+  background: var(--txt);
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.imageselct .adjust{
+  filter: invert(0);
+}
+.imageselect:hover .centertext {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.imageselect:hover img.anim {
+  opacity: 0.5;
+}
+.imageselect:hover img.adjust {
+  opacity: 0.5;
+}
 
 /* - - - - - - - - - - - - - - - - blocks - - - - - - - - - - - - - - - - */
 
 .blocks {
-    display: grid;
-    grid-column-gap: 10%;
-    grid-row-gap: 0px;
-    grid-template-columns: repeat(4, minmax(40px, 1fr));
+  display: grid;
+  grid-column-gap: 10%;
+  grid-row-gap: 0px;
+  grid-template-columns: repeat(4, minmax(40px, 1fr));
 }
 .botblocks {
-    display: grid;
-    grid-column-gap: 10%;
-    grid-row-gap: 0px;
-    grid-template-columns: repeat(4, minmax(40px, 1fr));
+  display: grid;
+  grid-column-gap: 10%;
+  grid-row-gap: 0px;
+  grid-template-columns: repeat(4, minmax(40px, 1fr));
 }
 .bigblocks {
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  display: grid;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 }
-block.image {
-    position: relative;
-    background-image: var(--bg_img);
-    background-size: 50px;
-    height: 250px;
-    border: 1px solid var(--txt);
-    text-align: center;
+.smlblocks {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(6, minmax(60px, 1fr));
 }
-block.fixed {
-    padding: 20px;
-    padding-top: 20px;
-    padding-bottom: 0px;
-    min-height: 230px;
-    max-height: 230px;
-    position: relative;
-    background-image: var(--bg_img);
-    background-size: 50px;
-    border: 1px solid var(--txt);
-    text-align: left;
+.titleblocks {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(1, minmax(630px, 1fr));
 }
-block.line {
-    padding: 8%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    border: 1px solid var(--txt);
-    text-align: left;
-}
-block.noline {
-    position: relative;
-    text-align: center;
-    text-decoration: none;
+.halfblocks {
+  margin: auto;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(2, minmax(60px, 190px));
 }
 
+block.title {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 418px;
+  max-height: 418px;
+  min-width: 630px;
+  max-width: 630px;
+}
+block.title .still {
+  filter: invert(0);
+}
+block.titleinv {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 418px;
+  max-height: 418px;
+  min-width: 630px;
+  max-width: 630px;
+  background-image: var(--bg_img);
+  background-size: 50px;
+}
+block.title .inv {
+
+}
+
+
+block.image {
+  position: relative;
+  background-image: var(--bg_img);
+  background-size: 50px;
+  height: 250px;
+  border: 1px solid var(--txt);
+  text-align: center;
+}
+
+block.image .anim {
+  filter: invert(0);
+}
+block.fixed {
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  min-height: 230px;
+  max-height: 230px;
+  position: relative;
+  background-image: var(--bg_img);
+  background-size: 50px;
+  border: 1px solid var(--txt);
+  text-align: left;
+}
+block.line {
+  padding: 8%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  border: 1px solid var(--txt);
+  text-align: left;
+}
+block.noline {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+block.nolinefixed {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  min-height: 140px;
+  max-height: 140px;
+}
+block.onelinefixed {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  min-height: 60px;
+  max-height: 60px;
+}
+block.topline {
+  min-height: 250px;
+  max-height: 250px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-image: var(--bg_img);
+  background-size: 50px;
+  border: 1px solid var(--txt);
+}
+block.audtxt {
+  background-image: var(--bg_img);
+  background-size: 50px;
+  padding: 6%;
+  padding-top: 19px;
+  padding-bottom: 10px;
+  position: relative;
+  min-height: 221px;
+  max-height: 221px;
+  border: 1px solid var(--txt);
+  text-align: left;
+  grid-column: auto / span 5;
+}
+block.titleline {
+  font-size: 16px;
+  border: 1px solid var(--txt);
+}
+block.titlenoline {
+  font-size: 34px;
+}
+.doublegry {
+  background:
+    linear-gradient(var(--gry), var(--gry)) 50% 6px / 100% 1px,
+    linear-gradient(var(--gry), var(--gry)) 50% 10px / 100% 1px;
+  background-repeat: no-repeat;
+}
+.doubletxt {
+  background:
+    linear-gradient(var(--txt), var(--txt)) 50% 6px / 100% 1px,
+    linear-gradient(var(--txt), var(--txt)) 50% 10px / 100% 1px;
+  background-repeat: no-repeat;
+}
+
+
+/* - - - - - - - - - - - - - - - - time display - - - - - - - - - - - - - - - - */
+.sevseg {
+  font-family: segment;
+  font-size: 2.9px;
+  letter-spacing: 1px;
+  float: right;
+}
+.eights{
+  color: var(--gry);
+  position: absolute;
+  float: right;
+  z-index: -1;
+  overflow: hidden;
+}
 
 /* - - - - - - - - - - - - - - - - modal - - - - - - - - - - - - - - - - */
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-image: var(--bg_img);
-    background-size: 50px;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: var(--bg_img);
+  background-size: 50px;
 }
 .modal-about {
-    display: none; 
-    position: relative; 
-    z-index: 1; 
-    padding-top: 0px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+  display: none;
+  position: relative;
+  z-index: 100;
+  padding-top: 0px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 .modal-content {
-    text-align: center;
-    background-color: var(--bgnd_t);
-    margin: auto;
-    padding: 20px;
-    padding-bottom: 60px;
-    border: 1px solid var(--txt);
-    max-width: 600px;
-    min-width: 310px;
-    width: 60%;
+  text-align: center;
+  background-color: var(--bgnd_t);
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 60px;
+  border: 1px solid var(--txt);
+  max-width: 600px;
+  min-width: 310px;
+  width: 60%;
 }
 .modal-index {
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    overflow: auto;
-    
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
 }
 .modal-content-btm {
-    text-align: left;
-    font-size: 12px;
-    background-color: var(--bgnd_t);
-    margin: auto;
-    margin-bottom: 20px;
-    padding: 20px;
-    padding-left: 3%;
-    padding-right: 3%;
-    border: 1px solid var(--txt);
-    min-width: 310px;
-    max-width: 600px;
-    width: 70%;
-    bottom: 0;
+  text-align: left;
+  font-size: 12px;
+  background-color: var(--bgnd_t);
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-left: 3%;
+  padding-right: 3%;
+  border: 1px solid var(--txt);
+  min-width: 310px;
+  max-width: 600px;
+  width: 70%;
+  bottom: 0;
 }
 .btn {
-    color: var(--txt);
-    transition: background 0.3s;
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
-    background-repeat: no-repeat;
+  display: block;
+  color: var(--txt);
+  padding: 6px;
+  width: 170px;
+  margin: auto;
+  transition: color 0.2s, background 0.3s;
+  background:
+    linear-gradient(var(--txt), var(--txt)) 100% 0% / 2px 100%,
+    linear-gradient(var(--txt), var(--txt)) 0% 0% / 2px 100%;
+  background-repeat: no-repeat;
 }
 .btn:hover {
-    color: var(--bgnd);
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
-    background-repeat: no-repeat;
+  color: var(--bgnd);
+  background:
+    linear-gradient(var(--txt), var(--txt)) 100% 0% / 50% 100%,
+    linear-gradient(var(--txt), var(--txt)) 0% 0% / 50% 100%;
+  background-repeat: no-repeat;
 }
 .close {
-    float: right;
-    color: var(--txt);
-    transition: background 0.3s;
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 0%;
-    background-repeat: no-repeat;
+  float: right;
+  color: var(--txt);
+  padding: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: background 0.3s;
+  background:
+    linear-gradient(var(--txt), var(--txt)) 100% 0% / 2px 100%,
+    linear-gradient(var(--txt), var(--txt)) 0% 0% / 2px 100%;
+  background-repeat: no-repeat;
 }
 .close:hover {
-    color: var(--bgnd);
-    background: linear-gradient(var(--txt), var(--txt)) 0% 0% / 100% 100%;
-    background-repeat: no-repeat;
+  color: var(--bgnd);
+  background:
+    linear-gradient(var(--txt), var(--txt)) 100% 0% / 50% 100%,
+    linear-gradient(var(--txt), var(--txt)) 0% 0% / 50% 100%;
+  background-repeat: no-repeat;
 }
 
 
-/* - - - - - - - - - - - - - - - - lines wide - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - device lines - - - - - - - - - - - - - - - - */
 
-.select {
-    background:
-        /* snid lines */
-        linear-gradient(var(--gry), var(--gry)) 6.8% 17px / 1px 35px,
-        linear-gradient(var(--gry), var(--gry)) 1.6% 52px / 5.4% 1px,
-        linear-gradient(var(--gry), var(--gry)) 1.4% 52px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 1% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 8% 17px / 1px 70px,
-        linear-gradient(var(--gry), var(--gry)) 1.6% 87px / 6.6% 1px,
-        linear-gradient(var(--gry), var(--gry)) 1.4% 87px / 1px 280px,
-        linear-gradient(var(--gry), var(--gry)) 1% 363px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 9.4% 17px / 1px 35px,
-        linear-gradient(var(--gry), var(--gry)) 16.9% 52px / 44.6% 1px,
-        linear-gradient(var(--gry), var(--gry)) 54% 52px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 54% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 10.7% 17px / 1px 70px,
-        linear-gradient(var(--gry), var(--gry)) 18.8% 87px / 43.4% 1px,
-        linear-gradient(var(--gry), var(--gry)) 54% 87px / 1px 280px,
-        linear-gradient(var(--gry), var(--gry)) 54% 363px / 9px 5px,
-        
-        /* varirack lines */
-        linear-gradient(var(--gry), var(--gry)) 32.2% 17px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 4.9% 42px / 28.7% 1px,
-        linear-gradient(var(--gry), var(--gry)) 3.4% 42px / 1px 35px,
-        linear-gradient(var(--gry), var(--gry)) 3% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 34.9% 17px / 1px 80px,
-        linear-gradient(var(--gry), var(--gry)) 5.15% 97px / 31.45% 1px,
-        linear-gradient(var(--gry), var(--gry)) 3.4% 97px / 1px 270px,
-        linear-gradient(var(--gry), var(--gry)) 3% 363px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 37.6% 17px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 46.05% 42px / 18.4% 1px,
-        linear-gradient(var(--gry), var(--gry)) 56% 42px / 1px 35px,
-        linear-gradient(var(--gry), var(--gry)) 56% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 40.3% 17px / 1px 110px,
-        linear-gradient(var(--gry), var(--gry)) 47.8% 127px / 15.8% 1px,
-        linear-gradient(var(--gry), var(--gry)) 56% 127px / 1px 240px,
-        linear-gradient(var(--gry), var(--gry)) 56% 363px / 9px 5px,
-        
-        /* eve lines */
-        linear-gradient(var(--gry), var(--gry)) 62.25% 17px / 1px 15px,
-        linear-gradient(var(--gry), var(--gry)) 12.6% 32px / 56.8% 1px,
-        linear-gradient(var(--gry), var(--gry)) 5.4% 32px / 1px 45px,
-        linear-gradient(var(--gry), var(--gry)) 5% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 63.25% 17px / 1px 90px,
-        linear-gradient(var(--gry), var(--gry)) 12.8% 107px / 57.8% 1px,
-        linear-gradient(var(--gry), var(--gry)) 5.4% 107px / 1px 260px,
-        linear-gradient(var(--gry), var(--gry)) 5% 363px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 64.25% 17px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 61.9% 42px / 6.3% 1px,
-        linear-gradient(var(--gry), var(--gry)) 57.9% 42px / 1px 35px,
-        linear-gradient(var(--gry), var(--gry)) 58% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 65.25% 17px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 93.6% 42px / 30.3% 1px,
-        linear-gradient(var(--gry), var(--gry)) 95.6% 42px / 1px 312px,
-        linear-gradient(var(--gry), var(--gry)) 92.9% 353px / 37.5% 1px,
-        linear-gradient(var(--gry), var(--gry)) 58% 353px / 1px 15px,
-        linear-gradient(var(--gry), var(--gry)) 58% 363px / 9px 5px,
+.selectdev {
+  background:
+    /* select 1 lines */
+    linear-gradient(var(--gry), var(--gry)) 6.8% 17px / 1px calc(var(--lyr1) - 36px),
+    linear-gradient(var(--gry), var(--gry)) 1.6% calc(var(--lyr1) - 20px) / 5.4% 1px,
+    linear-gradient(var(--gry), var(--gry)) 1.4% calc(var(--lyr1) - 20px) / 1px 20px,
+    linear-gradient(var(--gry), var(--gry)) 1% var(--lyr1) / 9px 5px,
 
-        /* visual lines */
-        linear-gradient(var(--gry), var(--gry)) 88.3% 17px / 1px 45px,
-        linear-gradient(var(--gry), var(--gry)) 38.95% 62px / 80.85% 1px,
-        linear-gradient(var(--gry), var(--gry)) 7.4% 62px / 1px 15px,
-        linear-gradient(var(--gry), var(--gry)) 7% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 90.23% 17px / 1px 100px,
-        linear-gradient(var(--gry), var(--gry)) 42.9% 117px / 82.75% 1px,
-        linear-gradient(var(--gry), var(--gry)) 7.4% 117px / 1px 250px,
-        linear-gradient(var(--gry), var(--gry)) 7% 363px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 92.27% 17px / 1px 35px,
-        linear-gradient(var(--gry), var(--gry)) 88.6% 52px / 32.3% 1px,
-        linear-gradient(var(--gry), var(--gry)) 60% 52px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 60% 71px / 9px 5px,
-        
-        linear-gradient(var(--gry), var(--gry)) 94.3% 17px / 1px 45px,
-        linear-gradient(var(--gry), var(--gry)) 97.4% 62px / 3.3% 1px,
-        linear-gradient(var(--gry), var(--gry)) 97.6% 62px / 1px 282px,
-        linear-gradient(var(--gry), var(--gry)) 96% 343px / 37.5% 1px,
-        linear-gradient(var(--gry), var(--gry)) 60% 343px / 1px 25px,
-        linear-gradient(var(--gry), var(--gry)) 60% 363px / 9px 5px;
-        
-    background-repeat: no-repeat;
-    max-width: 940px;
-    min-width: 320px;
-    min-height: 680px;
-    padding-bottom: 40px; 
-} 
+    linear-gradient(var(--gry), var(--gry)) 8.1% 17px / 1px calc(var(--lyr1) - 1px),
+    linear-gradient(var(--gry), var(--gry)) 1.6% calc(var(--lyr1) + 15px) / 6.7% 1px,
+    linear-gradient(var(--gry), var(--gry)) 1.4% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2) - var(--lyr1) - 15px),
+    linear-gradient(var(--gry), var(--gry)) 1% var(--lyr2) / 9px 5px,
 
-.select .main {
-    background:
-        /* snid lines */
-        linear-gradient(var(--txt), var(--txt)) 6.8% 17px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 1.6% 52px / 5.4% 1px,
-        linear-gradient(var(--txt), var(--txt)) 1.4% 52px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 1% 71px / 9px 5px,
-        
-        /* varirack lines */
-        linear-gradient(var(--txt), var(--txt)) 34.9% 17px / 1px 80px,
-        linear-gradient(var(--txt), var(--txt)) 5.15% 97px / 31.45% 1px,
-        linear-gradient(var(--txt), var(--txt)) 3.4% 97px / 1px 270px,
-        linear-gradient(var(--txt), var(--txt)) 3% 363px / 9px 5px,
-        
-        /* eve lines */
-        linear-gradient(var(--txt), var(--txt)) 64.25% 17px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 61.9% 42px / 6.3% 1px,
-        linear-gradient(var(--txt), var(--txt)) 57.9% 42px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 58% 71px / 9px 5px,
-        
-        /* visual lines */
-        linear-gradient(var(--txt), var(--txt)) 94.3% 17px / 1px 45px,
-        linear-gradient(var(--txt), var(--txt)) 97.4% 62px / 3.3% 1px,
-        linear-gradient(var(--txt), var(--txt)) 97.6% 62px / 1px 282px,
-        linear-gradient(var(--txt), var(--txt)) 96% 343px / 37.5% 1px,
-        linear-gradient(var(--txt), var(--txt)) 60% 343px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 60% 363px / 9px 5px;
-    
-    background-repeat: no-repeat;
-}
-.select .snid {
-    background:
-        /* snid lines */
-        linear-gradient(var(--txt), var(--txt)) 6.8% 17px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 1.6% 52px / 5.4% 1px,
-        linear-gradient(var(--txt), var(--txt)) 1.4% 52px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 1% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 8% 17px / 1px 70px,
-        linear-gradient(var(--txt), var(--txt)) 1.6% 87px / 6.6% 1px,
-        linear-gradient(var(--txt), var(--txt)) 1.4% 87px / 1px 280px,
-        linear-gradient(var(--txt), var(--txt)) 1% 363px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 9.4% 17px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 16.9% 52px / 44.6% 1px,
-        linear-gradient(var(--txt), var(--txt)) 54% 52px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 54% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 10.7% 17px / 1px 70px,
-        linear-gradient(var(--txt), var(--txt)) 18.8% 87px / 43.4% 1px,
-        linear-gradient(var(--txt), var(--txt)) 54% 87px / 1px 280px,
-        linear-gradient(var(--txt), var(--txt)) 54% 363px / 9px 5px;
+    linear-gradient(var(--gry), var(--gry)) 9.4% 17px / 1px calc(var(--lyr1) - 36px),
+    linear-gradient(var(--gry), var(--gry)) 16.95% calc(var(--lyr1) - 20px) / 44.55% 1px,
+    linear-gradient(var(--gry), var(--gry)) 54% calc(var(--lyr1) - 20px) / 1px 20px,
+    linear-gradient(var(--gry), var(--gry)) 54% var(--lyr1) / 9px 5px,
 
-    background-repeat: no-repeat;
+    linear-gradient(var(--gry), var(--gry)) 10.7% 17px / 1px calc(var(--lyr1) - 1px),
+    linear-gradient(var(--gry), var(--gry)) 18.8% calc(var(--lyr1) + 15px) / 43.4% 1px,
+    linear-gradient(var(--gry), var(--gry)) 54% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2) - var(--lyr1) - 14px),
+    linear-gradient(var(--gry), var(--gry)) 54% var(--lyr2) / 9px 5px,
+
+    /* select 2 lines */
+    linear-gradient(var(--gry), var(--gry)) 34.3% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--gry), var(--gry)) 4.9% calc(var(--lyr1) - 30px) / 31% 1px,
+    linear-gradient(var(--gry), var(--gry)) 3.4% calc(var(--lyr1) - 30px) / 1px 30px,
+    linear-gradient(var(--gry), var(--gry)) 3% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 35.6% 17px / 1px calc(var(--lyr1) + 9px),
+    linear-gradient(var(--gry), var(--gry)) 5.15% calc(var(--lyr1) + 25px) / 32.2% 1px,
+    linear-gradient(var(--gry), var(--gry)) 3.4% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr2) - var(--lyr1) - 25px),
+    linear-gradient(var(--gry), var(--gry)) 3% var(--lyr2) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 36.9% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--gry), var(--gry)) 45.55% calc(var(--lyr1) - 30px) / 19.1% 1px,
+    linear-gradient(var(--gry), var(--gry)) 56% calc(var(--lyr1) - 30px) / 1px 30px,
+    linear-gradient(var(--gry), var(--gry)) 56% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 38.2% 17px / 1px calc(var(--lyr1) + 39px),
+    linear-gradient(var(--gry), var(--gry)) 46.45% calc(var(--lyr1) + 55px) / 17.75% 1px,
+    linear-gradient(var(--gry), var(--gry)) 56% calc(var(--lyr1) + 55px) / 1px calc(var(--lyr2) - var(--lyr1) - 54px),
+    linear-gradient(var(--gry), var(--gry)) 56% var(--lyr2) / 9px 5px,
+
+    /* select 3 lines */
+    linear-gradient(var(--gry), var(--gry)) 61.8% 17px / 1px calc(var(--lyr1) - 56px),
+    linear-gradient(var(--gry), var(--gry)) 12.6% calc(var(--lyr1) - 40px) / 56.3% 1px,
+    linear-gradient(var(--gry), var(--gry)) 5.4% calc(var(--lyr1) - 40px) / 1px 40px,
+    linear-gradient(var(--gry), var(--gry)) 5% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 63.1% 17px / 1px calc(var(--lyr1) + 19px),
+    linear-gradient(var(--gry), var(--gry)) 12.8% calc(var(--lyr1) + 35px) / 57.8% 1px,
+    linear-gradient(var(--gry), var(--gry)) 5.4% calc(var(--lyr1) + 35px) / 1px calc(var(--lyr2) - var(--lyr1) - 35px),
+    linear-gradient(var(--gry), var(--gry)) 5% var(--lyr2) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 64.4% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--gry), var(--gry)) 61.9% calc(var(--lyr1) - 30px) / 6.45% 1px,
+    linear-gradient(var(--gry), var(--gry)) 57.9% calc(var(--lyr1) - 30px) / 1px 30px,
+    linear-gradient(var(--gry), var(--gry)) 58% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 65.7% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--gry), var(--gry)) 93.8% calc(var(--lyr1) - 30px) / 30% 1px,
+    linear-gradient(var(--gry), var(--gry)) 95.6% calc(var(--lyr1) - 30px) / 1px calc(var(--lyr2) - var(--lyr1) + 21px),
+    linear-gradient(var(--gry), var(--gry)) 92.95% calc(var(--lyr2) - 10px) / 37.75% 1px,
+    linear-gradient(var(--gry), var(--gry)) 57.9% calc(var(--lyr2) - 10px) / 1px 10px,
+    linear-gradient(var(--gry), var(--gry)) 58% var(--lyr2) / 9px 5px,
+
+    /* select 4 lines */
+    linear-gradient(var(--gry), var(--gry)) 89.3% 17px / 1px calc(var(--lyr1) - 26px),
+    linear-gradient(var(--gry), var(--gry)) 41.1% calc(var(--lyr1) - 10px) / 81.8% 1px,
+    linear-gradient(var(--gry), var(--gry)) 7.4% calc(var(--lyr1) - 10px) / 1px 10px,
+    linear-gradient(var(--gry), var(--gry)) 7% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 90.6% 17px / 1px calc(var(--lyr1) + 29px),
+    linear-gradient(var(--gry), var(--gry)) 43.9% calc(var(--lyr1) + 45px) / 83.1% 1px,
+    linear-gradient(var(--gry), var(--gry)) 7.4% calc(var(--lyr1) + 45px) / 1px calc(var(--lyr2) - var(--lyr1) - 45px),
+    linear-gradient(var(--gry), var(--gry)) 7% var(--lyr2) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 91.9% 17px / 1px calc(var(--lyr1) - 36px),
+    linear-gradient(var(--gry), var(--gry)) 88.0% calc(var(--lyr1) - 20px) / 31.77% 1px,
+    linear-gradient(var(--gry), var(--gry)) 60% calc(var(--lyr1) - 20px) / 1px 20px,
+    linear-gradient(var(--gry), var(--gry)) 60% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--gry), var(--gry)) 93.2% 17px / 1px calc(var(--lyr1) - 26px),
+    linear-gradient(var(--gry), var(--gry)) 97.4% calc(var(--lyr1) - 10px) / 4.4% 1px,
+    linear-gradient(var(--gry), var(--gry)) 97.6% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr2) - var(--lyr1) - 9px),
+    linear-gradient(var(--gry), var(--gry)) 96.15% calc(var(--lyr2) - 20px) / 37.6% 1px,
+    linear-gradient(var(--gry), var(--gry)) 60% calc(var(--lyr2) - 20px) / 1px 20px,
+    linear-gradient(var(--gry), var(--gry)) 60% var(--lyr2) / 9px 5px;
+
+  background-repeat: no-repeat;
+  max-width: 940px;
+  min-width: 320px;
+  min-height: 680px;
+  padding-bottom: 40px;
 }
-.select .varirack {
-    background:
-        /* varirack lines */
-        linear-gradient(var(--txt), var(--txt)) 32.2% 17px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 4.9% 42px / 28.7% 1px,
-        linear-gradient(var(--txt), var(--txt)) 3.4% 42px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 3% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 34.9% 17px / 1px 80px,
-        linear-gradient(var(--txt), var(--txt)) 5.15% 97px / 31.45% 1px,
-        linear-gradient(var(--txt), var(--txt)) 3.4% 97px / 1px 270px,
-        linear-gradient(var(--txt), var(--txt)) 3% 363px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 37.6% 17px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 46.05% 42px / 18.4% 1px,
-        linear-gradient(var(--txt), var(--txt)) 56% 42px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 56% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 40.3% 17px / 1px 110px,
-        linear-gradient(var(--txt), var(--txt)) 47.8% 127px / 15.8% 1px,
-        linear-gradient(var(--txt), var(--txt)) 56% 127px / 1px 240px,
-        linear-gradient(var(--txt), var(--txt)) 56% 363px / 9px 5px;
-        
-    background-repeat: no-repeat;
+
+.selectdev .main{
+  background:
+    /* select 1 lines */
+    linear-gradient(var(--txt), var(--txt)) 6.8% 17px / 1px calc(var(--lyr1) - 36px),
+    linear-gradient(var(--txt), var(--txt)) 1.6% calc(var(--lyr1) - 20px) / 5.4% 1px,
+    linear-gradient(var(--txt), var(--txt)) 1.4% calc(var(--lyr1) - 20px) / 1px 20px,
+    linear-gradient(var(--txt), var(--txt)) 1% var(--lyr1) / 9px 5px,
+
+    /* select 2 lines */
+    linear-gradient(var(--txt), var(--txt)) 35.6% 17px / 1px calc(var(--lyr1) + 9px),
+    linear-gradient(var(--txt), var(--txt)) 5.15% calc(var(--lyr1) + 25px) / 32.2% 1px,
+    linear-gradient(var(--txt), var(--txt)) 3.4% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr2) - var(--lyr1) - 25px),
+    linear-gradient(var(--txt), var(--txt)) 3% var(--lyr2) / 9px 5px,
+
+    /* select 3 lines */
+    linear-gradient(var(--txt), var(--txt)) 64.4% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--txt), var(--txt)) 61.9% calc(var(--lyr1) - 30px) / 6.45% 1px,
+    linear-gradient(var(--txt), var(--txt)) 57.9% calc(var(--lyr1) - 30px) / 1px 30px,
+    linear-gradient(var(--txt), var(--txt)) 58% var(--lyr1) / 9px 5px,
+
+    /* select 4 lines */
+    linear-gradient(var(--txt), var(--txt)) 93.2% 17px / 1px calc(var(--lyr1) - 26px),
+    linear-gradient(var(--txt), var(--txt)) 97.4% calc(var(--lyr1) - 10px) / 4.4% 1px,
+    linear-gradient(var(--txt), var(--txt)) 97.6% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr2) - var(--lyr1) - 9px),
+    linear-gradient(var(--txt), var(--txt)) 96.15% calc(var(--lyr2) - 20px) / 37.6% 1px,
+    linear-gradient(var(--txt), var(--txt)) 60% calc(var(--lyr2) - 20px) / 1px 20px,
+    linear-gradient(var(--txt), var(--txt)) 60% var(--lyr2) / 9px 5px;
+
+  background-repeat: no-repeat;
 }
-.select .eve {
-    background:
-        /* eve lines */
-        linear-gradient(var(--txt), var(--txt)) 62.25% 17px / 1px 15px,
-        linear-gradient(var(--txt), var(--txt)) 12.6% 32px / 56.8% 1px,
-        linear-gradient(var(--txt), var(--txt)) 5.4% 32px / 1px 45px,
-        linear-gradient(var(--txt), var(--txt)) 5% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 63.25% 17px / 1px 90px,
-        linear-gradient(var(--txt), var(--txt)) 12.8% 107px / 57.8% 1px,
-        linear-gradient(var(--txt), var(--txt)) 5.4% 107px / 1px 260px,
-        linear-gradient(var(--txt), var(--txt)) 5% 363px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 64.25% 17px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 61.9% 42px / 6.3% 1px,
-        linear-gradient(var(--txt), var(--txt)) 57.9% 42px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 58% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 65.25% 17px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 93.6% 42px / 30.3% 1px,
-        linear-gradient(var(--txt), var(--txt)) 95.6% 42px / 1px 312px,
-        linear-gradient(var(--txt), var(--txt)) 92.9% 353px / 37.5% 1px,
-        linear-gradient(var(--txt), var(--txt)) 58% 353px / 1px 15px,
-        linear-gradient(var(--txt), var(--txt)) 58% 363px / 9px 5px;
-        
-    background-repeat: no-repeat;
+
+.selectdev .snid{
+  background:
+    /* snid lines */
+    linear-gradient(var(--txt), var(--txt)) 6.8% 17px / 1px calc(var(--lyr1) - 36px),
+    linear-gradient(var(--txt), var(--txt)) 1.6% calc(var(--lyr1) - 20px) / 5.4% 1px,
+    linear-gradient(var(--txt), var(--txt)) 1.4% calc(var(--lyr1) - 20px) / 1px 20px,
+    linear-gradient(var(--txt), var(--txt)) 1% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 8.1% 17px / 1px calc(var(--lyr1) - 1px),
+    linear-gradient(var(--txt), var(--txt)) 1.6% calc(var(--lyr1) + 15px) / 6.7% 1px,
+    linear-gradient(var(--txt), var(--txt)) 1.4% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2) - var(--lyr1) - 15px),
+    linear-gradient(var(--txt), var(--txt)) 1% var(--lyr2) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 9.4% 17px / 1px calc(var(--lyr1) - 36px),
+    linear-gradient(var(--txt), var(--txt)) 16.95% calc(var(--lyr1) - 20px) / 44.55% 1px,
+    linear-gradient(var(--txt), var(--txt)) 54% calc(var(--lyr1) - 20px) / 1px 20px,
+    linear-gradient(var(--txt), var(--txt)) 54% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 10.7% 17px / 1px calc(var(--lyr1) - 1px),
+    linear-gradient(var(--txt), var(--txt)) 18.8% calc(var(--lyr1) + 15px) / 43.4% 1px,
+    linear-gradient(var(--txt), var(--txt)) 54% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2) - var(--lyr1) - 14px),
+    linear-gradient(var(--txt), var(--txt)) 54% var(--lyr2) / 9px 5px;
+
+  background-repeat: no-repeat;
 }
-.select .visual {
-    background:
-        /* visual lines */
-        linear-gradient(var(--txt), var(--txt)) 88.3% 17px / 1px 45px,
-        linear-gradient(var(--txt), var(--txt)) 38.95% 62px / 80.85% 1px,
-        linear-gradient(var(--txt), var(--txt)) 7.4% 62px / 1px 15px,
-        linear-gradient(var(--txt), var(--txt)) 7% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 90.23% 17px / 1px 100px,
-        linear-gradient(var(--txt), var(--txt)) 42.9% 117px / 82.75% 1px,
-        linear-gradient(var(--txt), var(--txt)) 7.4% 117px / 1px 250px,
-        linear-gradient(var(--txt), var(--txt)) 7% 363px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 92.27% 17px / 1px 35px,
-        linear-gradient(var(--txt), var(--txt)) 88.6% 52px / 32.3% 1px,
-        linear-gradient(var(--txt), var(--txt)) 60% 52px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 60% 71px / 9px 5px,
-        
-        linear-gradient(var(--txt), var(--txt)) 94.3% 17px / 1px 45px,
-        linear-gradient(var(--txt), var(--txt)) 97.4% 62px / 3.3% 1px,
-        linear-gradient(var(--txt), var(--txt)) 97.6% 62px / 1px 282px,
-        linear-gradient(var(--txt), var(--txt)) 96% 343px / 37.5% 1px,
-        linear-gradient(var(--txt), var(--txt)) 60% 343px / 1px 25px,
-        linear-gradient(var(--txt), var(--txt)) 60% 363px / 9px 5px;
-        
-    background-repeat: no-repeat;
+
+.selectdev .bwop{
+  background:
+    /* bwop lines */
+    linear-gradient(var(--txt), var(--txt)) 34.3% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--txt), var(--txt)) 4.9% calc(var(--lyr1) - 30px) / 31% 1px,
+    linear-gradient(var(--txt), var(--txt)) 3.4% calc(var(--lyr1) - 30px) / 1px 30px,
+    linear-gradient(var(--txt), var(--txt)) 3% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 35.6% 17px / 1px calc(var(--lyr1) + 9px),
+    linear-gradient(var(--txt), var(--txt)) 5.15% calc(var(--lyr1) + 25px) / 32.2% 1px,
+    linear-gradient(var(--txt), var(--txt)) 3.4% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr2) - var(--lyr1) - 25px),
+    linear-gradient(var(--txt), var(--txt)) 3% var(--lyr2) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 36.9% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--txt), var(--txt)) 45.55% calc(var(--lyr1) - 30px) / 19.1% 1px,
+    linear-gradient(var(--txt), var(--txt)) 56% calc(var(--lyr1) - 30px) / 1px 30px,
+    linear-gradient(var(--txt), var(--txt)) 56% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 38.2% 17px / 1px calc(var(--lyr1) + 39px),
+    linear-gradient(var(--txt), var(--txt)) 46.45% calc(var(--lyr1) + 55px) / 17.75% 1px,
+    linear-gradient(var(--txt), var(--txt)) 56% calc(var(--lyr1) + 55px) / 1px calc(var(--lyr2) - var(--lyr1) - 54px),
+    linear-gradient(var(--txt), var(--txt)) 56% var(--lyr2) / 9px 5px;
+
+  background-repeat: no-repeat;
+}
+
+.selectdev .glitch{
+  background:
+    /* glitch lines */
+    linear-gradient(var(--txt), var(--txt)) 61.8% 17px / 1px calc(var(--lyr1) - 56px),
+    linear-gradient(var(--txt), var(--txt)) 12.6% calc(var(--lyr1) - 40px) / 56.3% 1px,
+    linear-gradient(var(--txt), var(--txt)) 5.4% calc(var(--lyr1) - 40px) / 1px 40px,
+    linear-gradient(var(--txt), var(--txt)) 5% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 63.1% 17px / 1px calc(var(--lyr1) + 19px),
+    linear-gradient(var(--txt), var(--txt)) 12.8% calc(var(--lyr1) + 35px) / 57.8% 1px,
+    linear-gradient(var(--txt), var(--txt)) 5.4% calc(var(--lyr1) + 35px) / 1px calc(var(--lyr2) - var(--lyr1) - 35px),
+    linear-gradient(var(--txt), var(--txt)) 5% var(--lyr2) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 64.4% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--txt), var(--txt)) 61.9% calc(var(--lyr1) - 30px) / 6.45% 1px,
+    linear-gradient(var(--txt), var(--txt)) 57.9% calc(var(--lyr1) - 30px) / 1px 30px,
+    linear-gradient(var(--txt), var(--txt)) 58% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 65.7% 17px / 1px calc(var(--lyr1) - 46px),
+    linear-gradient(var(--txt), var(--txt)) 93.8% calc(var(--lyr1) - 30px) / 30% 1px,
+    linear-gradient(var(--txt), var(--txt)) 95.6% calc(var(--lyr1) - 30px) / 1px calc(var(--lyr2) - var(--lyr1) + 21px),
+    linear-gradient(var(--txt), var(--txt)) 92.95% calc(var(--lyr2) - 10px) / 37.75% 1px,
+    linear-gradient(var(--txt), var(--txt)) 57.9% calc(var(--lyr2) - 10px) / 1px 10px,
+    linear-gradient(var(--txt), var(--txt)) 58% var(--lyr2) / 9px 5px;
+
+  background-repeat: no-repeat;
+}
+
+.selectdev .eve{
+  background:
+    /* eve lines */
+    linear-gradient(var(--txt), var(--txt)) 89.3% 17px / 1px calc(var(--lyr1) - 26px),
+    linear-gradient(var(--txt), var(--txt)) 41.1% calc(var(--lyr1) - 10px) / 81.8% 1px,
+    linear-gradient(var(--txt), var(--txt)) 7.4% calc(var(--lyr1) - 10px) / 1px 10px,
+    linear-gradient(var(--txt), var(--txt)) 7% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 90.6% 17px / 1px calc(var(--lyr1) + 29px),
+    linear-gradient(var(--txt), var(--txt)) 43.9% calc(var(--lyr1) + 45px) / 83.1% 1px,
+    linear-gradient(var(--txt), var(--txt)) 7.4% calc(var(--lyr1) + 45px) / 1px calc(var(--lyr2) - var(--lyr1) - 45px),
+    linear-gradient(var(--txt), var(--txt)) 7% var(--lyr2) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 91.9% 17px / 1px calc(var(--lyr1) - 36px),
+    linear-gradient(var(--txt), var(--txt)) 88.0% calc(var(--lyr1) - 20px) / 31.77% 1px,
+    linear-gradient(var(--txt), var(--txt)) 60% calc(var(--lyr1) - 20px) / 1px 20px,
+    linear-gradient(var(--txt), var(--txt)) 60% var(--lyr1) / 9px 5px,
+
+    linear-gradient(var(--txt), var(--txt)) 93.2% 17px / 1px calc(var(--lyr1) - 26px),
+    linear-gradient(var(--txt), var(--txt)) 97.4% calc(var(--lyr1) - 10px) / 4.4% 1px,
+    linear-gradient(var(--txt), var(--txt)) 97.6% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr2) - var(--lyr1) - 9px),
+    linear-gradient(var(--txt), var(--txt)) 96.15% calc(var(--lyr2) - 20px) / 37.6% 1px,
+    linear-gradient(var(--txt), var(--txt)) 60% calc(var(--lyr2) - 20px) / 1px 20px,
+    linear-gradient(var(--txt), var(--txt)) 60% var(--lyr2) / 9px 5px;
+
+  background-repeat: no-repeat;
 }
 
 
 /* - - - - - - - - - - - - - - - - lines narrow - - - - - - - - - - - - - - - - */
 
 @media (max-width: 631px) { /* sinlge column */
-    .select {
-        background:
-            /* snid lines */
-            linear-gradient(var(--gry), var(--gry)) 5.1% 17px / 1px 29px,
-            linear-gradient(var(--gry), var(--gry)) 2.2% 46px / 3.15% 1px,
-            linear-gradient(var(--gry), var(--gry)) 2% 46px / 1px 25px,
-            linear-gradient(var(--gry), var(--gry)) 1% 71px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 7.4% 17px / 1px 70px,
-            linear-gradient(var(--gry), var(--gry)) 2.1% 87px / 5.6% 1px,
-            linear-gradient(var(--gry), var(--gry)) 2% 87px / 1px 280px,
-            linear-gradient(var(--gry), var(--gry)) 1% 363px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 9.7% 17px / 1px 39px,
-            linear-gradient(var(--gry), var(--gry)) 6.35% 56px / 3.78% 1px,
-            linear-gradient(var(--gry), var(--gry)) 6% 56px / 1px 324px,
-            linear-gradient(var(--gry), var(--gry)) 2.2% 380px / 4% 1px,
-            linear-gradient(var(--gry), var(--gry)) 2% 380px / 1px 280px,
-            linear-gradient(var(--gry), var(--gry)) 1% 655px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 12% 17px / 1px 373px,
-            linear-gradient(var(--gry), var(--gry)) 6.5% 390px / 6% 1px,
-            linear-gradient(var(--gry), var(--gry)) 6% 390px / 1px 280px,
-            linear-gradient(var(--gry), var(--gry)) 2.2% 670px / 4% 1px,
-            linear-gradient(var(--gry), var(--gry)) 2% 670px / 1px 280px,
-            linear-gradient(var(--gry), var(--gry)) 1% 947px / 9px 5px,
-            
-            /* varirack lines */
-            linear-gradient(var(--gry), var(--gry)) 32.2% 17px / 1px 39px,
-            linear-gradient(var(--gry), var(--gry)) 18.8% 56px / 16.6% 1px,
-            linear-gradient(var(--gry), var(--gry)) 15.6% 56px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 15% 71px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 34.9% 17px / 1px 90px,
-            linear-gradient(var(--gry), var(--gry)) 11% 107px / 26.9% 1px,
-            linear-gradient(var(--gry), var(--gry)) 8% 107px / 1px 242px,
-            linear-gradient(var(--gry), var(--gry)) 8.6% 348px / 7.6% 1px,
-            linear-gradient(var(--gry), var(--gry)) 15.6% 348px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 15% 363px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 37.6% 17px / 1px 80px,
-            linear-gradient(var(--gry), var(--gry)) 6.2% 97px / 33.6% 1px,
-            linear-gradient(var(--gry), var(--gry)) 4% 97px / 1px 544px,
-            linear-gradient(var(--gry), var(--gry)) 4.6% 640px / 11.6% 1px,
-            linear-gradient(var(--gry), var(--gry)) 15.6% 640px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 15% 655px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 40.3% 17px / 1px 70px,
-            linear-gradient(var(--gry), var(--gry)) 14.4% 87px / 30.3% 1px,
-            linear-gradient(var(--gry), var(--gry)) 10% 87px / 1px 845px,
-            linear-gradient(var(--gry), var(--gry)) 10.6% 932px / 5.6% 1px,
-            linear-gradient(var(--gry), var(--gry)) 15.6% 932px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 15% 947px / 9px 5px,
-            
-            /* eve lines */
-            linear-gradient(var(--gry), var(--gry)) 61.25% 17px / 1px 29px,
-            linear-gradient(var(--gry), var(--gry)) 43.2% 46px / 31.9% 1px,
-            linear-gradient(var(--gry), var(--gry)) 29.4% 46px / 1px 25px,
-            linear-gradient(var(--gry), var(--gry)) 29% 71px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 62.9% 17px / 1px 80px,
-            linear-gradient(var(--gry), var(--gry)) 83.9% 97px / 25.1% 1px,
-            linear-gradient(var(--gry), var(--gry)) 88% 97px / 1px 252px,
-            linear-gradient(var(--gry), var(--gry)) 70.7% 348px / 58.5% 1px,
-            linear-gradient(var(--gry), var(--gry)) 29.4% 348px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 29% 363px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 64.6% 17px / 1px 70px,
-            linear-gradient(var(--gry), var(--gry)) 91.4% 87px / 29.4% 1px,
-            linear-gradient(var(--gry), var(--gry)) 94% 87px / 1px 554px,
-            linear-gradient(var(--gry), var(--gry)) 82.7% 640px / 64.5% 1px,
-            linear-gradient(var(--gry), var(--gry)) 29.4% 640px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 29% 655px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 66.25% 17px / 1px 29px,
-            linear-gradient(var(--gry), var(--gry)) 94.2% 46px / 29.8% 1px,
-            linear-gradient(var(--gry), var(--gry)) 96% 46px / 1px 886px,
-            linear-gradient(var(--gry), var(--gry)) 87.5% 932px / 66.5% 1px,
-            linear-gradient(var(--gry), var(--gry)) 29.4% 932px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 29% 947px / 9px 5px,
-            
-            /* visual lines */
-            linear-gradient(var(--gry), var(--gry)) 88.3% 17px / 1px 39px,
-            linear-gradient(var(--gry), var(--gry)) 78.73% 56px / 45.1% 1px,
-            linear-gradient(var(--gry), var(--gry)) 43.3% 56px / 1px 15px,
-            linear-gradient(var(--gry), var(--gry)) 43% 71px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 90.23% 17px / 1px 322px,
-            linear-gradient(var(--gry), var(--gry)) 81.3% 338px / 46.8% 1px,
-            linear-gradient(var(--gry), var(--gry)) 43.3% 338px / 1px 25px,
-            linear-gradient(var(--gry), var(--gry)) 43% 363px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 92.27% 17px / 1px 614px,
-            linear-gradient(var(--gry), var(--gry)) 84.9% 630px / 49% 1px,
-            linear-gradient(var(--gry), var(--gry)) 43.3% 630px / 1px 25px,
-            linear-gradient(var(--gry), var(--gry)) 43% 655px / 9px 5px,
-            
-            linear-gradient(var(--gry), var(--gry)) 94.3% 17px / 1px 39px,
-            linear-gradient(var(--gry), var(--gry)) 97.9% 56px / 3.8% 1px,
-            linear-gradient(var(--gry), var(--gry)) 98% 56px / 1px 866px,
-            linear-gradient(var(--gry), var(--gry)) 95.6% 922px / 54.8% 1px,
-            linear-gradient(var(--gry), var(--gry)) 43.3% 922px / 1px 25px,
-            linear-gradient(var(--gry), var(--gry)) 43% 947px / 9px 5px;
-        background-repeat: no-repeat;
-        max-width: 940px;
-        min-width: 320px;
-        min-height: 680px;
-        padding-bottom: 40px; 
-    }
-    .select .main {
-        background:
-            /* snid lines */
-            linear-gradient(var(--txt), var(--txt)) 5.1% 17px / 1px 29px,
-            linear-gradient(var(--txt), var(--txt)) 2.2% 46px / 3.15% 1px,
-            linear-gradient(var(--txt), var(--txt)) 2% 46px / 1px 25px,
-            linear-gradient(var(--txt), var(--txt)) 1% 71px / 9px 5px,
-            
-            /* varirack lines */
-            linear-gradient(var(--txt), var(--txt)) 37.6% 17px / 1px 80px,
-            linear-gradient(var(--txt), var(--txt)) 6.2% 97px / 33.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 4% 97px / 1px 544px,
-            linear-gradient(var(--txt), var(--txt)) 4.6% 640px / 11.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 15.6% 640px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 15% 655px / 9px 5px,
-            
-            /* eve lines */            
-            linear-gradient(var(--txt), var(--txt)) 62.9% 17px / 1px 80px,
-            linear-gradient(var(--txt), var(--txt)) 83.9% 97px / 25.1% 1px,
-            linear-gradient(var(--txt), var(--txt)) 88% 97px / 1px 252px,
-            linear-gradient(var(--txt), var(--txt)) 70.7% 348px / 58.5% 1px,
-            linear-gradient(var(--txt), var(--txt)) 29.4% 348px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 29% 363px / 9px 5px,
-            
-            /* visual lines */
-            linear-gradient(var(--txt), var(--txt)) 94.3% 17px / 1px 39px,
-            linear-gradient(var(--txt), var(--txt)) 97.9% 56px / 3.8% 1px,
-            linear-gradient(var(--txt), var(--txt)) 98% 56px / 1px 866px,
-            linear-gradient(var(--txt), var(--txt)) 95.6% 922px / 54.8% 1px,
-            linear-gradient(var(--txt), var(--txt)) 43.3% 922px / 1px 25px,
-            linear-gradient(var(--txt), var(--txt)) 43% 947px / 9px 5px;
-        background-repeat: no-repeat;
-    } 
-    .select .snid {
-        background:
-            /* snid lines */
-            linear-gradient(var(--txt), var(--txt)) 5.1% 17px / 1px 29px,
-            linear-gradient(var(--txt), var(--txt)) 2.2% 46px / 3.15% 1px,
-            linear-gradient(var(--txt), var(--txt)) 2% 46px / 1px 25px,
-            linear-gradient(var(--txt), var(--txt)) 1% 71px / 9px 5px,
 
-            linear-gradient(var(--txt), var(--txt)) 7.4% 17px / 1px 70px,
-            linear-gradient(var(--txt), var(--txt)) 2.1% 87px / 5.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 2% 87px / 1px 280px,
-            linear-gradient(var(--txt), var(--txt)) 1% 363px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 9.7% 17px / 1px 39px,
-            linear-gradient(var(--txt), var(--txt)) 6.35% 56px / 3.78% 1px,
-            linear-gradient(var(--txt), var(--txt)) 6% 56px / 1px 324px,
-            linear-gradient(var(--txt), var(--txt)) 2.2% 380px / 4% 1px,
-            linear-gradient(var(--txt), var(--txt)) 2% 380px / 1px 280px,
-            linear-gradient(var(--txt), var(--txt)) 1% 655px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 12% 17px / 1px 373px,
-            linear-gradient(var(--txt), var(--txt)) 6.5% 390px / 6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 6% 390px / 1px 280px,
-            linear-gradient(var(--txt), var(--txt)) 2.2% 670px / 4% 1px,
-            linear-gradient(var(--txt), var(--txt)) 2% 670px / 1px 280px,
-            linear-gradient(var(--txt), var(--txt)) 1% 947px / 9px 5px;
-        background-repeat: no-repeat;
-    }
-    .select .varirack {
-        background: 
-            /* varirack lines */
-            linear-gradient(var(--txt), var(--txt)) 32.2% 17px / 1px 39px,
-            linear-gradient(var(--txt), var(--txt)) 18.8% 56px / 16.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 15.6% 56px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 15% 71px / 9px 5px,
+  .selectdev {
+    background:
+      /* select 1 lines */
+      linear-gradient(var(--gry), var(--gry)) 5.1% 17px / 1px calc(var(--lyr1) - 36px),
+      linear-gradient(var(--gry), var(--gry)) 2.2% calc(var(--lyr1) - 20px) / 3.15% 1px,
+      linear-gradient(var(--gry), var(--gry)) 2% calc(var(--lyr1) - 20px) / 1px 20px,
+      linear-gradient(var(--gry), var(--gry)) 1% var(--lyr1) / 9px 5px,
 
-            linear-gradient(var(--txt), var(--txt)) 34.9% 17px / 1px 90px,
-            linear-gradient(var(--txt), var(--txt)) 11% 107px / 26.9% 1px,
-            linear-gradient(var(--txt), var(--txt)) 8% 107px / 1px 242px,
-            linear-gradient(var(--txt), var(--txt)) 8.6% 348px / 7.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 15.6% 348px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 15% 363px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 37.6% 17px / 1px 80px,
-            linear-gradient(var(--txt), var(--txt)) 6.2% 97px / 33.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 4% 97px / 1px 544px,
-            linear-gradient(var(--txt), var(--txt)) 4.6% 640px / 11.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 15.6% 640px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 15% 655px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 40.3% 17px / 1px 70px,
-            linear-gradient(var(--txt), var(--txt)) 14.4% 87px / 30.3% 1px,
-            linear-gradient(var(--txt), var(--txt)) 10% 87px / 1px 845px,
-            linear-gradient(var(--txt), var(--txt)) 10.6% 932px / 5.6% 1px,
-            linear-gradient(var(--txt), var(--txt)) 15.6% 932px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 15% 947px / 9px 5px;
-        background-repeat: no-repeat;
-    }
-    .select .eve {
-        background:
-            /* eve lines */
-            linear-gradient(var(--txt), var(--txt)) 61.25% 17px / 1px 29px,
-            linear-gradient(var(--txt), var(--txt)) 43.2% 46px / 31.9% 1px,
-            linear-gradient(var(--txt), var(--txt)) 29.4% 46px / 1px 25px,
-            linear-gradient(var(--txt), var(--txt)) 29% 71px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 62.9% 17px / 1px 80px,
-            linear-gradient(var(--txt), var(--txt)) 83.9% 97px / 25.1% 1px,
-            linear-gradient(var(--txt), var(--txt)) 88% 97px / 1px 252px,
-            linear-gradient(var(--txt), var(--txt)) 70.7% 348px / 58.5% 1px,
-            linear-gradient(var(--txt), var(--txt)) 29.4% 348px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 29% 363px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 64.6% 17px / 1px 70px,
-            linear-gradient(var(--txt), var(--txt)) 91.4% 87px / 29.4% 1px,
-            linear-gradient(var(--txt), var(--txt)) 94% 87px / 1px 554px,
-            linear-gradient(var(--txt), var(--txt)) 82.7% 640px / 64.5% 1px,
-            linear-gradient(var(--txt), var(--txt)) 29.4% 640px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 29% 655px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 66.25% 17px / 1px 29px,
-            linear-gradient(var(--txt), var(--txt)) 94.2% 46px / 29.8% 1px,
-            linear-gradient(var(--txt), var(--txt)) 96% 46px / 1px 886px,
-            linear-gradient(var(--txt), var(--txt)) 87.5% 932px / 66.5% 1px,
-            linear-gradient(var(--txt), var(--txt)) 29.4% 932px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 29% 947px / 9px 5px;
-        background-repeat: no-repeat;
-    }
-    .select .visual {
-        background:
-            /* visual lines */
-            linear-gradient(var(--txt), var(--txt)) 88.3% 17px / 1px 39px,
-            linear-gradient(var(--txt), var(--txt)) 78.73% 56px / 45.1% 1px,
-            linear-gradient(var(--txt), var(--txt)) 43.3% 56px / 1px 15px,
-            linear-gradient(var(--txt), var(--txt)) 43% 71px / 9px 5px,
-    
-            linear-gradient(var(--txt), var(--txt)) 90.23% 17px / 1px 322px,
-            linear-gradient(var(--txt), var(--txt)) 81.3% 338px / 46.8% 1px,
-            linear-gradient(var(--txt), var(--txt)) 43.3% 338px / 1px 25px,
-            linear-gradient(var(--txt), var(--txt)) 43% 363px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 92.27% 17px / 1px 614px,
-            linear-gradient(var(--txt), var(--txt)) 84.9% 630px / 49% 1px,
-            linear-gradient(var(--txt), var(--txt)) 43.3% 630px / 1px 25px,
-            linear-gradient(var(--txt), var(--txt)) 43% 655px / 9px 5px,
-            
-            linear-gradient(var(--txt), var(--txt)) 94.3% 17px / 1px 39px,
-            linear-gradient(var(--txt), var(--txt)) 97.9% 56px / 3.8% 1px,
-            linear-gradient(var(--txt), var(--txt)) 98% 56px / 1px 866px,
-            linear-gradient(var(--txt), var(--txt)) 95.6% 922px / 54.8% 1px,
-            linear-gradient(var(--txt), var(--txt)) 43.3% 922px / 1px 25px,
-            linear-gradient(var(--txt), var(--txt)) 43% 947px / 9px 5px;
-        background-repeat: no-repeat;
-    }
+      linear-gradient(var(--gry), var(--gry)) 7.4% 17px / 1px calc(var(--lyr1) - 1px),
+      linear-gradient(var(--gry), var(--gry)) 2.2% calc(var(--lyr1) + 15px) / 5.5% 1px,
+      linear-gradient(var(--gry), var(--gry)) 2% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2b) - var(--lyr1) - 15px),
+      linear-gradient(var(--gry), var(--gry)) 1% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 9.7% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--gry), var(--gry)) 6.35% calc(var(--lyr1) - 10px) / 3.78% 1px,
+      linear-gradient(var(--gry), var(--gry)) 6% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr2b) - var(--lyr1) + 25px),
+      linear-gradient(var(--gry), var(--gry)) 2.2% calc(var(--lyr2b) + 15px) / 4% 1px,
+      linear-gradient(var(--gry), var(--gry)) 2% calc(var(--lyr2b) + 15px) / 1px calc(var(--lyr3) - var(--lyr2b) - 15px),
+      linear-gradient(var(--gry), var(--gry)) 1% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 12% 17px / 1px calc(var(--lyr2b) + 9px),
+      linear-gradient(var(--gry), var(--gry)) 6.5% calc(var(--lyr2b) + 25px) / 6% 1px,
+      linear-gradient(var(--gry), var(--gry)) 6% calc(var(--lyr2b) + 25px) / 1px calc(var(--lyr3) - var(--lyr2b) - 9px),
+      linear-gradient(var(--gry), var(--gry)) 2.2% calc(var(--lyr3) + 15px) / 4% 1px,
+      linear-gradient(var(--gry), var(--gry)) 2% calc(var(--lyr3) + 15px) / 1px calc(var(--lyr4) - var(--lyr3) - 15px),
+      linear-gradient(var(--gry), var(--gry)) 1% var(--lyr4) / 9px 5px,
+
+      /* select 2 lines */
+      linear-gradient(var(--gry), var(--gry)) 32.8% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--gry), var(--gry)) 18.9% calc(var(--lyr1) - 10px) / 17.3% 1px,
+      linear-gradient(var(--gry), var(--gry)) 15.6% calc(var(--lyr1) - 10px) / 1px 10px,
+      linear-gradient(var(--gry), var(--gry)) 15% var(--lyr1) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 35.1% 17px / 1px calc(var(--lyr1) + 19px),
+      linear-gradient(var(--gry), var(--gry)) 11% calc(var(--lyr1) + 35px) / 26.9% 1px,
+      linear-gradient(var(--gry), var(--gry)) 8% calc(var(--lyr1) + 35px) / 1px calc(var(--lyr2b) - var(--lyr1) - 45px),
+      linear-gradient(var(--gry), var(--gry)) 8.6% calc(var(--lyr2b) - 10px) / 7.7% 1px,
+      linear-gradient(var(--gry), var(--gry)) 15.7% calc(var(--lyr2b) - 10px) / 1px 10px,
+      linear-gradient(var(--gry), var(--gry)) 15% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 37.4% 17px / 1px calc(var(--lyr1) + 9px),
+      linear-gradient(var(--gry), var(--gry)) 6.2% calc(var(--lyr1) + 25px) / 33.35% 1px,
+      linear-gradient(var(--gry), var(--gry)) 4% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr3) - var(--lyr1) - 35px),
+      linear-gradient(var(--gry), var(--gry)) 4.6% calc(var(--lyr3) - 10px) / 11.6% 1px,
+      linear-gradient(var(--gry), var(--gry)) 15.6% calc(var(--lyr3) - 10px) / 1px 10px,
+      linear-gradient(var(--gry), var(--gry)) 15% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 39.7% 17px / 1px calc(var(--lyr1) - 1px),
+      linear-gradient(var(--gry), var(--gry)) 14.4% calc(var(--lyr1) + 15px) / 29.65% 1px,
+      linear-gradient(var(--gry), var(--gry)) 10% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr4) - var(--lyr1) - 25px),
+      linear-gradient(var(--gry), var(--gry)) 10.6% calc(var(--lyr4) - 10px) / 5.6% 1px,
+      linear-gradient(var(--gry), var(--gry)) 15.6% calc(var(--lyr4) - 10px) / 1px 10px,
+      linear-gradient(var(--gry), var(--gry)) 15% var(--lyr4) / 9px 5px,
+
+      /* select 3 lines */
+      linear-gradient(var(--gry), var(--gry)) 60.3% 17px / 1px calc(var(--lyr1) - 36px),
+      linear-gradient(var(--gry), var(--gry)) 42.55% calc(var(--lyr1) - 20px) / 31.05% 1px,
+      linear-gradient(var(--gry), var(--gry)) 29.4% calc(var(--lyr1) - 20px) / 1px 20px,
+      linear-gradient(var(--gry), var(--gry)) 29% var(--lyr1) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 62.6% 17px / 1px calc(var(--lyr1) - 1px),
+      linear-gradient(var(--gry), var(--gry)) 83.75% calc(var(--lyr1) + 15px) / 25.4% 1px,
+      linear-gradient(var(--gry), var(--gry)) 88% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2b) - var(--lyr1) - 24px),
+      linear-gradient(var(--gry), var(--gry)) 70.7% calc(var(--lyr2b) - 10px) / 58.5% 1px,
+      linear-gradient(var(--gry), var(--gry)) 29.4% calc(var(--lyr2b) - 10px) / 1px 10px,
+      linear-gradient(var(--gry), var(--gry)) 29% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 64.9% 17px / 1px calc(var(--lyr1) + 9px),
+      linear-gradient(var(--gry), var(--gry)) 91.55% calc(var(--lyr1) + 25px) / 29% 1px,
+      linear-gradient(var(--gry), var(--gry)) 94% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr3) - var(--lyr1) - 34px),
+      linear-gradient(var(--gry), var(--gry)) 82.7% calc(var(--lyr3) - 10px) / 64.5% 1px,
+      linear-gradient(var(--gry), var(--gry)) 29.4% calc(var(--lyr3) - 10px) / 1px 10px,
+      linear-gradient(var(--gry), var(--gry)) 29% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 67.2% 17px / 1px calc(var(--lyr1) - 36px),
+      linear-gradient(var(--gry), var(--gry)) 94.2% calc(var(--lyr1) - 20px) / 28.6% 1px,
+      linear-gradient(var(--gry), var(--gry)) 96% calc(var(--lyr1) - 20px) / 1px calc(var(--lyr4) - var(--lyr1) + 11px),
+      linear-gradient(var(--gry), var(--gry)) 87.5% calc(var(--lyr4) - 10px) / 66.5% 1px,
+      linear-gradient(var(--gry), var(--gry)) 29.4% calc(var(--lyr4) - 10px) / 1px 15px,
+      linear-gradient(var(--gry), var(--gry)) 29% var(--lyr4) / 9px 5px,
+
+      /* select 4 lines */
+      linear-gradient(var(--gry), var(--gry)) 87.8% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--gry), var(--gry)) 78% calc(var(--lyr1) - 10px) / 44.4% 1px,
+      linear-gradient(var(--gry), var(--gry)) 43.3% calc(var(--lyr1) - 10px) / 1px 10px,
+      linear-gradient(var(--gry), var(--gry)) 43% var(--lyr1) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 90.1% 17px / 1px calc(var(--lyr2b) - 36px),
+      linear-gradient(var(--gry), var(--gry)) 81.3% calc(var(--lyr2b) - 20px) / 46.8% 1px,
+      linear-gradient(var(--gry), var(--gry)) 43.3% calc(var(--lyr2b) - 20px) / 1px 20px,
+      linear-gradient(var(--gry), var(--gry)) 43% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 92.4% 17px / 1px calc(var(--lyr3) - 36px),
+      linear-gradient(var(--gry), var(--gry)) 84.9% calc(var(--lyr3) - 20px) / 49% 1px,
+      linear-gradient(var(--gry), var(--gry)) 43.3% calc(var(--lyr3) - 20px) / 1px 20px,
+      linear-gradient(var(--gry), var(--gry)) 43% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--gry), var(--gry)) 94.7% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--gry), var(--gry)) 97.9% calc(var(--lyr1) - 10px) / 3.3% 1px,
+      linear-gradient(var(--gry), var(--gry)) 98% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr4) - var(--lyr1) - 9px),
+      linear-gradient(var(--gry), var(--gry)) 95.5% calc(var(--lyr4) - 20px) / 54.7% 1px,
+      linear-gradient(var(--gry), var(--gry)) 43.3% calc(var(--lyr4) - 20px) / 1px 25px,
+      linear-gradient(var(--gry), var(--gry)) 43% var(--lyr4) / 9px 5px;
+
+    background-repeat: no-repeat;
+    max-width: 940px;
+    min-width: 320px;
+    min-height: 680px;
+    padding-bottom: 40px;
+  }
+
+  .selectdev .main {
+    background:
+      /* select 1 lines */
+      linear-gradient(var(--txt), var(--txt)) 5.1% 17px / 1px calc(var(--lyr1) - 36px),
+      linear-gradient(var(--txt), var(--txt)) 2.2% calc(var(--lyr1) - 20px) / 3.15% 1px,
+      linear-gradient(var(--txt), var(--txt)) 2% calc(var(--lyr1) - 20px) / 1px 20px,
+      linear-gradient(var(--txt), var(--txt)) 1% var(--lyr1) / 9px 5px,
+
+      /* select 2 lines */
+      linear-gradient(var(--txt), var(--txt)) 37.4% 17px / 1px calc(var(--lyr1) + 9px),
+      linear-gradient(var(--txt), var(--txt)) 6.2% calc(var(--lyr1) + 25px) / 33.35% 1px,
+      linear-gradient(var(--txt), var(--txt)) 4% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr3) - var(--lyr1) - 35px),
+      linear-gradient(var(--txt), var(--txt)) 4.6% calc(var(--lyr3) - 10px) / 11.6% 1px,
+      linear-gradient(var(--txt), var(--txt)) 15.6% calc(var(--lyr3) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 15% var(--lyr3) / 9px 5px,
+
+      /* select 3 lines */
+      linear-gradient(var(--txt), var(--txt)) 62.6% 17px / 1px calc(var(--lyr1) - 1px),
+      linear-gradient(var(--txt), var(--txt)) 83.75% calc(var(--lyr1) + 15px) / 25.4% 1px,
+      linear-gradient(var(--txt), var(--txt)) 88% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2b) - var(--lyr1) - 24px),
+      linear-gradient(var(--txt), var(--txt)) 70.7% calc(var(--lyr2b) - 10px) / 58.5% 1px,
+      linear-gradient(var(--txt), var(--txt)) 29.4% calc(var(--lyr2b) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 29% var(--lyr2b) / 9px 5px,
+
+      /* select 4 lines */
+      linear-gradient(var(--txt), var(--txt)) 94.7% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--txt), var(--txt)) 97.9% calc(var(--lyr1) - 10px) / 3.3% 1px,
+      linear-gradient(var(--txt), var(--txt)) 98% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr4) - var(--lyr1) - 9px),
+      linear-gradient(var(--txt), var(--txt)) 95.5% calc(var(--lyr4) - 20px) / 54.7% 1px,
+      linear-gradient(var(--txt), var(--txt)) 43.3% calc(var(--lyr4) - 20px) / 1px 25px,
+      linear-gradient(var(--txt), var(--txt)) 43% var(--lyr4) / 9px 5px;
+
+    background-repeat: no-repeat;
+  }
+
+  .selectdev .snid {
+    background:
+      /* snid lines */
+      linear-gradient(var(--txt), var(--txt)) 5.1% 17px / 1px calc(var(--lyr1) - 36px),
+      linear-gradient(var(--txt), var(--txt)) 2.2% calc(var(--lyr1) - 20px) / 3.15% 1px,
+      linear-gradient(var(--txt), var(--txt)) 2% calc(var(--lyr1) - 20px) / 1px 20px,
+      linear-gradient(var(--txt), var(--txt)) 1% var(--lyr1) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 7.4% 17px / 1px calc(var(--lyr1) - 1px),
+      linear-gradient(var(--txt), var(--txt)) 2.2% calc(var(--lyr1) + 15px) / 5.5% 1px,
+      linear-gradient(var(--txt), var(--txt)) 2% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2b) - var(--lyr1) - 15px),
+      linear-gradient(var(--txt), var(--txt)) 1% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 9.7% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--txt), var(--txt)) 6.35% calc(var(--lyr1) - 10px) / 3.78% 1px,
+      linear-gradient(var(--txt), var(--txt)) 6% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr2b) - var(--lyr1) + 25px),
+      linear-gradient(var(--txt), var(--txt)) 2.2% calc(var(--lyr2b) + 15px) / 4% 1px,
+      linear-gradient(var(--txt), var(--txt)) 2% calc(var(--lyr2b) + 15px) / 1px calc(var(--lyr3) - var(--lyr2b) - 15px),
+      linear-gradient(var(--txt), var(--txt)) 1% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 12% 17px / 1px calc(var(--lyr2b) + 9px),
+      linear-gradient(var(--txt), var(--txt)) 6.5% calc(var(--lyr2b) + 25px) / 6% 1px,
+      linear-gradient(var(--txt), var(--txt)) 6% calc(var(--lyr2b) + 25px) / 1px calc(var(--lyr3) - var(--lyr2b) - 9px),
+      linear-gradient(var(--txt), var(--txt)) 2.2% calc(var(--lyr3) + 15px) / 4% 1px,
+      linear-gradient(var(--txt), var(--txt)) 2% calc(var(--lyr3) + 15px) / 1px calc(var(--lyr4) - var(--lyr3) - 15px),
+      linear-gradient(var(--txt), var(--txt)) 1% var(--lyr4) / 9px 5px;
+
+    background-repeat: no-repeat;
+  }
+
+  .selectdev .bwop {
+    background:
+      /* bwop lines */
+      linear-gradient(var(--txt), var(--txt)) 32.8% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--txt), var(--txt)) 18.9% calc(var(--lyr1) - 10px) / 17.3% 1px,
+      linear-gradient(var(--txt), var(--txt)) 15.6% calc(var(--lyr1) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 15% var(--lyr1) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 35.1% 17px / 1px calc(var(--lyr1) + 19px),
+      linear-gradient(var(--txt), var(--txt)) 11% calc(var(--lyr1) + 35px) / 26.9% 1px,
+      linear-gradient(var(--txt), var(--txt)) 8% calc(var(--lyr1) + 35px) / 1px calc(var(--lyr2b) - var(--lyr1) - 45px),
+      linear-gradient(var(--txt), var(--txt)) 8.6% calc(var(--lyr2b) - 10px) / 7.7% 1px,
+      linear-gradient(var(--txt), var(--txt)) 15.7% calc(var(--lyr2b) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 15% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 37.4% 17px / 1px calc(var(--lyr1) + 9px),
+      linear-gradient(var(--txt), var(--txt)) 6.2% calc(var(--lyr1) + 25px) / 33.35% 1px,
+      linear-gradient(var(--txt), var(--txt)) 4% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr3) - var(--lyr1) - 35px),
+      linear-gradient(var(--txt), var(--txt)) 4.6% calc(var(--lyr3) - 10px) / 11.6% 1px,
+      linear-gradient(var(--txt), var(--txt)) 15.6% calc(var(--lyr3) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 15% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 39.7% 17px / 1px calc(var(--lyr1) - 1px),
+      linear-gradient(var(--txt), var(--txt)) 14.4% calc(var(--lyr1) + 15px) / 29.65% 1px,
+      linear-gradient(var(--txt), var(--txt)) 10% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr4) - var(--lyr1) - 25px),
+      linear-gradient(var(--txt), var(--txt)) 10.6% calc(var(--lyr4) - 10px) / 5.6% 1px,
+      linear-gradient(var(--txt), var(--txt)) 15.6% calc(var(--lyr4) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 15% var(--lyr4) / 9px 5px;
+
+    background-repeat: no-repeat;
+  }
+
+  .selectdev .glitch {
+    background:
+      /* glitch lines */
+      linear-gradient(var(--txt), var(--txt)) 60.3% 17px / 1px calc(var(--lyr1) - 36px),
+      linear-gradient(var(--txt), var(--txt)) 42.55% calc(var(--lyr1) - 20px) / 31.05% 1px,
+      linear-gradient(var(--txt), var(--txt)) 29.4% calc(var(--lyr1) - 20px) / 1px 20px,
+      linear-gradient(var(--txt), var(--txt)) 29% var(--lyr1) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 62.6% 17px / 1px calc(var(--lyr1) - 1px),
+      linear-gradient(var(--txt), var(--txt)) 83.75% calc(var(--lyr1) + 15px) / 25.4% 1px,
+      linear-gradient(var(--txt), var(--txt)) 88% calc(var(--lyr1) + 15px) / 1px calc(var(--lyr2b) - var(--lyr1) - 24px),
+      linear-gradient(var(--txt), var(--txt)) 70.7% calc(var(--lyr2b) - 10px) / 58.5% 1px,
+      linear-gradient(var(--txt), var(--txt)) 29.4% calc(var(--lyr2b) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 29% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 64.9% 17px / 1px calc(var(--lyr1) + 9px),
+      linear-gradient(var(--txt), var(--txt)) 91.55% calc(var(--lyr1) + 25px) / 29% 1px,
+      linear-gradient(var(--txt), var(--txt)) 94% calc(var(--lyr1) + 25px) / 1px calc(var(--lyr3) - var(--lyr1) - 34px),
+      linear-gradient(var(--txt), var(--txt)) 82.7% calc(var(--lyr3) - 10px) / 64.5% 1px,
+      linear-gradient(var(--txt), var(--txt)) 29.4% calc(var(--lyr3) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 29% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 67.2% 17px / 1px calc(var(--lyr1) - 36px),
+      linear-gradient(var(--txt), var(--txt)) 94.2% calc(var(--lyr1) - 20px) / 28.6% 1px,
+      linear-gradient(var(--txt), var(--txt)) 96% calc(var(--lyr1) - 20px) / 1px calc(var(--lyr4) - var(--lyr1) + 11px),
+      linear-gradient(var(--txt), var(--txt)) 87.5% calc(var(--lyr4) - 10px) / 66.5% 1px,
+      linear-gradient(var(--txt), var(--txt)) 29.4% calc(var(--lyr4) - 10px) / 1px 15px,
+      linear-gradient(var(--txt), var(--txt)) 29% var(--lyr4) / 9px 5px;
+
+    background-repeat: no-repeat;
+  }
+
+  .selectdev .eve {
+    background:
+      /* eve lines */
+      linear-gradient(var(--txt), var(--txt)) 87.8% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--txt), var(--txt)) 78% calc(var(--lyr1) - 10px) / 44.4% 1px,
+      linear-gradient(var(--txt), var(--txt)) 43.3% calc(var(--lyr1) - 10px) / 1px 10px,
+      linear-gradient(var(--txt), var(--txt)) 43% var(--lyr1) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 90.1% 17px / 1px calc(var(--lyr2b) - 36px),
+      linear-gradient(var(--txt), var(--txt)) 81.3% calc(var(--lyr2b) - 20px) / 46.8% 1px,
+      linear-gradient(var(--txt), var(--txt)) 43.3% calc(var(--lyr2b) - 20px) / 1px 20px,
+      linear-gradient(var(--txt), var(--txt)) 43% var(--lyr2b) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 92.4% 17px / 1px calc(var(--lyr3) - 36px),
+      linear-gradient(var(--txt), var(--txt)) 84.9% calc(var(--lyr3) - 20px) / 49% 1px,
+      linear-gradient(var(--txt), var(--txt)) 43.3% calc(var(--lyr3) - 20px) / 1px 20px,
+      linear-gradient(var(--txt), var(--txt)) 43% var(--lyr3) / 9px 5px,
+
+      linear-gradient(var(--txt), var(--txt)) 94.7% 17px / 1px calc(var(--lyr1) - 26px),
+      linear-gradient(var(--txt), var(--txt)) 97.9% calc(var(--lyr1) - 10px) / 3.3% 1px,
+      linear-gradient(var(--txt), var(--txt)) 98% calc(var(--lyr1) - 10px) / 1px calc(var(--lyr4) - var(--lyr1) - 9px),
+      linear-gradient(var(--txt), var(--txt)) 95.5% calc(var(--lyr4) - 20px) / 54.7% 1px,
+      linear-gradient(var(--txt), var(--txt)) 43.3% calc(var(--lyr4) - 20px) / 1px 25px,
+      linear-gradient(var(--txt), var(--txt)) 43% var(--lyr4) / 9px 5px;
+
+    background-repeat: no-repeat;
+  }
 }
 
-@media (max-width: 791px) { /* sinlge column */
-    body {
-        padding-top: 20px;
-    }
+@media (max-width: 791px) {
 
-    .bigblocks {
-        display: grid;
-        grid-column-gap: 1%;
-        grid-row-gap: 40px;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-    block.fixed {
-        font-size: 14px;
-    }
-    block.line {
-        font-size: 14px;
-    }
-    p {
-        font-size: 14px;
-    }
+
+  .bigblocks {
+    display: grid;
+    grid-column-gap: 1%;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .smlblocks {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(5, minmax(60px, 1fr));
+  }
+
+  block.fixed {
+    font-size: 14px;
+  }
+  block.line {
+    font-size: 14px;
+  }
+  block.audtxt {
+    font-size: 14px;
+    grid-column: auto / span 4;
+  }
+
+  .sevseg {
+    font-size: 2.4px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .gridtxt {
+    font-size: 11vw;
+    padding-top: calc(60px - 5vw);
+  }
+  .linetxt {
+    font-size: 4vw;
+    max-width: 332px;
+  }
+  .lineimg {
+    top: calc(80px + 4vw);
+    max-width: 332px;
+    width: 100%;
+    min-height: calc(24px + 5vw);
+  }
+  .doublefull {
+    max-width: 40vw;
+  }
+}
+@media (max-width: 631px) { /* sinlge column */
+  .indexbox {
+    display: none;
+  }
+  .indexbox-mob {
+    display: block;
+  }
+  node.ext {
+    display: none;
+  }
+  node.ext-mob {
+    display: block;
+  }
+  .drop-content {
+    display: none;
+  }
+
+  .titleblocks {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+  block.title {
+    min-height: 209px;
+    max-height: 209px;
+    min-width: 315px;
+    max-width: 315px;
+  }
+  block.titleinv {
+    min-height: 209px;
+    max-height: 209px;
+    min-width: 315px;
+    max-width: 315px;
+  }
+  .gridtxt {
+    font-size: 90px;
+    padding-top: 18px;
+  }
+  .linetxt {
+    font-size: 33px;
+    max-width: 360px;
+  }
+  .lineimg {
+    top: 113px;
+    max-width: 360px;
+    width: 100%;
+    min-height: 70px;
+  }
+  .doublefull {
+    max-width: 330px;
+  }
+
 }
 
-@media (max-width: 430px) { /* sinlge column */
-    a.scale {
-        font-size: 13px;
-    }
-    p {
-        font-size: 13px;
-    }
-    block.fixed {
-        font-size: 14px;
-    }
-    .modal {
-        padding-top: 40px;
-    }
-    iframe.doc {
-        height: 270px;
-    }
+@media (max-width: 430px) {
+  a.scale {
+    font-size: 13px;
+  }
+  p {
+    font-size: 13px;
+  }
+  block.fixed {
+    font-size: 14px;
+  }
+  .modal {
+    padding-top: 40px;
+  }
+  iframe.doc {
+    height: 270px;
+  }
 }
 
 @media (max-height: 900px) {
-    .modal {
-        padding-top: 50px;
-    }
-    img.data {
-        max-height: 600px;
-        width: auto;
-    }
+  .modal {
+    padding-top: 50px;
+  }
+  img.data {
+    max-height: 600px;
+    width: auto;
+  }
 }
 @media (max-height: 800px) {
-    .modal {
-        padding-top: 20px;
-    }
-    img.data {
-        max-height: 500px;
-    }
+  .modal {
+    padding-top: 20px;
+  }
+  img.data {
+    max-height: 500px;
+  }
 }
 
 @media (max-height: 430px) {
-    .modal {
-        padding-top: 5px;
-    }
-    .modal-content {
-        padding: 20px;
-    }
-    img.pic {
-        height: 280px;
-        width: auto;
-    }
-    img.data {
-        height: 280px;
-    }
-    iframe.doc {
-        height: 280px;
-    }
+  .modal {
+    padding-top: 5px;
+  }
+  .modal-content {
+    padding: 20px;
+  }
+  img.pic {
+    height: 280px;
+    width: auto;
+  }
+  img.data {
+    height: 280px;
+  }
+  iframe.doc {
+    height: 280px;
+  }
 }
 @media (max-height: 380px) {
-    img.pic {
-        height: 220px;
-    }
-    img.data {
-        height: 220px;
-    }
-    iframe.doc {
-        height: 220px;
-    }
+  img.pic {
+    height: 220px;
+  }
+  img.data {
+    height: 220px;
+  }
+  iframe.doc {
+    height: 220px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-    
-    body {
-        --txt: #0b0c0e;
-        --gry: #c9c7c3;
-        --bgnd: #e8e8e8;
-        --bgnd_t: #e8e8e8dd;
-        --bg_img: url(00_bg_images/dot_e8e8e8.svg);
-        --hdr_img: url(00_bg_images/diagonal_l.gif);
-    }
-    body img{
-        filter: invert(1);
-    }
-    body img.pic{
-        filter: invert(0);
-    }
-    body iframe{
-        filter: invert(0);
-    }
+  body {
+    --txt: #0b0d0e;
+    --gry: #c9c7c3;
+    --bgnd: #e8e8e8;
+    --bgnd_t: #e8e8e8cc;
+    --bg_img: url(00_bg_images/dot_e8e8e8.svg);
+  }
+  body img{
+    filter: invert(1);
+  }
+  body img.pic{
+    filter: invert(0);
+  }
+  body iframe{
+    filter: invert(0);
+  }
+  body .stickyimg {
+    filter: invert(1);
+  }
 
-    body.dark-theme {
-        --txt: #e8e8e8;
-        --gry: #333436;
-        --bgnd: #0b0c0e;
-        --bgnd_t: #0b0c0eee;  
-        --bg_img: url(00_bg_images/dot_0b0c0e.svg);
-        --hdr_img: url(00_bg_images/diagonal.gif);
-    }
-    body.dark-theme img {
-        filter: invert(0);
-    }  
+  body.dark-theme {
+    --txt: #e8e8e8;
+    --gry: #333436;
+    --bgnd: #0b0d0e;
+    --bgnd_t: #0b0d0edd;
+    --bg_img: url(00_bg_images/dot_0b0d0e.svg);
+  }
+  body.dark-theme img {
+    filter: invert(0);
+  }
+  body.dark-theme .stickyimg {
+    filter: invert(0);
+  }
 }
-
-

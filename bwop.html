@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>eve</title>
+    <title>bwop</title>
     <link rel="icon" type="image/x-icon" href="00_bg_images/vo.ico">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="variable, oscillations, synthesizer, eve">
+    <meta name="keywords" content="variable, oscillations, synthesizer, snid">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Content-Language" content="english">
-    <meta name="description" content="Evolving Vector Environment">
+    <meta name="description" content="Sinusoidal Numeric Incremental Device">
 
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
@@ -96,8 +96,8 @@
 
     <!-- - - - - - - - - - - - - page selection - - - - - - - - - - - - -->
 
-    <div class="selectdev" style="--lyr2: 1012px; --lyr2b: 397px; --lyr3: 1275px; --lyr4: 1567px;">
-      <div class="eve">
+    <div class="selectdev" style="--lyr2: 951px; --lyr2b: 397px; --lyr3: 1134px; --lyr4: 1426px;">
+      <div class="bwop">
         <div class="dev-nav" id="devnav">
           <section class="blocks">
             <block class="noline">
@@ -116,7 +116,7 @@
             </block>
 
             <block class="noline">
-              <a class="text-under" href="bwop">BWOP</a>
+              <a class="current" href="bwop">BWOP</a>
             </block>
 
             <block class="noline">
@@ -124,23 +124,22 @@
             </block>
 
             <block class="noline">
-              <a class="current" href="eve">EVE</a>
+              <a class="text-under" href="eve">EVE</a>
             </block>
           </section>
         </div>
         <br><br><br><br>
 
-        <!-- - - - - - - - - - EVE top info - - - - - - - - - -->
+        <!-- - - - - - - - - - BWOP top info - - - - - - - - - -->
 
         <section class="bigblocks">
           <block class="image">
-            <img class="lim" src="02_title_images/eve_title.svg">
+            <img class="lim" src="02_title_images/bwop_title.svg">
           </block>
+
           <block class="fixed">
-            EVE-01<div class="doubletxt">&nbsp</div>
-            A polyphonic digital synthesizer utilizing Vector Phase Shaping [VPS] Synthesis made with the modular software Reaktor.
-            <br><br>
-            The synthesizer's modules are connected in matrices of attenuators, allowing for flexible audio signal and modulation routing.
+            BWOP <div class="doubletxt">&nbsp</div>
+            An emitter of stereophonic rhythms and drones created through short mathematical equations.<br><br> The X, Y, and Z controls allow for the exploration of the equations by manipulating a number of the variables they contain.
           </block>
         </section>
         <br><br>
@@ -148,29 +147,28 @@
         <!-- - - - - - - - - - Rotation image - - - - - - - - - -->
 
         <section class="titleblocks">
-          <block class="titleinv">
+          <block class="title">
             <picture>
-              <source media="(min-width: 632px)" srcset="03_documents/eve/eve_630x420.gif">
-              <img class="inv" src="03_documents/scope_gifs/xy_280.gif">
+              <source media="(min-width: 632px)" srcset="04_rotations/bwop/bwop_630x436.gif">
+              <img class="still" src="04_rotations/bwop/bwop_315x218.gif">
             </picture>
           </block>
         </section>
-        <br>
+        <br><br>
 
         <!-- - - - - - - - - - links and documents - - - - - - - - - -->
 
         <section class="bigblocks">
-          <block class="nolinefixed">
+          <block class="onelinefixed">
+            <br>
+            <a class="text-sides" href="03_documents/bwop/bwop_manual.pdf" target="_blank">Functional Overview</a>
             <br><br>
-            <a class="text-sides" href="https://www.native-instruments.com/en/reaktor-community/reaktor-user-library/entry/show/12379/" target="_blank">
-              EVE-01 Reaktor Instrument
-            </a>
           </block>
-          <block class="nolinefixed">
+
+          <block class="onelinefixed">
+            <br>
+            <a class="btn">Documentation</a>
             <br><br>
-            <a class="text-sides" href="http://eprints.maynoothuniversity.ie/4096/1/vps_dafx11.pdf" target="_blank">
-              Vector Phase<br>Shaping Synthesis
-            </a>
           </block>
 
           <!-- - - - - - - - - - audio - - - - - - - - - -->
@@ -178,7 +176,7 @@
           <block class="noline">
             <section class="smlblocks">
               <block class="audtxt">
-                <audio id="aud_1" src="03_documents/eve/audio/eve-01_1.mp3" type="audio/mpeg"></audio>
+                <audio id="aud_1" src="03_documents/bwop/audio/bwop_1.mp3" type="audio/mpeg"></audio>
                 <button id="display_3" onclick="playpause()">[ &#9654; ]</button>
                 &nbsp;
                 <label id="display_5" class="sevseg"> / 00:00.00</label>
@@ -186,7 +184,7 @@
 
                 <div class="doublegry"> &nbsp</div>
 
-                <label id="display_6">Data Transmission 1 <br><br> Multiple instances of EVE-01 with slight EQ and reverb effects applied. <br><br> All sounds in transmissions are generated by EVE-01.</label>
+                <label id="display_6">Data Transmission 1 <br><br> Four rhythmic instances generated from the first equation.<br><br> All transmissions are recorded directly from BWOP.</label>
               </block>
               <block class="noline" style="text-align: left;" id="buttons">
                 <button class="btext" id="b0" style="background-color: var(--txt); color: var(--bgnd);">[ 1 ]</button>
@@ -194,6 +192,12 @@
                 <button class="btext" id="b1">[ 2 ]</button>
                 <br>
                 <button class="btext" id="b2">[ 3 ]</button>
+                <br>
+                <button class="btext" id="b3">[ 4 ]</button>
+                <br>
+                <button class="btext" id="b4">[ 5 ]</button>
+                <br>
+                <button class="btext" id="b5">[ 6 ]</button>
                 <br>
               </block>
             </section>
@@ -234,34 +238,64 @@
               document.getElementById('buttons').addEventListener('click', function(select) {
                 var target = select.target;
                 if (target.id == 'b0') {
-                  aud.src="03_documents/eve/audio/eve-01_1.mp3";
+                  aud.src="03_documents/bwop/audio/bwop_1.mp3";
                   btx[0].style.backgroundColor = "var(--txt)";
                   btx[0].style.color = "var(--bgnd)";
-                  l = "Data Transmission 1 <br><br> Multiple instances of EVE-01 with slight EQ and reverb effects applied. <br><br> All sounds in transmissions are generated by EVE-01.";
+                  l = "Data Transmission 1 <br><br> Four rhythmic instances generated from the first equation.<br><br> All transmissions are recorded directly from BWOP.";
                 }
                 else if (target.id != 'buttons'){
                   btx[0].style.backgroundColor = "var(--bgnd)";
                   btx[0].style.color = "var(--txt)";
                 }
                 if (target.id == 'b1') {
-                  aud.src="03_documents/eve/audio/eve-01_2.mp3";
+                  aud.src="03_documents/bwop/audio/bwop_2.mp3";
                   btx[1].style.backgroundColor = "var(--txt)";
                   btx[1].style.color = "var(--bgnd)";
-                  l = "Data Transmission 2 <br><br> Multiple instances of EVE-01 with slight EQ and reverb effects applied. <br><br>";
+                  l = "Data Transmission 2 <br><br> Four rhythmic instances generated from the second equation.<br><br>";
                 }
                 else if (target.id != 'buttons'){
                   btx[1].style.backgroundColor = "var(--bgnd)";
                   btx[1].style.color = "var(--txt)";
                 }
                 if (target.id == 'b2') {
-                  aud.src="03_documents/eve/audio/eve-01_3.mp3";
+                  aud.src="03_documents/bwop/audio/bwop_3.mp3";
                   btx[2].style.backgroundColor = "var(--txt)";
                   btx[2].style.color = "var(--bgnd)";
-                  l = "Data Transmission 3 <br><br> Single instance of EVE-01 recorded directly from within Reaktor.";
+                  l = "Data Transmission 3 <br><br> Four rhythmic instances generated from the third equation.<br><br>";
                 }
                 else if (target.id != 'buttons'){
                   btx[2].style.backgroundColor = "var(--bgnd)";
                   btx[2].style.color = "var(--txt)";
+                }
+                if (target.id == 'b3') {
+                  aud.src="03_documents/bwop/audio/bwop_4.mp3";
+                  btx[3].style.backgroundColor = "var(--txt)";
+                  btx[3].style.color = "var(--bgnd)";
+                  l = "Data Transmission 4 <br><br>Five droning instances from the fourth equation.<br><br>";
+                }
+                else if (target.id != 'buttons'){
+                  btx[3].style.backgroundColor = "var(--bgnd)";
+                  btx[3].style.color = "var(--txt)";
+                }
+                if (target.id == 'b4') {
+                  aud.src="03_documents/bwop/audio/bwop_5.mp3";
+                  btx[4].style.backgroundColor = "var(--txt)";
+                  btx[4].style.color = "var(--bgnd)";
+                  l = "Data Transmission 5 <br><br>Scanning through drone ranges of the fifth equation.<br><br>";
+                }
+                else if (target.id != 'buttons'){
+                  btx[4].style.backgroundColor = "var(--bgnd)";
+                  btx[4].style.color = "var(--txt)";
+                }
+                if (target.id == 'b5') {
+                  aud.src="03_documents/bwop/audio/bwop_6.mp3";
+                  btx[5].style.backgroundColor = "var(--txt)";
+                  btx[5].style.color = "var(--bgnd)";
+                  l = "Data Transmission 6 <br><br>Scanning through drone ranges of the sixth equation.<br><br>";
+                }
+                else if (target.id != 'buttons'){
+                  btx[5].style.backgroundColor = "var(--bgnd)";
+                  btx[5].style.color = "var(--txt)";
                 }
                 aud.currentTime = 0;
                 aud.play();
@@ -276,13 +310,141 @@
 
           <block class="fixed">
             Specifications <div class="doublegry">&nbsp</div>
-            Six voice vector phase shaping synthesizer<br><br>Per Voice: 2 Oscillators, LFO, Noise, AR Envelope, Sample & Hold, Low / High Pass Filter, and Stereo Positioning <br><br>
-            Requirements: Reaktor 6 / Reaktor 6 Player
+            Dual bytebeat generators with six different equations<br><br>
+            IO: 3.5mm headphone output, miniUSB / coin cell battery power <br><br>
+            Dimensions: 100 x 66 x 13 mm
           </block>
         </section>
       </div>
     </div>
-    <br>
+
+    <!-- - - - - - - - - BWOP modal data - - - - - - - - -->
+
+    <div class="modal">
+      <div class="modal-content">
+        <a class="close">x</a>
+        <br><br><br>
+
+        <img class="pic" id="varimg_2" style="display: none;" src="03_documents/pics/bwop/bwop_1.jpg">
+
+        <iframe class="doc" id="varfrm_2" frameborder="0" scrolling="no"  style="max-height: 390px;" src="https://www.youtube.com/embed/SREQB6NbSFo"></iframe>
+
+        <br><br>
+        <button id="minus_2" onclick="decrement_2()">&#60&#60;</button>
+        document
+        <label id="display_2"></label> / 06
+        <button id="plus_2" onclick="increment_2()">&#62&#62;</button>
+
+        <!-- - - - - - - - - multi image- - - - - - - - -->
+
+        <script type="text/javascript">
+          var j = 1;
+          var img_2 = document.getElementById('varimg_2');
+          var frm_2 = document.getElementById('varfrm_2');
+          function increment_2() {
+            if (j < 6) {
+                j++;
+            } else {
+                j = 1;
+            }
+            if (j < 10) {
+              document.getElementById("display_2").innerHTML = "0" + j;
+            } else {
+              document.getElementById("display_2").innerHTML = j;
+            }
+
+            if (j == 1) {
+              frm_2.style.display = "initial";
+              frm_2.src="https://www.youtube.com/embed/SREQB6NbSFo";
+
+              img_2.style.display = "none";
+            }
+            else if (j == 2) {
+              frm_2.style.display = "none";
+
+              img_2.style.display = "initial";
+              img_2.src="03_documents/pics/bwop/bwop_1.jpg";
+            }
+            else if (j == 3) {
+              img_2.src="03_documents/pics/bwop/bwop_2.jpg";
+            }
+            else if (j == 4) {
+              img_2.src="03_documents/pics/bwop/bwop_3.jpg";
+            }
+            else if (j == 5) {
+              img_2.src="03_documents/pics/bwop/bwop_4.jpg";
+            }
+            else if (j == 6) {
+              frm_2.style.display = "none";
+
+              img_2.style.display = "initial";
+              img_2.src="03_documents/pics/bwop/bwop_5.jpg";
+            }
+          }
+          function decrement_2() {
+            if (j > 1) {
+              j--;
+            } else {
+              j = 6;
+            }
+            if (j < 10) {
+              document.getElementById("display_2").innerHTML = "0" + j;
+            } else {
+              document.getElementById("display_2").innerHTML = j;
+            }
+            if (j == 1) {
+              frm_2.style.display = "initial";
+              frm_2.src="https://www.youtube.com/embed/SREQB6NbSFo";
+
+              img_2.style.display = "none";
+            }
+            else if (j == 2) {
+              frm_2.style.display = "none";
+
+              img_2.style.display = "initial";
+              img_2.src="03_documents/pics/bwop/bwop_1.jpg";
+            }
+            else if (j == 3) {
+              img_2.src="03_documents/pics/bwop/bwop_2.jpg";
+            }
+            else if (j == 4) {
+              img_2.src="03_documents/pics/bwop/bwop_3.jpg";
+            }
+            else if (j == 5) {
+              img_2.src="03_documents/pics/bwop/bwop_4.jpg";
+            }
+            else if (j == 6) {
+              frm_2.style.display = "none";
+
+              img_2.style.display = "initial";
+              img_2.src="03_documents/pics/bwop/bwop_5.jpg";
+            }
+          }
+          if (j < 10) {
+            document.getElementById("display_2").innerHTML = "0" + j;
+          } else {
+            document.getElementById("display_2").innerHTML = j;
+          }
+        </script>
+      </div>
+    </div>
+
+    <!-- - - - - - - - - - - - - open + close modals - - - - - - - - - - - - -->
+
+    <script>
+      var btn = document.getElementsByClassName("btn");
+      var mdl = document.getElementsByClassName("modal");
+      var close = document.getElementsByClassName("close");
+
+      btn[0].onclick = function() { mdl[0].style.display = "block"; }
+      close[0].onclick = function() { mdl[0].style.display = "none"; }
+
+      window.onclick = function(event) {
+        if (event.target == mdl[0]) {
+          mdl[0].style.display = "none";
+        }
+      }
+    </script>
 
     <!-- - - - - - - - - - - - - theme script - - - - - - - - - - - - -->
 
