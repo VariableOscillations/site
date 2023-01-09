@@ -703,8 +703,6 @@ block.titleinv {
 block.title .inv {
 
 }
-
-
 block.image {
   position: relative;
   background-image: var(--bg_img);
@@ -713,7 +711,6 @@ block.image {
   border: 1px solid var(--txt);
   text-align: center;
 }
-
 block.image .anim {
   filter: invert(0);
 }
@@ -785,6 +782,13 @@ block.titleline {
 }
 block.titlenoline {
   font-size: 34px;
+}
+block.contrib {
+  position: relative;
+  background-image: var(--bg_img);
+  background-size: 50px;
+  border: 1px solid var(--txt);
+  text-align: center;
 }
 .doublegry {
   background:
